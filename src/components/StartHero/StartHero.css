@@ -1,0 +1,117 @@
+    .bgimg2 {
+        background-image: linear-gradient(137.59deg, rgb(253, 27, 192) 17.41%, rgb(248, 237, 0) 98.07%);
+    }
+
+    .iconclr {
+        color: white;
+        text-align: center;
+    }
+    @keyframes blink {
+        0%, 100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .blink-text {
+        animation: blink 2s infinite;
+      }
+    .carouselImage {
+        margin-top: -70px;
+        font-size: 50px;
+        height: 750px;
+        background-repeat: no-repeat;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    a[href="https://elfsight.com/visitor-counter-widget/?utm_source=websites&utm_medium=clients&utm_content=visitor-counter&utm_term=localhost&utm_campaign=free-widget"] {
+        display:none;
+      }
+    .startHeading {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .startHeading1 {
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 3.5rem;
+    }
+
+    .startHeading12 {
+        font-family: 'Anek Latin', sans-serif;
+        line-height: 3rem;  
+    }
+
+   
+    article {
+        border: 2px solid red;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        display: flex;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .marquee {
+        animation: marquee 30s linear infinite;
+    }
+
+    .marquee2 {
+        animation: marquee2 30s linear infinite;
+        position: absolute;
+        top: 0;
+    }
+
+    .wrapper ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .wrapper li {
+        margin: 8px;
+        margin-right: 16px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        
+    }
+     
+    li .liName{
+        color : red;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes marquee2 {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .startHeading12 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .wrapper li {
+            margin: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            
+        }
+    }

@@ -1,0 +1,10 @@
+.gradientColor{
+     background-image : linear-gradient(to right, #293985 ,#a21d2e);
+}
+
+.gradientHeading{
+    background: -webkit-linear-gradient(#293985, #a21d2e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
