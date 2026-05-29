@@ -1,0 +1,14 @@
+.bgimg2{
+    background-image: linear-gradient(137.59deg, rgb(253, 27, 192) 17.41%, rgb(248, 237, 0) 98.07%);
+}
+.iconclrps{
+    color: white;
+}
+li::marker 
+{
+    color: white;
+}
+
+ul li::before {
+    color : black
+}

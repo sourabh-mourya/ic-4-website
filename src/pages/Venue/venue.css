@@ -1,0 +1,29 @@
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 600px;
+}
+
+.gmap_iframe {
+    height: 600px !important;
+    width: 100%;
+}
+
+.gradientColor{
+     background-image : linear-gradient(to right, #293985 ,#a21d2e);
+}
+
+.gradientHeading{
+    background: -webkit-linear-gradient(#293985, #a21d2e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
