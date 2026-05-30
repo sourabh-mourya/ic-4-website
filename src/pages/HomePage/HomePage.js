@@ -169,7 +169,7 @@ const HomePage = () => {
                                         <i className="fa-solid fa-chalkboard-user fa-4x iconclr"></i>
                                     </div>
                                     <p className="text-sm title-font text-white mt-2 text-center">Conference Date</p>
-                                    <h2 className="text-sm text-white mt-2 text-center bodyFont">January 07-09, 2027</h2>
+                                    <h2 className="text-sm text-white mt-2 text-center bodyFont">18-20 March 2026</h2>
 
                                 </div>
                             </Slide>
