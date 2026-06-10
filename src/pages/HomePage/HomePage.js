@@ -114,7 +114,7 @@ const HomePage = () => {
                                     <i className="fa-solid fa-chalkboard-user  fa-4x iconclr"></i>
                                 </div>
                                 <p className="title-font text-white mt-2 text-center">Conference Date</p>
-                                <h2 className="text-2xl text-white mt-2 text-center bodyFont">January 07-09, 2027</h2>-
+                                <h2 className="text-2xl text-white mt-2 text-center bodyFont">March 18-20, 2027</h2>-
 
                             </div>
                         </Slide>
