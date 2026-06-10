@@ -30,7 +30,7 @@ const StartHero = (props) => {
 
                         <li>Camera Ready Paper Submission - <span className='liName'><del style={{ textDecoration: "line-through", color: "red" }}><span className="text-black"></span></del><span className="text-[#ff0000]"></span> September 10, 2026</span></li>
                         <li>Registration Deadline- <span className='liName'>September 10, 2026</span></li>
-                        <li>Conference Date - <span className='liName'>March 18-20, 2027</span></li>
+                        <li>Conference Date - <span className='liName'>18-20 March 2027</span></li>
                     </ul>
                     <ul className="marquee2">
                         <li>Full Paper Submission - <span className='liName'><del style={{ textDecoration: "line-through", color: "red" }}><span className="text-black"></span></del> <del style={{ textDecoration: "line-through", color: "red" }}><span className="text-black"></span></del><span className="text-[#ff0000]"></span>June 30, 2026</span></li>
@@ -39,7 +39,7 @@ const StartHero = (props) => {
 
                         <li>Camera Ready Paper Submission - <span className='liName'><del style={{ textDecoration: "line-through", color: "red" }}><span className="text-black"></span></del><span className="text-[#ff0000]"></span> September 10, 2026</span></li>
                         <li>Registration Deadline- <span className='liName'>September 10, 2026</span></li>
-                        <li>Conference Date - <span className='liName'>March 18-20, 2027</span></li>
+                        <li>Conference Date - <span className='liName'>18-20 March 2027</span></li>
                     </ul>
                 </div>
             </article>
