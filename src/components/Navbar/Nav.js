@@ -54,9 +54,9 @@ const Nav = (props) => {
                 </div>
                 <Zoom>
                     <div className="w-full block flex-grow justify-center lg:flex lg:items-center lg:w-auto">
-                        <p className="dispNone1 text-center sm:w-auto sm:text-[3.25rem] sm:font-black text-[#016698] font-bold startHeading12 supHeading  mt-4 headingMain font-extrabold">3rd International Conference on Computer,<br></br> Communication and Control<br></br>(IC4'27)<span className='text-[1.25rem] '><br></br>March 18-20,2027</span>
+                        <p className="dispNone1 text-center sm:w-auto sm:text-[3.25rem] sm:font-black text-[#016698] font-bold startHeading12 supHeading  mt-4 headingMain font-extrabold">3rd International Conference on Computer,<br></br> Communication and Control<br></br>(IC4'27)<span className='text-[1.25rem] '><br></br>18-20 March 2027</span>
                         </p>
-                        <p className="dispNone2 text-center sm:w-auto sm:text-[3.25rem] sm:font-black text-[#016698] font-bold startHeading12 supHeading  mt-1 mx-2 headingMain font-extrabold">3rd International Conference on Computer,<br></br> Communication and Control <br></br> (IC4'27)<br /><span className='text-[0.7rem] '>March 18-20,2027</span>
+                        <p className="dispNone2 text-center sm:w-auto sm:text-[3.25rem] sm:font-black text-[#016698] font-bold startHeading12 supHeading  mt-1 mx-2 headingMain font-extrabold">3rd International Conference on Computer,<br></br> Communication and Control <br></br> (IC4'27)<br /><span className='text-[0.7rem] '>18-20 March 2027</span>
                         </p>
 
                     </div>
