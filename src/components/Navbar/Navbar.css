@@ -1,4 +1,4 @@
-.nav-link {
+.conf-nav-link {
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -8,17 +8,16 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    /* background-image : linear-gradient(to right, #293985 ,#a21d2e); */
+    overflow-x: clip;
 }
 
-.nav-link1 {
+.conf-nav-link1 {
     text-decoration: none;
     display: inline-block;
     position: relative;
 }
 
-.nav-link:after {
+.conf-nav-link:after {
     background: none repeat scroll 0 0 transparent;
     content: "";
     display: block;
@@ -30,9 +29,47 @@ body {
     left: 50%;
 }
 
-.nav-link:hover:after {
+.conf-nav-link:hover:after {
     width: 100%;
     left: 0;
+}
+
+/* ── NAVBAR ACTION BUTTONS ── */
+.conf-btn-primary {
+    background-color: #a21d2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.conf-btn-primary:hover {
+    opacity: 0.85;
+}
+
+.conf-btn-secondary {
+    background-color: transparent;
+    color: #016698;
+    border: 2px solid #016698;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.conf-btn-secondary:hover {
+    background-color: #016698;
+    color: white;
+}
+
+.conf-btn-accent {
+    background-color: #293985;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.conf-btn-accent:hover {
+    opacity: 0.85;
 }
 
 .dispNone {
@@ -48,7 +85,6 @@ body {
 }
 
 .navClass {
-    position: relative;
     z-index: 50;
 }
 
@@ -71,17 +107,18 @@ body {
 .iconclr2 {
     color: white;
 }
-.medicapsLogo{
-    width : 170px;
+
+.medicapsLogo {
+    width: 170px;
 }
-@media (min-width: 720px) {
+
+@media (min-width: 1024px) {
     .dispNone2 {
         display: none;
     }
-   
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1023px) {
     .bgimg3 {
         background-color: #00033D;
         background-image: none;
@@ -103,14 +140,15 @@ body {
     .dispNone1 {
         display: none;
     }
-     .medicapsLogo{
-        width: 100px;
+
+    .medicapsLogo {
+        width: 120px;
         margin-right: 2rem;
     }
-    .iconclrSocial1{
+
+    .iconclrSocial1 {
         color: white;
     }
-
 }
 
 @media screen and (min-width:1535px) and (max-width:1560px) {
@@ -125,10 +163,7 @@ body {
     .linkText {
         font-size: 0.98rem;
     }
-
 }
-
-
 
 @media screen and (max-width: 1535px) {
     .column {
@@ -137,31 +172,29 @@ body {
 
     .supHeading {
         font-size: 2.50rem;
-
     }
 
     .linkText {
         font-size: 0.75rem;
     }
-    .numHeading{
+
+    .numHeading {
         font-size: 2.5rem;
     }
-
-
 }
 
-.headingMain{
+.headingMain {
     background: -webkit-linear-gradient(#293985, #a21d2e);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.gradientColor{
-     background-image : linear-gradient(to right, #293985 ,#a21d2e);
+.gradientColor {
+    background-image: linear-gradient(to right, #293985, #a21d2e);
 }
 
-.gradientHeading{
+.gradientHeading {
     font-size: 40px;
     background: -webkit-linear-gradient(#293985, #a21d2e);
     -webkit-background-clip: text;
