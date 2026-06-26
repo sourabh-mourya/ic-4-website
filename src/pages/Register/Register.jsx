@@ -5,6 +5,7 @@ import './register.css';
 import ImportantDates from '../../components/common/ImportantDates'
 import { assets } from '../../constants/assets'
 import { registrationFees } from '../../data/data'
+import { CONFIG } from '../../constants/config'
 
 function Register() {
     return (
@@ -25,6 +26,22 @@ function Register() {
                         </h1>
                         <span className="inline-block h-1 w-20 rounded bg-[#a21d2e] mt-4 mx-auto"></span>
                     </div>
+
+                    {!CONFIG.REGISTRATION_ENABLED && (
+                        <div className="mb-8 p-4 sm:p-6 bg-[#a21d2e]/10 border border-[#a21d2e]/20 rounded-2xl flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                            <div className="w-12 h-12 rounded-full bg-[#a21d2e]/10 text-[#a21d2e] flex items-center justify-center flex-shrink-0">
+                                <i className="fa-solid fa-triangle-exclamation text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 className="text-base font-bold text-[#a21d2e] mb-1 font-heading">
+                                    Registrations are currently closed
+                                </h3>
+                                <p className="text-gray-700 text-xs sm:text-sm font-medium leading-relaxed">
+                                    Thank you for your interest. Registration is temporarily unavailable and will reopen soon. Please check back later for updates.
+                                </p>
+                            </div>
+                        </div>
+                    )}
 
                     <div className="w-full">
                         {/* Table Responsive Wrapper */}
@@ -51,11 +68,17 @@ function Register() {
 
                         {/* CTA button */}
                         <div className="flex justify-center mt-6">
-                            <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" target="_blank" rel="noopener noreferrer" className="click-scale">
-                                <button className="conf-btn-primary py-3 px-10 text-sm uppercase tracking-wider font-semibold">
-                                    Register & Pay Here
+                            {CONFIG.REGISTRATION_ENABLED ? (
+                                <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" target="_blank" rel="noopener noreferrer" className="click-scale">
+                                    <button className="conf-btn-primary py-3 px-10 text-sm uppercase tracking-wider font-semibold">
+                                        Register & Pay Here
+                                    </button>
+                                </a>
+                            ) : (
+                                <button className="py-3 px-10 text-sm uppercase tracking-wider font-semibold bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed border border-gray-200" disabled>
+                                    Registration Closed
                                 </button>
-                            </a>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -86,22 +109,47 @@ function Register() {
                                 </div>
                                 <div>
                                     <span className="text-[0.68rem] uppercase font-black text-gray-400 block tracking-wider">Gateway Target</span>
-                                    <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" className="text-[#016698] font-bold text-sm underline hover:text-[#293985]" target="_blank" rel="noopener noreferrer">
-                                        Medi-Caps Miscellaneous Portal
-                                    </a>
+                                    {CONFIG.REGISTRATION_ENABLED ? (
+                                        <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" className="text-[#016698] font-bold text-sm underline hover:text-[#293985]" target="_blank" rel="noopener noreferrer">
+                                            Medi-Caps Miscellaneous Portal
+                                        </a>
+                                    ) : (
+                                        <span className="text-[#a21d2e] font-bold text-sm">
+                                            Temporarily Closed
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                         </div>
 
                         {/* QR Code card */}
-                        <div className="w-full lg:w-2/5 flex flex-col items-center justify-center bg-gray-50 border border-gray-150 rounded-2xl p-6">
-                            <div className="bg-white p-3 rounded-2xl shadow-md border border-gray-100 mb-4 max-w-[220px]">
-                                <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medi-Caps University UPI QR Code" />
+                        {CONFIG.REGISTRATION_ENABLED ? (
+                            <div className="w-full lg:w-2/5 flex flex-col items-center justify-center bg-gray-50 border border-gray-150 rounded-2xl p-6">
+                                <div className="bg-white p-3 rounded-2xl shadow-md border border-gray-100 mb-4 max-w-[220px]">
+                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medi-Caps University UPI QR Code" />
+                                </div>
+                                <span className="text-xs font-bold text-gray-500 text-center tracking-wide block max-w-xs leading-relaxed">
+                                    Scan this UPI QR code using any UPI payment app to transfer registration fees directly.
+                                </span>
                             </div>
-                            <span className="text-xs font-bold text-gray-500 text-center tracking-wide block max-w-xs leading-relaxed">
-                                Scan this UPI QR code using any UPI payment app to transfer registration fees directly.
-                            </span>
-                        </div>
+                        ) : (
+                            <div className="w-full lg:w-2/5 flex flex-col items-center justify-center bg-gray-50 border border-gray-150 rounded-2xl p-6 relative overflow-hidden">
+                                <div className="bg-white p-3 rounded-2xl shadow-md border border-gray-100 mb-4 max-w-[220px] filter blur-sm select-none pointer-events-none">
+                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medi-Caps University UPI QR Code" />
+                                </div>
+                                <div className="absolute inset-0 bg-slate-900/10 flex flex-col items-center justify-center p-4 text-center">
+                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 text-[#a21d2e]">
+                                        <i className="fa-solid fa-lock"></i>
+                                    </div>
+                                    <span className="text-xs font-bold text-slate-800 bg-white/95 px-2.5 py-1 rounded-full shadow-sm font-heading">
+                                        QR Code Locked
+                                    </span>
+                                </div>
+                                <span className="text-xs font-bold text-gray-400 text-center tracking-wide block max-w-xs leading-relaxed">
+                                    QR code is disabled as registrations are currently closed.
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

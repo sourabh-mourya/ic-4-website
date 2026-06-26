@@ -273,6 +273,139 @@ export const speakers = [];
 export const galleryImages = [];
 
 // ──────────────────────────────────────────────
+// Paper Submission Content
+// ──────────────────────────────────────────────
+export const paperSubmissionInfo = {
+  portalUrl: 'https://cmt3.research.microsoft.com/',
+  isOpen: true,
+  contactEmail: 'ic4@medicaps.ac.in',
+  deadlines: [
+    { label: 'Full Paper Submission', date: 'Sept 15, 2026', icon: 'fa-hourglass-end' },
+    { label: 'Acceptance Notification', date: 'Oct 15, 2026', icon: 'fa-bell' },
+    { label: 'Camera Ready Paper', date: 'Nov 15, 2026', icon: 'fa-cloud-arrow-up' },
+    { label: 'Registration Deadline', date: 'Nov 15, 2026', icon: 'fa-id-card' }
+  ]
+};
+
+export const submissionGuidelines = [
+  {
+    title: 'Electronic Format Only',
+    description: 'Manuscripts will ONLY be accepted in electronic format (Microsoft Word format) through the CMT online submission system. Do not send hard copies of your paper.',
+    icon: 'fa-file-word text-blue-500'
+  },
+  {
+    title: 'IEEE Template Alignment',
+    description: 'Submissions must strictly follow the standard IEEE conference template in double-column A4 format.',
+    icon: 'fa-file-invoice text-indigo-500'
+  },
+  {
+    title: 'Original & Unpublished Work',
+    description: 'Authors should only submit originally written, unpublished work. Plagiarism is strictly prohibited and papers will be checked.',
+    icon: 'fa-shield-halved text-emerald-500'
+  },
+  {
+    title: 'Format & Page Constraints',
+    description: 'Please limit your paper within 6 pages. The size of your Word file must be less than 10MB; files larger than 10MB will not be accepted.',
+    icon: 'fa-file-circle-check text-cyan-500'
+  },
+  {
+    title: 'IEEE Referencing Standard',
+    description: 'All references and citations in the paper must follow the IEEE format of referencing.',
+    icon: 'fa-list-ol text-violet-500'
+  },
+  {
+    title: 'Over-length Page Charges',
+    description: 'Standard submission is up to 6 pages. Authors may submit up to 8 pages with an over-length fee of INR 1500 per additional page.',
+    icon: 'fa-coins text-amber-500'
+  }
+];
+
+export const submissionSteps = [
+  {
+    step: '01',
+    title: 'Format Manuscript',
+    description: 'Prepare your paper strictly using the official IEEE A4 double-column Word template.'
+  },
+  {
+    step: '02',
+    title: 'Check Constraints',
+    description: 'Keep your file within 6 pages and 10MB. Ensure references follow the IEEE standard.'
+  },
+  {
+    step: '03',
+    title: 'Submit via CMT',
+    description: 'Register and upload your manuscript through the CMT online submission system.'
+  },
+  {
+    step: '04',
+    title: 'Review & Decision',
+    description: 'Your paper will undergo peer review, and acceptance decision will be emailed by Oct 15, 2026.'
+  }
+];
+
+export const conferenceTracks = [
+  {
+    id: 1,
+    title: 'Computer Science and Engineering',
+    icon: 'fa-laptop-code',
+    topics: ['AI and ML', 'Data Science', 'Cloud Computing', 'Cybersecurity', 'Big Data', 'Database and Data Mining', 'Blockchain', 'Quantum Computing', 'Cryptography']
+  },
+  {
+    id: 2,
+    title: 'Electronics and Communication',
+    icon: 'fa-microchip',
+    topics: ['Communication Systems', 'Wireless Communication', 'Optical Communication', 'Signal Processing', 'Embedded Systems', 'VLSI Design and Microelectronics', 'IoT and Automation', 'Antennas', 'High Power Amplifiers', 'Microwave Devices']
+  },
+  {
+    id: 3,
+    title: 'Information Technology',
+    icon: 'fa-network-wired',
+    topics: ['IT Convergence Technology', 'Information Systems', 'Wireless Sensor Networks', 'Healthcare Informatics', 'Web-Based Learning']
+  },
+  {
+    id: 4,
+    title: 'Instrumentation',
+    icon: 'fa-gauge-high',
+    topics: ['Medical and Biological Measurement', 'Measurement Techniques', 'Sensor Networks', 'Nanotechnology', 'Speech, Audio and Video Signal Processing', 'Optical Control, Process Control and Distributed Control']
+  },
+  {
+    id: 5,
+    title: 'Electrical Engineering',
+    icon: 'fa-bolt',
+    topics: ['Smart Grid Technologies', 'Energy Management', 'Renewable Energy Integration', 'Electric Vehicle Applications', 'Innovations in Energy Storage', 'AI Optimized Power Systems']
+  },
+  {
+    id: 6,
+    title: 'Robotics and Automation',
+    icon: 'fa-robot',
+    topics: ['Industrial Robotics', 'Computational Intelligence in Robotics', 'Field Robotics', 'Human-Robot Interaction', 'Humanoid Robotics', 'Design and Control']
+  }
+];
+
+export const submissionFAQs = [
+  {
+    question: 'Can I submit my paper in PDF format?',
+    answer: 'For the initial submission, please upload your manuscript in Microsoft Word (.doc or .docx) format formatted according to the IEEE template.'
+  },
+  {
+    question: 'What are the page limits and file size limit?',
+    answer: 'Standard paper length is 6 pages, and maximum file size is 10MB. You can submit up to 8 pages by paying an over-length fee of INR 1500 per additional page.'
+  },
+  {
+    question: 'How do I submit my paper?',
+    answer: 'All submissions must go through the CMT online submission system. Hard copies or submissions via email are not accepted.'
+  },
+  {
+    question: 'Can I submit work that has been previously published?',
+    answer: 'No. Submissions must consist of original, unpublished work. Plagiarism check will be conducted for all submissions.'
+  },
+  {
+    question: 'Who should I contact if I have queries?',
+    answer: 'For any paper submission related queries, you can email us at ic4@medicaps.ac.in or contact the publication chairs listed on the contact page.'
+  }
+];
+
+// ──────────────────────────────────────────────
 // Unified export  (for one-line imports)
 // ──────────────────────────────────────────────
 export const conferenceData = {
@@ -293,4 +426,9 @@ export const conferenceData = {
   registrationFees,
   speakers,
   galleryImages,
+  paperSubmissionInfo,
+  submissionGuidelines,
+  submissionSteps,
+  conferenceTracks,
+  submissionFAQs,
 };

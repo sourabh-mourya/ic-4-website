@@ -26,6 +26,8 @@ import paymentQR from '../img/paymentqr.jpg';
 
 // --- Documents ---
 import brochurePDF from "../img/IC-EETA’25 Brochure Updated.pdf";
+import paperTemplate from '../img/conference-template-a4.docx';
+import copyrightForm from '../img/IEEEcopyrightform.pdf';
 
 // --- Committee Photos ---
 import rcMittal from '../assets/images/committee/rcMittal.png';
@@ -76,6 +78,8 @@ export const assets = {
 
   // Documents
   brochurePDF,
+  paperTemplate,
+  copyrightForm,
 };
 
 // Committee photos exported separately for use in data.js

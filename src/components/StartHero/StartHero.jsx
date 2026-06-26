@@ -83,8 +83,19 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes';
 import { assets } from '../../constants/assets';
 import { heroContent, importantDates, conferenceInfo } from '../../data/data';
+import { CONFIG } from '../../constants/config';
+import { useRegistration } from '../../Context/context';
 
 const StartHero = (props) => {
+    const { setIsRegModalOpen } = useRegistration();
+
+    const handleRegisterClick = (e) => {
+        if (!CONFIG.REGISTRATION_ENABLED) {
+            e.preventDefault();
+            setIsRegModalOpen(true);
+        }
+    };
+
     return (
         <div className="relative overflow-hidden bg-slate-950 text-white z-[1]">
             {/* Ticker / Announcement Marquee */}
@@ -128,7 +139,7 @@ const StartHero = (props) => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap justify-center gap-4 mt-8">
-                        <Link to={ROUTES.REGISTER} className="click-scale">
+                        <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
                             <button className="py-2.5 px-6 text-xs sm:text-sm tracking-wider uppercase font-semibold bg-[#a21d2e] text-white rounded-lg hover:bg-[#861726] transition duration-150 shadow">
                                 Register Now
                             </button>

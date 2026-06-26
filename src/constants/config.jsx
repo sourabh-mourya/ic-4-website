@@ -6,6 +6,7 @@
 export const CONFIG = {
   siteName: "IC4'27 - International Conference on Computer, Communication and Control",
   siteUrl: 'https://ic4.medicaps.ac.in',
+  REGISTRATION_ENABLED: false,
   year: '2026',
   edition: '3rd',
   shortName: "IC4'27",

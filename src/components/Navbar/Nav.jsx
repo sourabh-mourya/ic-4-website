@@ -6,10 +6,21 @@ import close from './close.svg';
 import { heroContent, navLinks } from '../../data/data';
 import { assets } from '../../constants/assets';
 import { ROUTES } from '../../constants/routes';
+import { CONFIG } from '../../constants/config';
+import { useRegistration } from '../../Context/context';
 
 const Nav = memo((props) => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const { setIsRegModalOpen } = useRegistration();
+
+  const handleRegisterClick = (e) => {
+    if (!CONFIG.REGISTRATION_ENABLED) {
+      e.preventDefault();
+      setIsRegModalOpen(true);
+      setOpen(false);
+    }
+  };
 
   useEffect(() => {
     setOpen(false);
@@ -55,7 +66,7 @@ const Nav = memo((props) => {
       </nav>
 
       {/* ── STICKY NAVBAR ── */}
-      <div className="w-full sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <div className="w-full sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm">
         <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-2.5 relative">
 
           {/* Mobile: Short name */}
@@ -67,7 +78,7 @@ const Nav = memo((props) => {
 
           {/* Mobile: Register + Hamburger */}
           <div className="lg:hidden flex items-center gap-2 ml-auto">
-            <Link to={ROUTES.REGISTER}>
+            <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
               <button className="px-3 py-1 bg-[#016698] text-white text-[0.68rem] font-bold uppercase rounded-md">
                 Register
               </button>
@@ -124,7 +135,7 @@ const Nav = memo((props) => {
                     Paper Submission
                   </button>
                 </Link>
-                <Link to={ROUTES.REGISTER} onClick={() => setOpen(false)}>
+                <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
                   <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 transition duration-150 tracking-wider">
                     Register
                   </button>
@@ -169,7 +180,7 @@ const Nav = memo((props) => {
                 Paper Submission
               </button>
             </Link>
-            <Link to={ROUTES.REGISTER}>
+            <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
               <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
                 Register
               </button>
@@ -243,7 +254,7 @@ export default Nav;
 //       </nav>
 
 //       {/* ── STICKY NAVBAR ── */}
-//       <div className="w-full sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+//       <div className="w-full sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm">
 //         <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-2 relative">
 
 //           {/* Mobile: short name left */}

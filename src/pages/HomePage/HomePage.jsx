@@ -10,9 +10,20 @@ import { useCount } from '../../Context/context'
 import { previousConferences } from '../../data/data'
 import { assets } from '../../constants/assets'
 import { ROUTES } from '../../constants/routes'
+import { CONFIG } from '../../constants/config'
+import { useRegistration } from '../../Context/context'
 
 const HomePage = () => {
     const { setCount } = useCount();
+    const { setIsRegModalOpen } = useRegistration();
+
+    const handleRegisterClick = (e) => {
+        if (!CONFIG.REGISTRATION_ENABLED) {
+            e.preventDefault();
+            setIsRegModalOpen(true);
+        }
+    };
+
     useEffect(() => {
         const func = () => {
             console.log("page is fully loaded");
@@ -45,7 +56,7 @@ const HomePage = () => {
                             <p className="mb-6 leading-relaxed text-gray-700 text-sm sm:text-[0.98rem] text-justify font-medium">
                                 The objective of this international conference is to foster a dynamic exchange of knowledge and innovation across the domains of mechanical, civil, electrical, and computer engineering. By bringing together leading scholars, industry experts, and visionary practitioners, the conference aims to strengthen academic-industry collaboration and provide a forum for the dissemination of pioneering research, advanced technologies, and future-oriented solutions. Emphasizing interdisciplinary synergy, the event is aimed at addressing pressing global challenges while promoting sustainable, cutting-edge practices. Ultimately, it aspires to contribute to the technological growth and sustainable development of our nation, positioning it at the forefront of global innovation. The conference will feature keynote addresses from eminent personalities in various fields aligned with the theme, including distinguished Indian and international speakers.
                             </p>
-                            <Link to={ROUTES.REGISTER} className="click-scale">
+                            <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
                                 <button className="conf-btn-primary">Register Now</button>
                             </Link>
                         </div>

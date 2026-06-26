@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { ROUTES } from './constants/routes';
+import RegistrationDisabledModal from './components/common/RegistrationDisabledModal';
 
 // Lazy-load all pages — each page loads only when navigated to
 const HomePage        = lazy(() => import('./pages/HomePage/HomePage'));
@@ -28,6 +29,7 @@ const PageLoader = () => (
 function App() {
   return (
     <Suspense fallback={<PageLoader />}>
+      <RegistrationDisabledModal />
       <Routes>
         <Route path={ROUTES.HOME}             element={<HomePage />} />
         <Route path={ROUTES.PAPER_SUBMISSION} element={<PaperSubmission />} />
