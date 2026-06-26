@@ -28,7 +28,7 @@ const StartHero = () => {
     return (
         <div className="hero-root">
 
-            {/* ── Scrolling Announcement Ticker ── */}
+            {/* ── Announcement Ticker ── */}
             <div className="hero-ticker">
                 <span className="hero-ticker-label">
                     <i className="fa-solid fa-bullhorn" /> &nbsp;UPDATES
@@ -43,7 +43,7 @@ const StartHero = () => {
                             </li>
                         ))}
                     </ul>
-                    <ul className="marquee2 hero-ticker-list">
+                    <ul className="marquee2 hero-ticker-list" aria-hidden="true">
                         {importantDates.map((item) => (
                             <li key={item.id} className="hero-ticker-item">
                                 <i className={`fa-solid ${item.icon} hero-ticker-icon`} />
@@ -55,59 +55,55 @@ const StartHero = () => {
                 </div>
             </div>
 
-            {/* ── Hero Main Panel ── */}
-            <div
-                className="hero-panel"
-                style={{ backgroundImage: `url(${home_carousel1})` }}
-            >
-                {/* Dark overlay */}
-                <div className="hero-overlay" />
+            {/* ── Hero Split Panel ── */}
+            <div className="hero-split">
 
-                {/* Decorative blobs */}
-                <div className="hero-blob hero-blob--blue" />
-                <div className="hero-blob hero-blob--red" />
+                {/* Left — Text Content (light) */}
+                <div className="hero-left">
 
-                {/* Content */}
-                <div className="hero-content">
-
-                    {/* Badge */}
-                    <span className="hero-badge">
-                        <i className="fa-solid fa-university" />
-                        &nbsp; Initiated by Medicaps University
-                    </span>
-
-                    {/* Conference edition pill */}
-                    <div className="hero-edition-pill">
-                        {conferenceInfo.edition} Edition
+                    {/* Top labels */}
+                    <div className="hero-left-labels">
+                        <span className="hero-org-badge">
+                            <i className="fa-solid fa-building-columns" />
+                            Medicaps University
+                        </span>
+                        <span className="hero-edition-tag">
+                            {conferenceInfo.edition} Edition
+                        </span>
                     </div>
 
-                    {/* Main heading */}
-                    <h1 className="hero-heading bodyFont2">
+                    {/* Conference name */}
+                    <h1 className="hero-title bodyFont2">
                         {heroContent.heading}
                     </h1>
 
                     {/* Short name */}
-                    <p className="hero-shortname">
-                        {heroContent.shortName}
-                    </p>
+                    <p className="hero-abbr">({heroContent.shortName})</p>
 
-                    {/* Date & Venue */}
-                    <div className="hero-meta">
-                        <span className="hero-meta-item">
-                            <i className="fa-regular fa-calendar hero-meta-icon" />
-                            {conferenceInfo.dates}
-                        </span>
+                    {/* Date + Location row */}
+                    <div className="hero-info-row">
+                        <div className="hero-info-chip">
+                            <i className="fa-regular fa-calendar" />
+                            <span>{conferenceInfo.dates}</span>
+                        </div>
+                        <div className="hero-info-chip">
+                            <i className="fa-solid fa-location-dot" />
+                            <span>Indore, India</span>
+                        </div>
                     </div>
 
-                    {/* Action Buttons */}
+                    {/* Divider */}
+                    <div className="hero-left-divider" />
+
+                    {/* Action buttons */}
                     <div className="hero-actions">
-                        <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
-                            <button className="hero-btn hero-btn--red">
+                        <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                            <button className="hero-btn hero-btn--primary">
                                 <i className="fa-solid fa-pen-to-square" /> Register Now
                             </button>
                         </Link>
-                        <Link to={ROUTES.PAPER_SUBMISSION} className="click-scale">
-                            <button className="hero-btn hero-btn--navy">
+                        <Link to={ROUTES.PAPER_SUBMISSION}>
+                            <button className="hero-btn hero-btn--secondary">
                                 <i className="fa-solid fa-paper-plane" /> Submit Paper
                             </button>
                         </Link>
@@ -116,7 +112,6 @@ const StartHero = () => {
                             download="conferenceBrochure"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="click-scale"
                             onClick={handleBrochureClick}
                         >
                             <button className="hero-btn hero-btn--ghost">
@@ -125,11 +120,35 @@ const StartHero = () => {
                         </a>
                     </div>
 
-                    {/* Scroll hint */}
-                    <div className="hero-scroll-hint">
-                        <i className="fa-solid fa-chevron-down hero-scroll-icon" />
+                    {/* IEEE note */}
+                    <p className="hero-ieee-note">
+                        <i className="fa-solid fa-certificate" />
+                        &nbsp; Papers published in IEEE Xplore &amp; indexed in Scopus
+                    </p>
+                </div>
+
+                {/* Right — Photo panel */}
+                <div className="hero-right">
+                    <div className="hero-photo-wrap">
+                        <img
+                            src={home_carousel1}
+                            alt="IC4 Conference"
+                            className="hero-photo"
+                        />
+                        <div className="hero-photo-overlay" />
+
+                        {/* Floating stat cards */}
+                        <div className="hero-float-card hero-float-card--tl">
+                            <span className="hero-float-num bodyFont2">500+</span>
+                            <span className="hero-float-lbl">Attendees</span>
+                        </div>
+                        <div className="hero-float-card hero-float-card--br">
+                            <span className="hero-float-num bodyFont2">10+</span>
+                            <span className="hero-float-lbl">Countries</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     );
