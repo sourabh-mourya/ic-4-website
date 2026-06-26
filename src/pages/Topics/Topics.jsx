@@ -2,6 +2,8 @@ import React from 'react'
 import Nav from '../../components/layout/Navbar/Navbar'
 import "./Topics.css"
 import Footer from '../../components/layout/Footer/Footer'
+import PageHeader from '../../components/common/PageHeader'
+import '../../components/common/PageHeader.css'
 import { conferenceTracks } from '../../data/data'
 
 const Topics = () => {
@@ -9,29 +11,22 @@ const Topics = () => {
         <>
             <Nav />
 
-            {/* Full-width page background */}
-            <div className="topics-page-bg">
-                <section className="topics-section">
+            <PageHeader
+                eyebrow="Scope & Coverage"
+                title="Conference Tracks & Topics"
+                desc="IC4'27 invites high-quality submissions on research tracks including, but not limited to, the following areas."
+            />
 
-                    {/* Page Header */}
-                    <div className="topics-header gradientColor">
-                        <h1 className="topics-header-title bodyFont2">
-                            Topics of Interest
-                        </h1>
-                        <i className="fa-solid fa-lightbulb topics-header-icon" />
-                    </div>
-
-                    <p className="topics-subtitle">
-                        Topics include, but are not limited to, the following tracks
-                    </p>
-
+            <div className="page-body">
+                <div className="page-container">
+                    
                     {/* Tracks */}
                     <div className="topics-tracks-wrapper">
                         {conferenceTracks.map((track, trackIdx) => (
                             <React.Fragment key={track.id}>
                                 {/* Track Header */}
                                 <div className="track-header">
-                                    <div className="track-number gradientColor">
+                                    <div className="track-number">
                                         T{track.id}
                                     </div>
                                     <div className="track-title-wrap">
@@ -62,7 +57,7 @@ const Topics = () => {
                         ))}
                     </div>
 
-                </section>
+                </div>
             </div>
 
             <Footer />

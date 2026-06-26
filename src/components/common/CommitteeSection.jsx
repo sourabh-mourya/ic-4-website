@@ -10,14 +10,14 @@ const CommitteeSection = memo(({ title, members, fullWidth = false }) => {
   if (!members || members.length === 0) return null;
 
   return (
-    <div className="mb-10">
-      <h3 className="leading-relaxed text-lg sm:text-[1.35rem] font-bold text-[#a21d2e] mt-4 mb-4 border-b border-gray-150 pb-2">
+    <div className="committee-sec-wrap">
+      <h3 className="committee-sec-title font-heading">
         {title}
       </h3>
       <div className={
         fullWidth 
-          ? "grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 justify-center"
-          : "grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-6 justify-center"
+          ? "committee-grid committee-grid--wide"
+          : "committee-grid"
       }>
         {members.map((member, idx) => (
           <div key={idx} className="committee-card">

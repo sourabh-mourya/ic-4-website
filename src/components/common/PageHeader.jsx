@@ -1,22 +1,24 @@
 import React, { memo } from 'react';
 
 /**
- * PageHeader - Consistent gradient banner header for all pages.
- * @param {string} title - Page title text
- * @param {string} icon  - FontAwesome icon class (e.g. "fa-address-book")
+ * PageHeader — Uniform white page banner, used on every inner page.
+ * @param {string} title   - Main page title
+ * @param {string} eyebrow - Small label above title (e.g. "About", "Navigation")
+ * @param {string} desc    - Optional short description below title
  */
-const PageHeader = memo(({ title, icon }) => {
+const PageHeader = memo(({ title, eyebrow, desc }) => {
   return (
-    <div className="flex items-center mb-3 mr-8 justify-center gradientColor rounded-sm">
-      <h1 className="sm:text-4xl text-xl font-black text-white sm:ml-12 ml-4 py-3 bodyFont2">
-        {title}
-      </h1>
-      {icon && (
-        <i
-          className={`fa-solid ${icon} sm:fa-3x fa-2x ml-12`}
-          style={{ color: '#ffffff' }}
-        />
-      )}
+    <div className="page-header-root">
+      <div className="page-header-inner">
+        {eyebrow && (
+          <span className="page-header-eyebrow">{eyebrow}</span>
+        )}
+        <h1 className="page-header-title bodyFont2">{title}</h1>
+        <div className="page-header-bar" />
+        {desc && (
+          <p className="page-header-desc">{desc}</p>
+        )}
+      </div>
     </div>
   );
 });

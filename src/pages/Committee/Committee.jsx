@@ -1,6 +1,8 @@
 import React, { memo } from 'react'
 import Footer from '../../components/layout/Footer/Footer'
 import Nav from '../../components/layout/Navbar/Navbar'
+import PageHeader from '../../components/common/PageHeader'
+import '../../components/common/PageHeader.css'
 import './Committee.css'
 import CommitteeSection from '../../components/common/CommitteeSection'
 import {
@@ -20,15 +22,15 @@ const ProgrameComitte = memo(() => {
   return (
     <>
       <Nav />
-      {/* Full-width neutral background */}
-      <div className="committee-page-bg">
-        <section className="committee-section">
+      
+      <PageHeader
+        eyebrow="Organizers"
+        title="Committees"
+        desc="Meet the academic leaders, advisory board, and organizing committee behind IC4'27."
+      />
 
-          {/* Page Header — gradient banner */}
-          <div className="committee-header gradientColor">
-            <h1 className="committee-header-title bodyFont2">COMMITTEES</h1>
-            <i className="fa-solid fa-user-large fa-2x committee-header-icon" />
-          </div>
+      <div className="page-body">
+        <div className="page-container">
 
           {/* ── PHOTO SECTIONS ── */}
 
@@ -131,7 +133,7 @@ const ProgrameComitte = memo(() => {
             </div>
           </div>
 
-        </section>
+        </div>
       </div>
       <Footer />
     </>
