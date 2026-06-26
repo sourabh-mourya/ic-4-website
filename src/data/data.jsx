@@ -17,7 +17,6 @@ export const conferenceInfo = {
   abbreviation: "IC4'27",
   dates: 'March  18-20,2027',
   year: '2027',
-  venue: 'Main Auditorium, Medicaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
   phones: ['+91-731-3111500', '+91-731-3111501'],
   email: 'ic4@medicaps.ac.in',

@@ -97,11 +97,7 @@ const StartHero = () => {
                             <i className="fa-regular fa-calendar hero-meta-icon" />
                             {conferenceInfo.dates}
                         </span>
-                        <span className="hero-meta-sep" />
-                        <span className="hero-meta-item">
-                            <i className="fa-solid fa-location-dot hero-meta-icon" />
-                            {conferenceInfo.venue}
-                        </span>
+
                     </div>
 
                     {/* Action Buttons */}
