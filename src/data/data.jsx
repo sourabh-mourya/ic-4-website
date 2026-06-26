@@ -245,7 +245,7 @@ export const internationalAdvisoryCommittee2 = [
 // Previous Conferences  (exactly 4, no IEEE prefix)
 // ──────────────────────────────────────────────
 export const previousConferences = [
-  { id: 'iceeta25', title: "International Conference IC-EETA'25", year: '2025', link: null, image: 'pastConference3' },
+  { id: 'iceeta25', title: "International Conference IC-EETA'25", year: '2025', link: 'https://ieeexplore.ieee.org/xpl/conhome/11547912/proceeding', image: 'pastConference3' },
   { id: 'ic4_2024', title: '2nd Conference IC4', year: '2024', link: 'https://ieeexplore.ieee.org/xpl/conhome/10486055/proceeding', image: 'pastConference4' },
   { id: 'cdan2016', title: 'CDAN Symposium', year: '2016', link: 'https://ieeexplore.ieee.org/xpl/conhome/7562831/proceeding', image: 'pastConference2' },
   { id: 'ic4_2015', title: '1st Conference IC4', year: '2015', link: 'https://ieeexplore.ieee.org/xpl/conhome/7368254/proceeding', image: 'pastConference1' },
@@ -256,9 +256,11 @@ export const previousConferences = [
 // ──────────────────────────────────────────────
 export const registrationFees = [
   { category: 'Non-IEEE Professional', indian: 'INR 9000/-', international: 'USD 250' },
-  { category: 'IEEE Professional Members', indian: 'INR 8000/-', international: 'USD 250' },
-  { category: 'Non-IEEE Students', indian: 'INR 8000/-', international: 'USD 250' },
-  { category: 'IEEE Student Members', indian: 'INR 7000/-', international: 'USD 250' },
+  { category: 'IEEE Professional Members', indian: 'INR 7500/-', international: 'USD 250' },
+  { category: 'Non-IEEE PhD Students', indian: 'INR 7000/-', international: 'USD 250' },
+  { category: 'IEEE PhD Students', indian: 'INR 6000/-', international: 'USD 250' },
+  { category: 'Non-IEEE PG/UG Students', indian: 'INR 6000/-', international: 'USD 250' },
+  { category: 'IEEE PG/UG Students', indian: 'INR 5000/-', international: 'USD 250' },
   { category: 'Industry Participants', indian: 'INR 10000/-', international: 'USD 250' },
 ];
 
