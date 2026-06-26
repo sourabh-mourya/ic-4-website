@@ -11,7 +11,7 @@ function AboutMedicaps() {
     return (
         <>
             <Nav />
-            
+
             {/* Hero Section */}
             <section className="py-16 text-center text-white bg-gradient-to-r from-[#016698] to-[#293985] shadow-inner relative overflow-hidden">
                 <div className="absolute inset-0 bg-grid-white/[0.05] z-0" />
@@ -20,7 +20,7 @@ function AboutMedicaps() {
                         Our University
                     </span>
                     <h1 className="text-3xl sm:text-5xl font-extrabold font-heading tracking-wide mb-4 uppercase">
-                        About Medi-Caps University
+                        About Medicaps University
                     </h1>
                     <span className="inline-block h-1 w-20 rounded bg-[#a21d2e] mb-4"></span>
                     <p className="max-w-2xl mx-auto text-sm sm:text-[0.98rem] text-gray-200 leading-relaxed font-medium">
@@ -40,19 +40,21 @@ function AboutMedicaps() {
                                 Excellence in Education Since 2000
                             </h2>
                             <p className="leading-relaxed text-gray-600 text-sm sm:text-base mb-6 text-justify font-medium">
-                                Medi-Caps University is one of the brand names in the arena of technical education and is contributing to making Indore an educational hub. Since its inception in July 2000, the group consistently aims at creating an ideal ambiance for budding technocrats and helping them grow into professionals.
+                                Medicaps University is one of the brand names in the arena of technical education and is contributing to making Indore an educational hub. Since its inception in July 2000, the group consistently aims at creating an ideal ambiance for budding technocrats and helping them grow into professionals.
                             </p>
                             <p className="leading-relaxed text-gray-600 text-sm sm:text-base text-justify font-medium">
-                                The main strength of Medi-Caps University is its highly qualified faculty. We have an optimal blend of academic brilliance and industry exposure, supplemented by specialized visiting faculty, industry experts, and senior medical professionals from various segments of different industry/business houses. This helps in refining the work and candidature of our students from different fields.
+                                The main strength of Medicaps University is its highly qualified faculty. We have an optimal blend of academic brilliance and industry exposure, supplemented by specialized visiting faculty, industry experts, and senior medical professionals from various segments of different industry/business houses. This helps in refining the work and candidature of our students from different fields.
                             </p>
                         </div>
 
                         {/* Visual Image Grid */}
-                        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-                            <img alt="Campus Life" className="w-full object-cover h-32 sm:h-40 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/1760/2019/7/8/Auditorium%20of%20Medi-Caps%20University%20Indore_Auditorium.jpg" />
-                            <img alt="University Campus View" className="w-full object-cover h-32 sm:h-40 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi3} />
-                            <img alt="Medi-Caps Campus" className="w-full object-cover h-32 sm:h-40 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedicapsGallery} />
-                            <img alt="Engineering Wing" className="w-full object-cover h-32 sm:h-40 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi1} />
+                        <div className="w-full lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <img alt="Campus Life" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/1760/2019/7/8/Auditorium%20of%20Medi-Caps%20University%20Indore_Auditorium.jpg" />
+                            <img alt="University Campus View" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi3} />
+                            <img alt="Medicaps Campus" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedicapsGallery} />
+                            <img alt="Engineering Wing" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi1} />
+                            <img alt="Academic Block" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi2} />
+                            <img alt="Main Library" className="w-full object-cover h-28 rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:scale-102" src={aboutMedi4} />
                         </div>
                     </div>
 
@@ -70,7 +72,7 @@ function AboutMedicaps() {
                                 </p>
                             </div>
                             <div className="w-full lg:w-1/2">
-                                <img className="object-cover object-center w-full h-64 sm:h-72 rounded-xl shadow-md border-4 border-gray-50" alt="Medi-Caps University Vision" src="https://www.medicaps.ac.in/public/frontend/images/the-university-img1.webp" />
+                                <img className="object-cover object-center w-full h-64 sm:h-72 rounded-xl shadow-md border-4 border-gray-50" alt="Medicaps University Vision" src="https://www.medicaps.ac.in/public/frontend/images/the-university-img1.webp" />
                             </div>
                         </div>
 
@@ -109,7 +111,7 @@ function AboutMedicaps() {
                                 </ul>
                             </div>
                             <div className="w-full lg:w-1/2">
-                                <img className="object-cover object-center w-full h-64 sm:h-72 rounded-xl shadow-md border-4 border-gray-50" alt="Medi-Caps Academic Collaboration" src="https://www.medicaps.ac.in/public/frontend/images/academic-collaboration-img.webp" />
+                                <img className="object-cover object-center w-full h-64 sm:h-72 rounded-xl shadow-md border-4 border-gray-50" alt="Medicaps Academic Collaboration" src="https://www.medicaps.ac.in/public/frontend/images/academic-collaboration-img.webp" />
                             </div>
                         </div>
                     </div>

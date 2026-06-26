@@ -8,12 +8,19 @@ const CountContext = createContext();
 export function ContextProvider({ children }) {
   const [count, setCount] = useState(0);
   const [isRegModalOpen, setIsRegModalOpen] = useState(false);
+  const [isCmtModalOpen, setIsCmtModalOpen] = useState(false);
+  const [isBrochureModalOpen, setIsBrochureModalOpen] = useState(false);
 
   // Define the context value
   
   // Provide the context value to the children components
   return (
-    <CountContext.Provider value={{count, setCount, isRegModalOpen, setIsRegModalOpen}}>
+    <CountContext.Provider value={{
+      count, setCount, 
+      isRegModalOpen, setIsRegModalOpen,
+      isCmtModalOpen, setIsCmtModalOpen,
+      isBrochureModalOpen, setIsBrochureModalOpen
+    }}>
       {children}
     </CountContext.Provider>
   );
@@ -26,6 +33,14 @@ export function useCount() {
 
 // Create a custom hook to access registration modal state
 export function useRegistration() {
-  const { isRegModalOpen, setIsRegModalOpen } = useContext(CountContext);
-  return { isRegModalOpen, setIsRegModalOpen };
+  const { 
+    isRegModalOpen, setIsRegModalOpen,
+    isCmtModalOpen, setIsCmtModalOpen,
+    isBrochureModalOpen, setIsBrochureModalOpen
+  } = useContext(CountContext);
+  return { 
+    isRegModalOpen, setIsRegModalOpen,
+    isCmtModalOpen, setIsCmtModalOpen,
+    isBrochureModalOpen, setIsBrochureModalOpen
+  };
 }

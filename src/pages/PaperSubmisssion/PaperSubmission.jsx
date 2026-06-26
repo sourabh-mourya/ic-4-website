@@ -11,8 +11,18 @@ import {
   submissionFAQs 
 } from '../../data/data';
 import './PaperSubmission.css';
+import { CONFIG } from '../../constants/config';
+import { useRegistration } from '../../Context/context';
 
 const PaperSubmission = () => {
+  const { setIsCmtModalOpen } = useRegistration();
+
+  const handleCmtClick = (e) => {
+    if (!CONFIG.CMT_PORTAL_ENABLED) {
+      e.preventDefault();
+      setIsCmtModalOpen(true);
+    }
+  };
   return (
     <>
       <Nav />
@@ -236,6 +246,7 @@ const PaperSubmission = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="click-scale"
+              onClick={handleCmtClick}
             >
               <button className="px-8 py-3.5 bg-[#a21d2e] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#861726] transition shadow-lg tracking-wider font-heading">
                 Access CMT Submission Portal

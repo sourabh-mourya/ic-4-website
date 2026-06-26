@@ -111,7 +111,7 @@ function Register() {
                                     <span className="text-[0.68rem] uppercase font-black text-gray-400 block tracking-wider">Gateway Target</span>
                                     {CONFIG.REGISTRATION_ENABLED ? (
                                         <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" className="text-[#016698] font-bold text-sm underline hover:text-[#293985]" target="_blank" rel="noopener noreferrer">
-                                            Medi-Caps Miscellaneous Portal
+                                            Medicaps Miscellaneous Portal
                                         </a>
                                     ) : (
                                         <span className="text-[#a21d2e] font-bold text-sm">
@@ -126,7 +126,7 @@ function Register() {
                         {CONFIG.REGISTRATION_ENABLED ? (
                             <div className="w-full lg:w-2/5 flex flex-col items-center justify-center bg-gray-50 border border-gray-150 rounded-2xl p-6">
                                 <div className="bg-white p-3 rounded-2xl shadow-md border border-gray-100 mb-4 max-w-[220px]">
-                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medi-Caps University UPI QR Code" />
+                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medicaps University UPI QR Code" />
                                 </div>
                                 <span className="text-xs font-bold text-gray-500 text-center tracking-wide block max-w-xs leading-relaxed">
                                     Scan this UPI QR code using any UPI payment app to transfer registration fees directly.
@@ -135,7 +135,7 @@ function Register() {
                         ) : (
                             <div className="w-full lg:w-2/5 flex flex-col items-center justify-center bg-gray-50 border border-gray-150 rounded-2xl p-6 relative overflow-hidden">
                                 <div className="bg-white p-3 rounded-2xl shadow-md border border-gray-100 mb-4 max-w-[220px] filter blur-sm select-none pointer-events-none">
-                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medi-Caps University UPI QR Code" />
+                                    <img className="w-full h-auto object-contain rounded-xl" src={assets.paymentQR} alt="Medicaps University UPI QR Code" />
                                 </div>
                                 <div className="absolute inset-0 bg-slate-900/10 flex flex-col items-center justify-center p-4 text-center">
                                     <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 text-[#a21d2e]">

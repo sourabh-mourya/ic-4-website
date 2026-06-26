@@ -17,9 +17,9 @@ export const conferenceInfo = {
   abbreviation: "IC4'27",
   dates: 'March  18-20,2027',
   year: '2027',
-  venue: 'Main Auditorium, MediCaps University',
+  venue: 'Main Auditorium, Medicaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
-  phones: ['0731-3111500', '0731-3111501'],
+  phones: ['+91 731-3111500', '+91 731-3111501'],
   email: 'ic4@medicaps.ac.in',
 };
 
@@ -90,9 +90,9 @@ export const footerContent = {
 // Venue Info
 // ──────────────────────────────────────────────
 export const venueInfo = {
-  name: 'Main Auditorium, MediCaps University',
+  name: 'Main Auditorium, Medicaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
-  phones: ['0731-3111500', '0731-3111501'],
+  phones: ['+91 731-3111500', '+91 731-3111501'],
   email: 'ic4@medicaps.ac.in',
   mapSrc: 'https://maps.google.com/maps?width=2048&height=600&hl=en&q=medi-caps+university&t=&z=12&ie=UTF8&iwloc=B&output=embed',
 };
@@ -133,11 +133,11 @@ export const committeeData = {
   ],
   ieeeMPSection: [
     { name: 'Prof. G S Tomar', designation: 'Chairperson, IEEE MP Section', image: committeePhotos.gsTomar_mp },
-    { name: 'Prof. Manish Dixit', designation: 'Chair-Elect', image: committeePhotos.manishDixit },
-    { name: 'Prof. Jinendra Agrawal', designation: 'Vice Chairperson', image: committeePhotos.jinendraAgrawal },
-    { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson', image: committeePhotos.manmathBadapanda },
-    { name: 'Prof. M P S Chawla', designation: 'Secretary', image: committeePhotos.mpSChawla },
-    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair CSE', image: committeePhotos.durgeshMishra },
+    { name: 'Prof. Manish Dixit', designation: 'Chair Elect, IEEE MP Section', image: committeePhotos.manishDixit },
+    { name: 'Prof. Jinendra Agrawal', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.jinendraAgrawal },
+    { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.manmathBadapanda },
+    { name: 'Prof. M P S Chawla', designation: 'Secretary, IEEE MP Section', image: committeePhotos.mpSChawla },
+    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair Computer Society ', image: committeePhotos.durgeshMishra },
   ],
   ieeeFranceSection: [
     { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
@@ -171,9 +171,9 @@ export const workingCommittee = [
 ];
 
 export const internationalAdvisoryCommittee1 = [
-  'Prof. G S Tomar, Chairperson', 'Prof. Manish Dixit, Chair-Elect',
+  'Prof. G S Tomar, Chairperson', 'Prof. Manish Dixit, Chair Elect',
   'Prof. Manmath Badapanda, Vice Chairperson', 'Prof. M P S Chawla, Secretary',
-  'Prof. Vijayalaxmi, Secretary & WIE Chair', 'Prof. Durgesh Kumar Mishra, Chair CS',
+  'Prof. Vijayalaxmi, Secretary & WIE Chair', 'Prof. Durgesh Kumar Mishra, Chair Computer Society ',
   'Prof. Amit Raje, Chair PE Chapter', 'Prof. Jinendra Agrawal, TPAC Chair',
   'Prof. Amit Ojha, MANIT Bhopal', 'Prof. Somesh Kumar, Chair SAC',
   'Prof. Ashish Singhal, Vice-Chair SAC', 'Prof. Shaibal Mukherjee, IIT Indore',

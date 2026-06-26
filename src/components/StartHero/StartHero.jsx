@@ -87,12 +87,19 @@ import { CONFIG } from '../../constants/config';
 import { useRegistration } from '../../Context/context';
 
 const StartHero = (props) => {
-    const { setIsRegModalOpen } = useRegistration();
+    const { setIsRegModalOpen, setIsBrochureModalOpen } = useRegistration();
 
     const handleRegisterClick = (e) => {
         if (!CONFIG.REGISTRATION_ENABLED) {
             e.preventDefault();
             setIsRegModalOpen(true);
+        }
+    };
+
+    const handleBrochureClick = (e) => {
+        if (!CONFIG.BROCHURE_DOWNLOAD_ENABLED) {
+            e.preventDefault();
+            setIsBrochureModalOpen(true);
         }
     };
 
@@ -125,7 +132,7 @@ const StartHero = (props) => {
             >
                 <div className="container mx-auto px-6 py-16 text-center z-10 flex flex-col items-center">
                     <span className="bg-[#a21d2e] text-white text-xs font-bold uppercase px-3 py-1.5 rounded-full tracking-widest mb-6 animate-pulse shadow-lg">
-                        Initiated By MediCaps University
+                        Initiated By Medicaps University
                     </span>
                     <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight max-w-4xl text-center leading-tight font-heading" style={{ color: 'white', WebkitTextFillColor: 'white' }}>
                         {heroContent.heading}
@@ -134,7 +141,7 @@ const StartHero = (props) => {
                         ({heroContent.shortName})
                     </p>
                     <p className="text-sm sm:text-lg text-gray-300 max-w-2xl mt-4 font-medium">
-                        {conferenceInfo.dates} | {conferenceInfo.venue}, Indore
+                        {conferenceInfo.dates}
                     </p>
 
                     {/* Action Buttons */}
@@ -149,7 +156,7 @@ const StartHero = (props) => {
                                 Submit Paper
                             </button>
                         </Link>
-                        <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" className="click-scale">
+                        <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" className="click-scale" onClick={handleBrochureClick}>
                             <button className="py-2.5 px-6 text-xs sm:text-sm tracking-wider uppercase font-semibold bg-[#016698] text-white rounded-lg hover:bg-[#014f75] transition duration-150 shadow flex items-center gap-2">
                                 <i className="fa-solid fa-circle-down"></i> Brochure
                             </button>

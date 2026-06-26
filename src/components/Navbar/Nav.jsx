@@ -12,12 +12,20 @@ import { useRegistration } from '../../Context/context';
 const Nav = memo((props) => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  const { setIsRegModalOpen } = useRegistration();
+  const { setIsRegModalOpen, setIsBrochureModalOpen } = useRegistration();
 
   const handleRegisterClick = (e) => {
     if (!CONFIG.REGISTRATION_ENABLED) {
       e.preventDefault();
       setIsRegModalOpen(true);
+      setOpen(false);
+    }
+  };
+
+  const handleBrochureClick = (e) => {
+    if (!CONFIG.BROCHURE_DOWNLOAD_ENABLED) {
+      e.preventDefault();
+      setIsBrochureModalOpen(true);
       setOpen(false);
     }
   };
@@ -37,7 +45,7 @@ const Nav = memo((props) => {
             <Link to={ROUTES.HOME}>
               <img
                 src={assets.medicapsLogo}
-                alt="Medi-Caps University"
+                alt="Medicaps University"
                 className="w-[90px] sm:w-[120px] md:w-[150px] lg:w-[170px]"
               />
             </Link>
@@ -57,7 +65,7 @@ const Nav = memo((props) => {
           <div className="flex-shrink-0">
             <img
               src={assets.medicaps25}
-              alt="Medi-Caps 25 Years"
+              alt="Medicaps 25 Years"
               className="w-[45px] sm:w-[65px] md:w-[90px] lg:w-[115px]"
             />
           </div>
@@ -102,7 +110,7 @@ const Nav = memo((props) => {
               {/* Overlay Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/20 flex-shrink-0">
                 <Link to={ROUTES.HOME} onClick={() => setOpen(false)}>
-                  <img src={assets.medicapsLogo} alt="Medi-Caps" className="w-[100px] brightness-0 invert" />
+                  <img src={assets.medicapsLogo} alt="Medicaps" className="w-[100px] brightness-0 invert" />
                 </Link>
                 <button onClick={() => setOpen(false)} className="focus:outline-none">
                   <img src={close} alt="Close" width={30} />
@@ -145,6 +153,7 @@ const Nav = memo((props) => {
                   download="conferenceBrochure"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleBrochureClick}
                 >
                   <button className="w-full py-3 bg-[#cc0000] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#a21d2e] transition duration-150 flex items-center justify-center gap-2 tracking-wider">
                     <i className="fa-solid fa-circle-down"></i> Download Brochure
@@ -185,7 +194,7 @@ const Nav = memo((props) => {
                 Register
               </button>
             </Link>
-            <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer">
+            <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" onClick={handleBrochureClick}>
               <button className="px-5 py-2.5 bg-[#cc0000] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#a21d2e] shadow hover:shadow-md transition duration-150 flex items-center gap-2 whitespace-nowrap">
                 <i className="fa-solid fa-circle-down"></i> Brochure
               </button>
