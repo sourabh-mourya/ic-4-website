@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="text-black body-font mt-4 gradientColor">
                 <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
 
-                    <span className="ml-3 text-l text-white font-black font-[Poppins]">IC4'26 | © 2026 IC4'26 </span>
+                    <span className="ml-3 text-l text-white font-black font-[Poppins]">IC4'27 | © 2026 IC4'27 </span>
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                         <a className="text-white" href="https://www.facebook.com/share/18WMTa4GR9/?mibextid=qi2Omg">

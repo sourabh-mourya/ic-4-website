@@ -10,9 +10,7 @@ import { ROUTES } from '../../constants/routes';
 const Nav = memo((props) => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  console.log("Nav component render check:", { heroContent, navLinks });
 
-  // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
   }, [location]);
@@ -20,121 +18,169 @@ const Nav = memo((props) => {
   return (
     <>
       {/* ── TOP LOGO BAR ── */}
-      <nav className="container mx-auto flex items-center justify-between flex-wrap bg-white py-3 px-4 md:px-8 border-b border-gray-100">
-        <div className="flex items-center flex-shrink-0 text-white">
-          <div className="font-bold text-2xl cursor-pointer flex items-center">
-            <Link to={ROUTES.HOME} className="flex title-font font-medium items-center text-gray-900">
-              <img className="medicapsLogo lg:mt-2" src={assets.medicapsLogo} alt="Medi-Caps University" />
+      <nav className="w-full bg-white border-b border-gray-100">
+        <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-3 md:py-4">
+
+          {/* Left: Medicaps Logo */}
+          <div className="flex items-center flex-shrink-0">
+            <Link to={ROUTES.HOME}>
+              <img
+                src={assets.medicapsLogo}
+                alt="Medi-Caps University"
+                className="w-[90px] sm:w-[120px] md:w-[150px] lg:w-[170px]"
+              />
             </Link>
           </div>
-        </div>
 
-        <div className="hidden lg:flex flex-grow justify-center items-center max-w-4xl mx-auto">
-          <div className="text-center">
-            <p className="text-center text-[1.4rem] xl:text-[1.8rem] text-[#016698] startHeading12 mt-2 headingMain font-extrabold tracking-tight leading-tight">
+          {/* Center: Conference Title */}
+          <div className="flex-1 text-center px-2 md:px-8">
+            <p className="text-[0.78rem] sm:text-[1rem] md:text-[1.3rem] lg:text-[1.6rem] headingMain font-extrabold tracking-tight leading-tight">
               {heroContent.heading} ({heroContent.shortName})
             </p>
-            <p className="text-[0.9rem] font-bold text-gray-600 tracking-wide mt-1">
-              {heroContent.dates} | Main Auditorium, Medi-Caps University
+            <p className="text-[0.62rem] sm:text-[0.75rem] md:text-[0.85rem] font-bold text-gray-600 tracking-wide mt-1">
+              {heroContent.dates}
             </p>
           </div>
-        </div>
 
-        <div className="flex items-center">
-          <span className="hover:opacity-90 transition-opacity duration-300 nav-link1 dispNone1">
-            <img src={assets.medicaps25} alt="Medi-Caps 25 Years" width={150} />
-          </span>
+          {/* Right: 25 Years Badge */}
+          <div className="flex-shrink-0">
+            <img
+              src={assets.medicaps25}
+              alt="Medi-Caps 25 Years"
+              className="w-[45px] sm:w-[65px] md:w-[90px] lg:w-[115px]"
+            />
+          </div>
+
         </div>
       </nav>
 
-      {/* ── STICKY GLASS NAVIGATION BAR ── */}
-      <div className="w-full sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm navClass">
-        <div className="container mx-auto flex items-center justify-between py-2.5 px-4 md:px-8">
+      {/* ── STICKY NAVBAR ── */}
+      <div className="w-full sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-2.5 relative">
 
-          {/* Mobile Title Logo (shows only when mobile nav menu is closed) */}
+          {/* Mobile: Short name */}
           <div className="lg:hidden flex items-center">
-            <span className="font-black text-[#016698] text-sm tracking-widest">{heroContent.shortName}</span>
+            <span className="font-black text-[#016698] text-sm tracking-widest">
+              {heroContent.shortName}
+            </span>
           </div>
 
-          {/* Quick Register CTA for mobile/tablet */}
-          <div className="lg:hidden flex items-center gap-3 ml-auto mr-4">
-            <Link to={ROUTES.REGISTER} className="click-scale">
-              <button className="bg-[#a21d2e] text-white py-1 px-3 text-[0.72rem] font-bold rounded-md uppercase tracking-wider shadow-sm hover:opacity-90 transition-opacity duration-300">
+          {/* Mobile: Register + Hamburger */}
+          <div className="lg:hidden flex items-center gap-2 ml-auto">
+            <Link to={ROUTES.REGISTER}>
+              <button className="px-3 py-1 bg-[#016698] text-white text-[0.68rem] font-bold uppercase rounded-md">
                 Register
               </button>
             </Link>
+            <button
+              onClick={() => setOpen(!open)}
+              className="focus:outline-none p-1"
+              aria-label="Toggle menu"
+            >
+              {!open
+                ? <img src={hamburger} alt="Menu" width={28} />
+                : <img src={close} alt="Close" width={28} />
+              }
+            </button>
           </div>
 
-          {/* Hamburger (mobile toggle) */}
-          <div onClick={() => setOpen(!open)} className="text-3xl cursor-pointer lg:hidden items-center z-50">
-            {!open
-              ? <img src={hamburger} alt="Menu" width={30} />
-              : <img src={close} alt="Close" width={30} />
-            }
-          </div>
+          {/* ── MOBILE FULLSCREEN MENU ── */}
+          {open && (
+            <div className="lg:hidden fixed inset-0 w-full h-full bg-[#016698] z-[9999] flex flex-col overflow-y-auto">
 
-          <ul className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all sideNav duration-500 ease-in navClass1 ${open ? 'top-full opacity-100 bg-[#016698]/95 backdrop-blur-lg text-white lg:bg-transparent lg:text-inherit' : 'top-[-1100px] opacity-0 lg:opacity-100'}`}>
+              {/* Overlay Header */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/20 flex-shrink-0">
+                <Link to={ROUTES.HOME} onClick={() => setOpen(false)}>
+                  <img src={assets.medicapsLogo} alt="Medi-Caps" className="w-[100px] brightness-0 invert" />
+                </Link>
+                <button onClick={() => setOpen(false)} className="focus:outline-none">
+                  <img src={close} alt="Close" width={30} />
+                </button>
+              </div>
+
+              {/* Nav Links */}
+              <ul className="flex flex-col px-6 py-2 flex-1">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.link}
+                      onClick={() => setOpen(false)}
+                      className={`flex items-center py-3.5 text-[0.9rem] font-bold uppercase tracking-wider border-b border-white/10 transition-colors duration-200
+                        ${location.pathname === link.link
+                          ? 'text-yellow-300'
+                          : 'text-white hover:text-yellow-200'
+                        }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile Action Buttons */}
+              <div className="flex flex-col gap-3 px-6 py-6 flex-shrink-0">
+                <Link to={ROUTES.PAPER_SUBMISSION} onClick={() => setOpen(false)}>
+                  <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 transition duration-150 tracking-wider">
+                    Paper Submission
+                  </button>
+                </Link>
+                <Link to={ROUTES.REGISTER} onClick={() => setOpen(false)}>
+                  <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 transition duration-150 tracking-wider">
+                    Register
+                  </button>
+                </Link>
+                <a
+                  href={assets.brochurePDF}
+                  download="conferenceBrochure"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="w-full py-3 bg-[#cc0000] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#a21d2e] transition duration-150 flex items-center justify-center gap-2 tracking-wider">
+                    <i className="fa-solid fa-circle-down"></i> Download Brochure
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          )}
+
+          {/* ── DESKTOP NAV LINKS ── */}
+          <ul className="hidden lg:flex items-center justify-center flex-1 gap-20 xl:gap-10">
             {navLinks.map((link) => (
-              <li key={link.name} className="lg:ml-5 text-xs lg:my-0 my-6">
+              <li key={link.name}>
                 <Link
                   to={link.link}
-                  className={`linkText font-bold text-[0.88rem] uppercase tracking-wider transition-colors duration-300 py-1 conf-nav-link ${location.pathname === link.link
-                    ? 'text-white border-l-4 border-white pl-2 lg:border-l-0 lg:border-b-2 lg:border-[#a21d2e] lg:pl-0 lg:text-[#a21d2e]'
-                    : 'text-white/80 hover:text-white lg:text-[#293985] lg:hover:text-[#a21d2e]'
+                  className={`conf-nav-link font-bold text-[0.72rem] xl:text-[0.8rem] uppercase tracking-wider transition-colors duration-200 pb-1 whitespace-nowrap
+                    ${location.pathname === link.link
+                      ? 'text-[#a21d2e] border-b-2 border-[#a21d2e]'
+                      : 'text-[#293985] hover:text-[#a21d2e]'
                     }`}
                 >
                   {link.name}
                 </Link>
               </li>
             ))}
-
-            {/* Collapsible Mobile Action Buttons */}
-            <li className="lg:hidden mt-6 pr-9 space-y-4">
-              <div className="w-full border-t border-white/20 my-4" />
-              <div className="flex flex-col gap-3">
-                <Link to={ROUTES.PAPER_SUBMISSION} className="w-full block click-scale">
-                  <button className="w-full py-2 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider bg-transparent text-white border border-white hover:bg-white hover:text-[#016698] transition-all duration-300">
-                    Paper Submission
-                  </button>
-                </Link>
-
-                <Link to={ROUTES.REGISTER} className="w-full block click-scale">
-                  <button type="button" className="w-full py-2 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider bg-[#a21d2e] text-white hover:bg-[#a21d2e]/80 transition-all duration-300">
-                    Register
-                  </button>
-                </Link>
-
-                <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" className="w-full block click-scale">
-                  <button type="button" className="w-full py-2 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider bg-white/10 text-white border border-white/10 hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-1.5">
-                    <i className="fa-solid fa-circle-down"></i> Brochure
-                  </button>
-                </a>
-              </div>
-            </li>
           </ul>
 
-          <div className="hidden lg:flex justify-end items-center gap-3 ml-auto">
-            {/* Paper Submission button */}
-            <Link to={ROUTES.PAPER_SUBMISSION} className="click-scale">
-              <button className="conf-btn-secondary py-1.5 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider">
+          {/* ── DESKTOP ACTION BUTTONS ── */}
+          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <Link to={ROUTES.PAPER_SUBMISSION}>
+              <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
                 Paper Submission
               </button>
             </Link>
-
-            {/* Register button */}
-            <Link to={ROUTES.REGISTER} className="click-scale">
-              <button type="button" className="conf-btn-primary py-1.5 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider">
+            <Link to={ROUTES.REGISTER}>
+              <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
                 Register
               </button>
             </Link>
-
-            {/* Brochure button */}
-            <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" className="click-scale">
-              <button type="button" className="conf-btn-accent py-1.5 px-4 text-xs font-semibold rounded-lg uppercase tracking-wider flex items-center gap-1.5">
+            <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer">
+              <button className="px-5 py-2.5 bg-[#cc0000] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#a21d2e] shadow hover:shadow-md transition duration-150 flex items-center gap-2 whitespace-nowrap">
                 <i className="fa-solid fa-circle-down"></i> Brochure
               </button>
             </a>
           </div>
+
         </div>
       </div>
     </>
@@ -143,3 +189,178 @@ const Nav = memo((props) => {
 
 Nav.displayName = 'Nav';
 export default Nav;
+
+// import React, { useState, useEffect, memo } from 'react';
+// import './Navbar.css';
+// import { Link, useLocation } from 'react-router-dom';
+// import hamburger from './hamburger.svg';
+// import close from './close.svg';
+// import { heroContent, navLinks } from '../../data/data';
+// import { assets } from '../../constants/assets';
+// import { ROUTES } from '../../constants/routes';
+
+// const Nav = memo((props) => {
+//   const location = useLocation();
+//   const [open, setOpen] = useState(false);
+
+//   useEffect(() => {
+//     setOpen(false);
+//   }, [location]);
+
+//   return (
+//     <>
+//       {/* ── TOP LOGO BAR ── */}
+//       <nav className="w-full bg-white border-b border-gray-100">
+//         <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-3">
+
+//           {/* Left: Logo */}
+//           <div className="flex-shrink-0">
+//             <Link to={ROUTES.HOME}>
+//               <img
+//                 src={assets.medicapsLogo}
+//                 alt="Medi-Caps University"
+//                 className="w-[100px] md:w-[140px] lg:w-[160px]"
+//               />
+//             </Link>
+//           </div>
+
+//           {/* Center: Title */}
+//           <div className="flex-1 text-center px-3 md:px-8">
+//             <p className="text-[0.95rem] md:text-[1.2rem] lg:text-[1.5rem] headingMain font-extrabold tracking-tight leading-tight">
+//               {heroContent.heading} ({heroContent.shortName})
+//             </p>
+//             <p className="text-[0.7rem] md:text-[0.82rem] font-bold text-gray-600 tracking-wide mt-1">
+//               {heroContent.dates}
+//             </p>
+//           </div>
+
+//           {/* Right: 25yr badge — visible on all screens */}
+//           <div className="flex-shrink-0">
+//             <img src={assets.medicaps25} alt="25 Years" className="w-[55px] md:w-[80px] lg:w-[110px]" />
+//           </div>
+
+//         </div>
+//       </nav>
+
+//       {/* ── STICKY NAVBAR ── */}
+//       <div className="w-full sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+//         <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-2 relative">
+
+//           {/* Mobile: short name left */}
+//           <div className="lg:hidden">
+//             <span className="font-black text-[#016698] text-sm tracking-widest">{heroContent.shortName}</span>
+//           </div>
+
+//           {/* Mobile: Register + Hamburger right */}
+//           <div className="lg:hidden flex items-center gap-2 ml-auto">
+//             <Link to={ROUTES.REGISTER}>
+//               <button className="px-3 py-1 bg-[#016698] text-white text-[0.68rem] font-bold uppercase rounded-md">
+//                 Register
+//               </button>
+//             </Link>
+//             <button onClick={() => setOpen(!open)} className="focus:outline-none p-1">
+//               {!open
+//                 ? <img src={hamburger} alt="Menu" width={28} />
+//                 : <img src={close} alt="Close" width={28} />
+//               }
+//             </button>
+//           </div>
+
+//           {/* ── MOBILE FULLSCREEN MENU OVERLAY ── */}
+//           {open && (
+//             <div className="lg:hidden fixed inset-0 top-0 left-0 w-full h-full bg-[#016698] z-[9999] flex flex-col overflow-y-auto">
+
+//               {/* Header inside overlay */}
+//               <div className="flex items-center justify-between px-6 py-4 border-b border-white/20">
+//                 <span className="font-black text-white text-lg tracking-widest">{heroContent.shortName}</span>
+//                 <button onClick={() => setOpen(false)} className="focus:outline-none">
+//                   <img src={close} alt="Close" width={28} />
+//                 </button>
+//               </div>
+
+//               {/* Nav Links */}
+//               <ul className="flex flex-col px-6 py-4 gap-1">
+//                 {navLinks.map((link) => (
+//                   <li key={link.name}>
+//                     <Link
+//                       to={link.link}
+//                       onClick={() => setOpen(false)}
+//                       className={`block py-3 text-[0.95rem] font-bold uppercase tracking-wider border-b border-white/10 transition-colors duration-200
+//                         ${location.pathname === link.link
+//                           ? 'text-yellow-300'
+//                           : 'text-white hover:text-yellow-200'
+//                         }`}
+//                     >
+//                       {link.name}
+//                     </Link>
+//                   </li>
+//                 ))}
+//               </ul>
+
+//               {/* Action Buttons */}
+//               <div className="flex flex-col gap-3 px-6 py-4 mt-2">
+//                 <Link to={ROUTES.PAPER_SUBMISSION} onClick={() => setOpen(false)}>
+//                   <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-lg hover:bg-gray-100 transition duration-150">
+//                     Paper Submission
+//                   </button>
+//                 </Link>
+//                 <Link to={ROUTES.REGISTER} onClick={() => setOpen(false)}>
+//                   <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-lg hover:bg-gray-100 transition duration-150">
+//                     Register
+//                   </button>
+//                 </Link>
+//                 <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer">
+//                   <button className="w-full py-3 bg-[#ff0000] text-white text-sm font-bold uppercase rounded-lg hover:bg-[#a21d2e] transition duration-150 flex items-center justify-center gap-2">
+//                     <i className="fa-solid fa-circle-down"></i> Download Brochure
+//                   </button>
+//                 </a>
+//               </div>
+
+//             </div>
+//           )}
+
+//           {/* ── DESKTOP NAV LINKS ── */}
+//           <ul className="hidden lg:flex items-center justify-center flex-1 gap-3 xl:gap-6">
+//             {navLinks.map((link) => (
+//               <li key={link.name}>
+//                 <Link
+//                   to={link.link}
+//                   className={`conf-nav-link font-bold text-[0.75rem] xl:text-[0.8rem] uppercase tracking-wider transition-colors duration-200 pb-1 whitespace-nowrap
+//                     ${location.pathname === link.link
+//                       ? 'text-[#a21d2e] border-b-2 border-[#a21d2e]'
+//                       : 'text-[#293985] hover:text-[#a21d2e]'
+//                     }`}
+//                 >
+//                   {link.name}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+
+//           {/* ── DESKTOP ACTION BUTTONS ── */}
+//           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+//             <Link to={ROUTES.PAPER_SUBMISSION}>
+//               <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
+//                 Paper Submission
+//               </button>
+//             </Link>
+//             <Link to={ROUTES.REGISTER}>
+//               <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
+//                 Register
+//               </button>
+//             </Link>
+//             <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer">
+//               <button className="px-5 py-2.5 bg-[#cc0000] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#a21d2e] shadow hover:shadow-md transition duration-150 flex items-center gap-2 whitespace-nowrap">
+//                 <i className="fa-solid fa-circle-down"></i> Brochure
+//               </button>
+//             </a>
+//           </div>
+
+//         </div>
+//       </div>
+//     </>
+//   );
+// });
+
+// Nav.displayName = 'Nav';
+// export default Nav;

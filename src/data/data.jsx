@@ -11,13 +11,13 @@ import { committeePhotos } from '../constants/assets';
 // Conference Info
 // ──────────────────────────────────────────────
 export const conferenceInfo = {
-  shortName: "IC4'26",
+  shortName: "IC4'27",
   edition: '3rd',
   fullName: '3rd International Conference on Computer, Communication and Control',
-  abbreviation: "IC4'26",
+  abbreviation: "IC4'27",
   dates: 'December 10–12, 2026',
   year: '2026',
-  venue: 'Main Auditorium, Medi-Caps University',
+  venue: 'Main Auditorium, MediCaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
   phones: ['0731-3111500', '0731-3111501'],
   email: 'ic4@medicaps.ac.in',
@@ -28,7 +28,7 @@ export const conferenceInfo = {
 // ──────────────────────────────────────────────
 export const heroContent = {
   heading: '3rd International Conference on Computer, Communication and Control',
-  shortName: "IC4'26",
+  shortName: "IC4'27",
   dates: 'December 10–12, 2026',
 };
 
@@ -49,11 +49,11 @@ export const navLinks = [
 // Important Dates
 // ──────────────────────────────────────────────
 export const importantDates = [
-  { id: 'submission',   label: 'Full Paper Submission',          date: 'Sept 15, 2026',        icon: 'fa-hourglass-end' },
-  { id: 'notification', label: 'Acceptance Notification',        date: 'Oct 15, 2026',         icon: 'fa-bell' },
-  { id: 'camera',       label: 'Camera Ready Paper Submission',  date: 'Nov 15, 2026',         icon: 'fa-cloud-arrow-up' },
-  { id: 'registration', label: 'Registration Deadline',          date: 'Nov 15, 2026',         icon: 'fa-id-card' },
-  { id: 'conference',   label: 'Conference Date',                date: 'December 10–12, 2026', icon: 'fa-chalkboard-user' },
+  { id: 'submission', label: 'Full Paper Submission', date: 'Sept 15, 2026', icon: 'fa-hourglass-end' },
+  { id: 'notification', label: 'Acceptance Notification', date: 'Oct 15, 2026', icon: 'fa-bell' },
+  { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Nov 15, 2026', icon: 'fa-cloud-arrow-up' },
+  { id: 'registration', label: 'Registration Deadline', date: 'Nov 15, 2026', icon: 'fa-id-card' },
+  { id: 'conference', label: 'Conference Date', date: 'December 10–12, 2026', icon: 'fa-chalkboard-user' },
 ];
 
 // ──────────────────────────────────────────────
@@ -62,9 +62,9 @@ export const importantDates = [
 export const contactInfo = {
   email: 'ic4@medicaps.ac.in',
   contacts: [
-    { purpose: 'For Paper Submission',       name: 'Dr. Kailash Chandra Bandhu', phone: '+91 9479628030' },
-    { purpose: 'For Travel and Stay',        name: 'Dr. Sonu Kumar',             phone: '+91 9827282120' },
-    { purpose: 'For Conference Event Related', name: 'Prof. Sanket Gupta',       phone: '+91 7000110427' },
+    { purpose: 'For Paper Submission', name: 'Dr. Kailash Chandra Bandhu', phone: '+91 9479628030' },
+    { purpose: 'For Travel and Stay', name: 'Dr. Sonu Kumar', phone: '+91 9827282120' },
+    { purpose: 'For Conference Event Related', name: 'Prof. Sanket Gupta', phone: '+91 7000110427' },
   ],
 };
 
@@ -72,17 +72,17 @@ export const contactInfo = {
 // Social Links  (Footer + data-driven)
 // ──────────────────────────────────────────────
 export const socialLinks = {
-  facebook:  'https://www.facebook.com/share/18WMTa4GR9/?mibextid=qi2Omg',
-  twitter:   'https://x.com/Medicaps_Indore?t=8hTuBIHRt4zLhSSrqYhvXw&s=08',
+  facebook: 'https://www.facebook.com/share/18WMTa4GR9/?mibextid=qi2Omg',
+  twitter: 'https://x.com/Medicaps_Indore?t=8hTuBIHRt4zLhSSrqYhvXw&s=08',
   instagram: 'https://www.instagram.com/medicaps_university/',
-  linkedin:  'https://www.linkedin.com/school/medicaps-university-indore/',
+  linkedin: 'https://www.linkedin.com/school/medicaps-university-indore/',
 };
 
 // ──────────────────────────────────────────────
 // Footer Content
 // ──────────────────────────────────────────────
 export const footerContent = {
-  copyright: "IC4'26 | © 2026 IC4'26",
+  copyright: "IC4'27 | © 2026 IC4'27",
   socialLinks,
 };
 
@@ -90,11 +90,11 @@ export const footerContent = {
 // Venue Info
 // ──────────────────────────────────────────────
 export const venueInfo = {
-  name:    'Main Auditorium, Medi-Caps University',
+  name: 'Main Auditorium, MediCaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
-  phones:  ['0731-3111500', '0731-3111501'],
-  email:   'ic4@medicaps.ac.in',
-  mapSrc:  'https://maps.google.com/maps?width=2048&height=600&hl=en&q=medi-caps+university&t=&z=12&ie=UTF8&iwloc=B&output=embed',
+  phones: ['0731-3111500', '0731-3111501'],
+  email: 'ic4@medicaps.ac.in',
+  mapSrc: 'https://maps.google.com/maps?width=2048&height=600&hl=en&q=medi-caps+university&t=&z=12&ie=UTF8&iwloc=B&output=embed',
 };
 
 // ──────────────────────────────────────────────
@@ -102,25 +102,25 @@ export const venueInfo = {
 // ──────────────────────────────────────────────
 export const committeeData = {
   chiefPatron: [
-    { name: 'Shri R.C. Mittal',    designation: 'Chancellor',                   image: committeePhotos.rcMittal },
-    { name: 'Shri Gopal Agrawal',  designation: 'Pro Chancellor',               image: committeePhotos.gopalAgrawal },
-    { name: 'Shri Palash Garg',    designation: 'OSD to Chancellor',            image: committeePhotos.palashGarg },
-    { name: 'Ms. Saloni Garg',     designation: 'Director Promotion & Branding', image: committeePhotos.saloniGarg },
+    { name: 'Shri R.C. Mittal', designation: 'Chancellor', image: committeePhotos.rcMittal },
+    { name: 'Shri Gopal Agrawal', designation: 'Pro Chancellor', image: committeePhotos.gopalAgrawal },
+    { name: 'Shri Palash Garg', designation: 'OSD to Chancellor', image: committeePhotos.palashGarg },
+    { name: 'Ms. Saloni Garg', designation: 'Director Promotion & Branding', image: committeePhotos.saloniGarg },
   ],
   patron: [
-    { name: 'Prof. D.K. Patnaik',          designation: 'Vice Chancellor',      image: committeePhotos.dkPatnaik },
-    { name: 'Prof. Birajashis Pattnaik',   designation: 'Pro Vice Chancellor',  image: committeePhotos.birajashisPattnaik },
+    { name: 'Prof. D.K. Patnaik', designation: 'Vice Chancellor', image: committeePhotos.dkPatnaik },
+    { name: 'Prof. Birajashis Pattnaik', designation: 'Pro Vice Chancellor', image: committeePhotos.birajashisPattnaik },
   ],
   generalChair: [
     { name: 'Dr. Ratnesh Litoriya', designation: 'Dean of Engineering (Computing)', image: committeePhotos.ratneshLitoriya },
   ],
   generalCoChairs: [
-    { name: 'Dr. Kailash Chandra Bandhu', designation: 'Head of Department, CSE',        image: committeePhotos.kailashBandhu },
-    { name: 'Dr. Prashant Panse',         designation: 'Associate Dean Digitalization',  image: committeePhotos.prashantPanse },
-    { name: 'Dr. Anuradha Kar',           designation: 'Associate Professor, Aivancity', image: committeePhotos.anuradhaKar },
+    { name: 'Dr. Kailash Chandra Bandhu', designation: 'Head of Department, CSE', image: committeePhotos.kailashBandhu },
+    { name: 'Dr. Prashant Panse', designation: 'Associate Dean Digitalization', image: committeePhotos.prashantPanse },
+    { name: 'Dr. Anuradha Kar', designation: 'Associate Professor, Aivancity', image: committeePhotos.anuradhaKar },
   ],
   publicationChairs: [
-    { name: 'Dr. Sonu Kumar',    designation: 'Publication Chair', image: committeePhotos.sonuKumar },
+    { name: 'Dr. Sonu Kumar', designation: 'Publication Chair', image: committeePhotos.sonuKumar },
   ],
   financeChair: [
     { name: 'Prof. Rudresh Shah', designation: 'Finance Chair', image: committeePhotos.rudreshShah },
@@ -132,19 +132,19 @@ export const committeeData = {
     { name: 'Prof. Sanket Gupta', designation: 'Technical Program Committee Chair', image: committeePhotos.sanketGupta },
   ],
   ieeeMPSection: [
-    { name: 'Prof. G S Tomar',              designation: 'Chairperson, IEEE MP Section', image: committeePhotos.gsTomar_mp },
-    { name: 'Prof. Manish Dixit',           designation: 'Chair-Elect',                  image: committeePhotos.manishDixit },
-    { name: 'Prof. Jinendra Agrawal',       designation: 'Vice Chairperson',             image: committeePhotos.jinendraAgrawal },
-    { name: 'Prof. Manmath Badapanda',      designation: 'Vice Chairperson',             image: committeePhotos.manmathBadapanda },
-    { name: 'Prof. M P S Chawla',          designation: 'Secretary',                    image: committeePhotos.mpSChawla },
-    { name: 'Prof. Durgesh Kumar Mishra',   designation: 'Chair CSE',                   image: committeePhotos.durgeshMishra },
+    { name: 'Prof. G S Tomar', designation: 'Chairperson, IEEE MP Section', image: committeePhotos.gsTomar_mp },
+    { name: 'Prof. Manish Dixit', designation: 'Chair-Elect', image: committeePhotos.manishDixit },
+    { name: 'Prof. Jinendra Agrawal', designation: 'Vice Chairperson', image: committeePhotos.jinendraAgrawal },
+    { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson', image: committeePhotos.manmathBadapanda },
+    { name: 'Prof. M P S Chawla', designation: 'Secretary', image: committeePhotos.mpSChawla },
+    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair CSE', image: committeePhotos.durgeshMishra },
   ],
   ieeeFranceSection: [
-    { name: 'Dr. Florence Sedes',     designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
-    { name: 'Dr. Marina Deng',        designation: 'Vice President Conferences',     image: committeePhotos.marinaDeng },
-    { name: 'Gérard-André Capolino',  designation: 'President, Power Electronics',   image: committeePhotos.gerardCapolino },
-    { name: 'Roua Touihri',           designation: 'President Computer',             image: committeePhotos.rouaTouihri },
-    { name: 'Pascal Lorenz',          designation: 'President, Communications',      image: committeePhotos.pascalLorenz },
+    { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
+    { name: 'Dr. Marina Deng', designation: 'Vice President Conferences', image: committeePhotos.marinaDeng },
+    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics', image: committeePhotos.gerardCapolino },
+    { name: 'Roua Touihri', designation: 'President Computer', image: committeePhotos.rouaTouihri },
+    { name: 'Pascal Lorenz', designation: 'President, Communications', image: committeePhotos.pascalLorenz },
   ],
 };
 
@@ -245,21 +245,21 @@ export const internationalAdvisoryCommittee2 = [
 // Previous Conferences  (exactly 4, no IEEE prefix)
 // ──────────────────────────────────────────────
 export const previousConferences = [
-  { id: 'iceeta25',  title: "International Conference IC-EETA'25", year: '2025', link: null,                                                                  image: 'pastConference3' },
-  { id: 'ic4_2024', title: '2nd Conference IC4',                   year: '2024', link: 'https://ieeexplore.ieee.org/xpl/conhome/10486055/proceeding',         image: 'pastConference4' },
-  { id: 'cdan2016', title: 'CDAN Symposium',                       year: '2016', link: 'https://ieeexplore.ieee.org/xpl/conhome/7562831/proceeding',          image: 'pastConference2' },
-  { id: 'ic4_2015', title: '1st Conference IC4',                   year: '2015', link: 'https://ieeexplore.ieee.org/xpl/conhome/7368254/proceeding',          image: 'pastConference1' },
+  { id: 'iceeta25', title: "International Conference IC-EETA'25", year: '2025', link: null, image: 'pastConference3' },
+  { id: 'ic4_2024', title: '2nd Conference IC4', year: '2024', link: 'https://ieeexplore.ieee.org/xpl/conhome/10486055/proceeding', image: 'pastConference4' },
+  { id: 'cdan2016', title: 'CDAN Symposium', year: '2016', link: 'https://ieeexplore.ieee.org/xpl/conhome/7562831/proceeding', image: 'pastConference2' },
+  { id: 'ic4_2015', title: '1st Conference IC4', year: '2015', link: 'https://ieeexplore.ieee.org/xpl/conhome/7368254/proceeding', image: 'pastConference1' },
 ];
 
 // ──────────────────────────────────────────────
 // Registration Fees
 // ──────────────────────────────────────────────
 export const registrationFees = [
-  { category: 'Non-IEEE Professional',   indian: 'INR 9000/-',  international: 'USD 250' },
+  { category: 'Non-IEEE Professional', indian: 'INR 9000/-', international: 'USD 250' },
   { category: 'IEEE Professional Members', indian: 'INR 8000/-', international: 'USD 250' },
-  { category: 'Non-IEEE Students',        indian: 'INR 8000/-',  international: 'USD 250' },
-  { category: 'IEEE Student Members',     indian: 'INR 7000/-',  international: 'USD 250' },
-  { category: 'Industry Participants',    indian: 'INR 10000/-', international: 'USD 250' },
+  { category: 'Non-IEEE Students', indian: 'INR 8000/-', international: 'USD 250' },
+  { category: 'IEEE Student Members', indian: 'INR 7000/-', international: 'USD 250' },
+  { category: 'Industry Participants', indian: 'INR 10000/-', international: 'USD 250' },
 ];
 
 // ──────────────────────────────────────────────
