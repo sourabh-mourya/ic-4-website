@@ -1,118 +1,347 @@
-    .bgimg2 {
-        background-image: linear-gradient(137.59deg, rgb(253, 27, 192) 17.41%, rgb(248, 237, 0) 98.07%);
-    }
+/* ════════════════════════════════════════════
+   StartHero — full styles
+   ════════════════════════════════════════════ */
 
-    .iconclr {
-        color: white;
-        text-align: center;
-    }
-    @keyframes blink {
-        0%, 100% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-      }
-      .blink-text {
-        animation: blink 2s infinite;
-      }
-    .carouselImage {
-        margin-top: -70px;
-        font-size: 50px;
-        height: 750px;
-        background-repeat: no-repeat;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    a[href="https://elfsight.com/visitor-counter-widget/?utm_source=websites&utm_medium=clients&utm_content=visitor-counter&utm_term=localhost&utm_campaign=free-widget"] {
-        display:none;
-      }
-    .startHeading {
-        font-family: 'Josefin Sans', sans-serif;
-    }
+/* ── Root wrapper ── */
+.hero-root {
+    position: relative;
+    z-index: 1;
+    background: #080d1a;
+    color: #ffffff;
+}
 
-    .startHeading1 {
-        font-family: 'Josefin Sans', sans-serif;
-        line-height: 3.5rem;
-    }
+/* ════════════════════════════════════════════
+   Announcement Ticker
+   ════════════════════════════════════════════ */
+.hero-ticker {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    height: 38px;
+}
 
-    .startHeading12 {
-        font-family: 'Anek Latin', sans-serif;
-        line-height: 3rem;  
-    }
+.hero-ticker-label {
+    flex-shrink: 0;
+    background: linear-gradient(to right, #293985, #a21d2e);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0 14px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+}
 
-   
-    article {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        overflow: hidden;
-        white-space: nowrap;
-        width: 100%;
-        display: flex;
-    }
+.hero-ticker-track-wrap {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    height: 100%;
+}
 
-    .wrapper {
-        position: relative;
-    }
+.hero-ticker-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
 
-    .marquee {
-        animation: marquee 30s linear infinite;
-    }
+.hero-ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.88);
+    white-space: nowrap;
+}
 
-    .marquee2 {
-        animation: marquee2 30s linear infinite;
-        position: absolute;
-        top: 0;
-    }
+.hero-ticker-icon {
+    color: #57b7e7;
+    font-size: 0.7rem;
+}
 
-    .wrapper ul {
-        display: flex;
-        list-style: none;
-        padding-left: 0;
-    }
+.hero-ticker-date {
+    color: #f87171;
+    font-weight: 800;
+}
 
-    .wrapper li {
-        margin: 8px;
-        margin-right: 16px;
-        font-size: 1.05rem;
-        font-weight: 600;
-        
-    }
-     
-    li .liName{
-        color : red;
-    }
+/* Marquee animations */
+.marquee  { animation: marquee  30s linear infinite; }
+.marquee2 { animation: marquee2 30s linear infinite; position: absolute; top: 0; }
 
-    @keyframes marquee {
-        from {
-            transform: translateX(0%);
-        }
+@keyframes marquee {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(-100%); }
+}
+@keyframes marquee2 {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0%); }
+}
 
-        to {
-            transform: translateX(-100%);
-        }
-    }
+/* ════════════════════════════════════════════
+   Hero Main Panel
+   ════════════════════════════════════════════ */
+.hero-panel {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
 
-    @keyframes marquee2 {
-        from {
-            transform: translateX(100%);
-        }
+/* Dark overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg,
+        rgba(8, 13, 26, 0.88) 0%,
+        rgba(10, 18, 60, 0.82) 50%,
+        rgba(8, 13, 26, 0.92) 100%
+    );
+}
 
-        to {
-            transform: translateX(0%);
-        }
+/* Decorative blobs */
+.hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+    opacity: 0.35;
+}
+
+.hero-blob--blue {
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, #293985 0%, transparent 70%);
+    top: -120px;
+    left: -100px;
+}
+
+.hero-blob--red {
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, #a21d2e 0%, transparent 70%);
+    bottom: -80px;
+    right: -60px;
+}
+
+/* ── Content container ── */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 64px 20px 48px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ── University badge ── */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(162, 29, 46, 0.85);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(162,29,46,0.4);
+    backdrop-filter: blur(4px);
+    animation: fadeDown 0.6s ease both;
+}
+
+/* ── Edition pill ── */
+.hero-edition-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
+    animation: fadeDown 0.7s ease 0.1s both;
+}
+
+/* ── Main heading ── */
+.hero-heading {
+    font-size: clamp(1.5rem, 4.5vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    -webkit-text-fill-color: #ffffff;
+    animation: fadeDown 0.8s ease 0.15s both;
+}
+
+/* ── IC4'27 shortname ── */
+.hero-shortname {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 800;
+    color: #57b7e7;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+    animation: fadeDown 0.8s ease 0.2s both;
+}
+
+/* ── Date & Venue meta row ── */
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    animation: fadeDown 0.8s ease 0.28s both;
+}
+
+.hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.78);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 99px;
+    padding: 6px 14px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-meta-icon {
+    color: #57b7e7;
+}
+
+.hero-meta-sep {
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .hero-meta-sep { display: none; }
+    .hero-meta { gap: 8px; }
+}
+
+/* ── Action buttons ── */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    animation: fadeDown 0.8s ease 0.36s both;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero-btn--primary {
+    background: #a21d2e;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(162,29,46,0.45);
+}
+.hero-btn--primary:hover {
+    background: #861726;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(162,29,46,0.55);
+}
+
+.hero-btn--outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.65);
+}
+.hero-btn--outline:hover {
+    background: #ffffff;
+    color: #1e2a6e;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.hero-btn--ghost {
+    background: rgba(1, 102, 152, 0.75);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(1,102,152,0.4);
+    backdrop-filter: blur(6px);
+}
+.hero-btn--ghost:hover {
+    background: #016698;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(1,102,152,0.5);
+}
+
+/* ── Scroll hint ── */
+.hero-scroll-hint {
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll-icon {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+}
+
+/* ════════════════════════════════════════════
+   Animations
+   ════════════════════════════════════════════ */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
     }
-    @media only screen and (max-width: 600px) {
-        .startHeading12 {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-        .wrapper li {
-            margin: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(6px); }
+}
+
+/* ── Legacy class kept for compat ── */
+.iconclr { color: white; text-align: center; }

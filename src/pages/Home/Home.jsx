@@ -39,168 +39,156 @@ const HomePage = () => {
             <StartHero />
 
             {/* Important Dates Section */}
-            <section className="py-12 bg-gradient-to-r from-[#016698] to-[#293985] shadow-inner" id="impDates">
+            <section className="home-imp-dates" id="impDates">
                 <ImportantDates />
             </section>
 
-            {/* Conference Scope Section */}
-            <section className="py-16 px-4 md:px-8">
-                <div className="container mx-auto max-w-6xl bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
-                    <div className="flex flex-col lg:flex-row items-center gap-12">
-                        <div className="lg:w-1/2 flex flex-col items-start text-left">
-                            <span className="text-xs uppercase tracking-widest text-[#a21d2e] font-black mb-2">Scope of Event</span>
-                            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#293985] mb-6 font-heading">
-                                Conference Scope
-                            </h2>
-                            <p className="mb-6 leading-relaxed text-gray-700 text-sm sm:text-[0.98rem] text-justify font-medium">
-                                The objective of this international conference is to foster a dynamic exchange of knowledge and innovation across the domains of mechanical, civil, electrical, and computer engineering. By bringing together leading scholars, industry experts, and visionary practitioners, the conference aims to strengthen academic-industry collaboration and provide a forum for the dissemination of pioneering research, advanced technologies, and future-oriented solutions. Emphasizing interdisciplinary synergy, the event is aimed at addressing pressing global challenges while promoting sustainable, cutting-edge practices. Ultimately, it aspires to contribute to the technological growth and sustainable development of our nation, positioning it at the forefront of global innovation. The conference will feature keynote addresses from eminent personalities in various fields aligned with the theme, including distinguished Indian and international speakers.
-                            </p>
-                            <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
-                                <button className="conf-btn-primary">Register Now</button>
+            {/* ── Conference Scope ── */}
+            <section className="home-scope-section">
+                <div className="home-scope-card">
+                    <div className="home-scope-text">
+                        <span className="home-section-eyebrow">Scope of Event</span>
+                        <h2 className="home-section-heading font-heading">Conference Scope</h2>
+                        <p className="home-scope-body">
+                            The objective of this international conference is to foster a dynamic exchange of knowledge and
+                            innovation across the domains of mechanical, civil, electrical, and computer engineering. By
+                            bringing together leading scholars, industry experts, and visionary practitioners, the conference
+                            aims to strengthen academic-industry collaboration and provide a forum for the dissemination of
+                            pioneering research, advanced technologies, and future-oriented solutions. Emphasizing
+                            interdisciplinary synergy, the event is aimed at addressing pressing global challenges while
+                            promoting sustainable, cutting-edge practices.
+                        </p>
+                        <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
+                            <button className="conf-btn-primary">Register Now &rarr;</button>
+                        </Link>
+                    </div>
+
+                    <div className="home-scope-img-wrap">
+                        <div className="home-scope-img-inner">
+                            <img
+                                className="home-scope-img"
+                                alt="IC4 Conference Scope"
+                                src={assets.scopeImage}
+                            />
+                            <div className="home-scope-img-overlay" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Statistics ── */}
+            <section className="home-stats-section">
+                <div className="home-stats-inner">
+                    {[
+                        { icon: 'fa-users',            value: '500+', label: 'Attendees' },
+                        { icon: 'fa-file-invoice',     value: '150+', label: 'Papers Submitted' },
+                        { icon: 'fa-chalkboard-user',  value: '85+',  label: 'Sessions' },
+                        { icon: 'fa-earth-americas',   value: '10+',  label: 'Countries' },
+                    ].map(({ icon, value, label }) => (
+                        <div className="home-stat-card" key={label}>
+                            <div className="home-stat-icon-wrap">
+                                <i className={`fa-solid ${icon} home-stat-icon`} />
+                            </div>
+                            <p className="home-stat-value bodyFont2">{value}</p>
+                            <p className="home-stat-label">{label}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ── Quick Links ── */}
+            <section className="home-quicklinks-section">
+                <div className="home-quicklinks-inner">
+                    <div className="home-quicklinks-header">
+                        <span className="home-section-eyebrow home-section-eyebrow--light">Explore More</span>
+                        <h2 className="home-section-heading home-section-heading--light font-heading">Quick Links</h2>
+                    </div>
+
+                    <div className="home-quicklinks-grid">
+                        {[
+                            {
+                                to: ROUTES.COMMITTEES,
+                                icon: 'fa-user-large',
+                                title: 'Program Committee',
+                                desc: 'Meet the General Chairs, patrons, and organizing members.',
+                            },
+                            {
+                                to: ROUTES.ACCEPTED_PAPERS,
+                                icon: 'fa-newspaper',
+                                title: 'Paper Guidelines',
+                                desc: 'Download IEEE templates and review submission guidelines.',
+                            },
+                            {
+                                to: ROUTES.VENUE,
+                                icon: 'fa-location-pin',
+                                title: 'Venue & Map',
+                                desc: 'Find directions, local accommodation, and the campus map.',
+                            },
+                        ].map(({ to, icon, title, desc }) => (
+                            <Link to={to} className="click-scale home-ql-link" key={title}>
+                                <div className="home-ql-card">
+                                    <div className="home-ql-icon-wrap">
+                                        <i className={`fa-solid ${icon} home-ql-icon`} />
+                                    </div>
+                                    <h3 className="home-ql-title font-heading">{title}</h3>
+                                    <p className="home-ql-desc">{desc}</p>
+                                    <span className="home-ql-cta">Explore Details &rarr;</span>
+                                </div>
                             </Link>
-                        </div>
-
-                        <div className="lg:w-1/2 w-full max-w-md lg:max-w-none">
-                            <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white group">
-                                <img className="w-full object-cover object-center transition-transform duration-500 group-hover:scale-103" alt="IC4 Conference Scope" src={assets.scopeImage} />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Statistics Showcase */}
-            <section className="py-16 bg-[#293985] text-white">
-                <div className="container px-5 mx-auto max-w-6xl">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div className="p-4 flex flex-col items-center">
-                            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#57b7e7]">
-                                <i className="fa-solid fa-users text-xl animate-pulse"></i>
-                            </div>
-                            <h2 className="title-font font-black text-4xl sm:text-5xl font-heading text-white">500+</h2>
-                            <p className="leading-relaxed mt-2 text-xs tracking-widest uppercase text-gray-300 font-bold">Attendees</p>
-                        </div>
-                        <div className="p-4 flex flex-col items-center">
-                            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#57b7e7]">
-                                <i className="fa-solid fa-file-invoice text-xl animate-pulse"></i>
-                            </div>
-                            <h2 className="title-font font-black text-4xl sm:text-5xl font-heading text-white">150+</h2>
-                            <p className="leading-relaxed mt-2 text-xs tracking-widest uppercase text-gray-300 font-bold">Papers Submitted</p>
-                        </div>
-                        <div className="p-4 flex flex-col items-center">
-                            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#57b7e7]">
-                                <i className="fa-solid fa-chalkboard-user text-xl animate-pulse"></i>
-                            </div>
-                            <h2 className="title-font font-black text-4xl sm:text-5xl font-heading text-white">85+</h2>
-                            <p className="leading-relaxed mt-2 text-xs tracking-widest uppercase text-gray-300 font-bold">Sessions</p>
-                        </div>
-                        <div className="p-4 flex flex-col items-center">
-                            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#57b7e7]">
-                                <i className="fa-solid fa-earth-americas text-xl animate-pulse"></i>
-                            </div>
-                            <h2 className="title-font font-black text-4xl sm:text-5xl font-heading text-white">10+</h2>
-                            <p className="leading-relaxed mt-2 text-xs tracking-widest uppercase text-gray-300 font-bold">Countries</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Quick Links Section */}
-            <section className="py-16 bg-gradient-to-r from-[#016698] to-[#293985] text-white">
-                <div className="container px-5 mx-auto max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Link to={ROUTES.COMMITTEES} className="click-scale block h-full">
-                            <div className="flex flex-col items-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 shadow-lg text-center h-full group hover:-translate-y-1">
-                                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <i className="fa-solid fa-user-large text-2xl"></i>
-                                </div>
-                                <h3 className="text-xl font-extrabold mb-2 font-heading text-white">Program Committee</h3>
-                                <p className="text-sm text-gray-200 mt-2">View General Chairs, patrons, and members.</p>
-                                <span className="text-[#57b7e7] text-xs font-bold uppercase tracking-wider mt-6 block group-hover:underline">Explore Details &rarr;</span>
-                            </div>
-                        </Link>
-                        
-                        <Link to={ROUTES.ACCEPTED_PAPERS} className="click-scale block h-full">
-                            <div className="flex flex-col items-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 shadow-lg text-center h-full group hover:-translate-y-1">
-                                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <i className="fa-solid fa-newspaper text-2xl"></i>
-                                </div>
-                                <h3 className="text-xl font-extrabold mb-2 font-heading text-white">Paper Guidelines</h3>
-                                <p className="text-sm text-gray-200 mt-2">Download IEEE templates and check guidelines.</p>
-                                <span className="text-[#57b7e7] text-xs font-bold uppercase tracking-wider mt-6 block group-hover:underline">Explore Details &rarr;</span>
-                            </div>
-                        </Link>
-
-                        <Link to={ROUTES.VENUE} className="click-scale block h-full">
-                            <div className="flex flex-col items-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 shadow-lg text-center h-full group hover:-translate-y-1">
-                                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <i className="fa-solid fa-location-pin text-2xl"></i>
-                                </div>
-                                <h3 className="text-xl font-extrabold mb-2 font-heading text-white">Venue & Map</h3>
-                                <p className="text-sm text-gray-200 mt-2">Find directions and look at local locations.</p>
-                                <span className="text-[#57b7e7] text-xs font-bold uppercase tracking-wider mt-6 block group-hover:underline">Explore Details &rarr;</span>
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* Collaborations Placeholder */}
-            <section className="py-16 px-4 md:px-8">
-                <div className="container mx-auto max-w-6xl bg-white rounded-2xl shadow-md border border-gray-100 p-8 text-center">
-                    <span className="text-xs uppercase tracking-widest text-[#a21d2e] font-black mb-2 block">Updates & Partners</span>
-                    <h2 className="text-3xl font-extrabold text-[#293985] mb-4 font-heading">
-                        Media & Collaborations
-                    </h2>
-                    <p className="text-gray-500 max-w-md mx-auto text-sm sm:text-base mb-6 font-semibold">
+            {/* ── Collaborations ── */}
+            <section className="home-collab-section">
+                <div className="home-collab-card">
+                    <span className="home-section-eyebrow">Updates &amp; Partners</span>
+                    <h2 className="home-section-heading font-heading">Media &amp; Collaborations</h2>
+                    <p className="home-collab-desc">
                         We are currently aligning partners and media agencies. Declarations and details will be displayed here soon.
                     </p>
-                    <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-full px-4 py-2 text-xs text-gray-600 font-bold">
-                        <i className="fa-solid fa-circle-info text-[#016698]"></i> Under Preparation
+                    <div className="home-collab-badge">
+                        <i className="fa-solid fa-circle-info home-collab-badge-icon" />
+                        Under Preparation
                     </div>
                 </div>
             </section>
 
-            {/* Previous Conferences Section */}
-            <section className="py-16 px-4 md:px-8 bg-gray-50">
-                <div className="container mx-auto max-w-6xl">
-                    <div className="flex flex-col text-center w-full mb-12">
-                        <span className="text-xs uppercase tracking-widest text-[#a21d2e] font-black mb-2">Past Events</span>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#293985] font-heading">
-                            Previous Conferences
-                        </h2>
-                        <span className="inline-block h-1 w-20 rounded bg-[#a21d2e] mt-4 mx-auto"></span>
-                    </div>
+            {/* ── Previous Conferences ── */}
+            <section className="home-prev-section">
+                <div className="home-prev-inner">
+                    <span className="home-section-eyebrow">Past Events</span>
+                    <h2 className="home-section-heading font-heading">Previous Conferences</h2>
+                    <span className="home-section-divider" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {previousConferences.map((conf) => {
-                            return (
-                                <ConferenceCard
-                                    key={conf.id}
-                                    title={conf.title}
-                                    year={conf.year}
-                                    link={conf.link}
-                                    image={assets[conf.image]}
-                                />
-                            );
-                        })}
+                    <div className="home-prev-grid">
+                        {previousConferences.map((conf) => (
+                            <ConferenceCard
+                                key={conf.id}
+                                title={conf.title}
+                                year={conf.year}
+                                link={conf.link}
+                                image={assets[conf.image]}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Paper Submission Block */}
-            <section className="py-16 px-4 md:px-8">
-                <div className="container mx-auto max-w-4xl bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12 text-center flex flex-col items-center">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#293985] mb-4 font-heading uppercase">
-                        Paper Submission
-                    </h2>
-                    <p className="mb-6 leading-relaxed text-gray-700 text-sm sm:text-lg text-justify font-medium">
-                        Authors are invited to submit papers through the conference submission system. Submissions must be original and should not have been published previously or be under consideration for publication while being evaluated for this conference.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
+            {/* ── Paper Submission CTA ── */}
+            <section className="home-cta-section">
+                <div className="home-cta-inner gradientColor">
+                    <div className="home-cta-glow" />
+                    <div className="home-cta-content">
+                        <i className="fa-solid fa-paper-plane home-cta-icon" />
+                        <h2 className="home-cta-title font-heading">Submit Your Research Paper</h2>
+                        <p className="home-cta-body">
+                            Authors are invited to submit original, unpublished papers through our conference submission
+                            system. Papers should not be under consideration for publication elsewhere.
+                        </p>
                         <Link to={ROUTES.PAPER_SUBMISSION} className="click-scale">
-                            <button className="conf-btn-primary py-2.5 px-6">Submit Your Paper</button>
+                            <button className="home-cta-btn">Submit Your Paper &rarr;</button>
                         </Link>
                     </div>
                 </div>
