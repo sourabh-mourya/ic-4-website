@@ -15,8 +15,8 @@ export const conferenceInfo = {
   edition: '3rd',
   fullName: '3rd International Conference on Computer, Communication and Control',
   abbreviation: "IC4'27",
-  dates: 'December 10–12, 2026',
-  year: '2026',
+  dates: 'March  18-20,2027',
+  year: '2027',
   venue: 'Main Auditorium, MediCaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
   phones: ['0731-3111500', '0731-3111501'],
@@ -29,7 +29,7 @@ export const conferenceInfo = {
 export const heroContent = {
   heading: '3rd International Conference on Computer, Communication and Control',
   shortName: "IC4'27",
-  dates: 'December 10–12, 2026',
+  dates: 'March  18-20,2027',
 };
 
 // ──────────────────────────────────────────────
@@ -53,7 +53,7 @@ export const importantDates = [
   { id: 'notification', label: 'Acceptance Notification', date: 'Oct 15, 2026', icon: 'fa-bell' },
   { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Nov 15, 2026', icon: 'fa-cloud-arrow-up' },
   { id: 'registration', label: 'Registration Deadline', date: 'Nov 15, 2026', icon: 'fa-id-card' },
-  { id: 'conference', label: 'Conference Date', date: 'December 10–12, 2026', icon: 'fa-chalkboard-user' },
+  { id: 'conference', label: 'Conference Date', date: 'March  18-20,2027', icon: 'fa-chalkboard-user' },
 ];
 
 // ──────────────────────────────────────────────
