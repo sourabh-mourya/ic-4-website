@@ -112,11 +112,11 @@ export const committeeData = {
     { name: 'Prof. Birajashis Pattnaik', designation: 'Pro Vice Chancellor', image: committeePhotos.birajashisPattnaik },
   ],
   generalChair: [
-    { name: 'Dr. Ratnesh Litoriya', designation: 'Dean of Engineering (Computing)', image: committeePhotos.ratneshLitoriya },
+    { name: 'Dr. Ratnesh Litoriya', designation: 'Associate Dean of Engineering (Computing)', image: committeePhotos.ratneshLitoriya },
   ],
   generalCoChairs: [
     { name: 'Dr. Kailash Chandra Bandhu', designation: 'Head of Department, CSE', image: committeePhotos.kailashBandhu },
-    { name: 'Dr. Prashant Panse', designation: 'Associate Dean Digitalization', image: committeePhotos.prashantPanse },
+    { name: 'Dr. Prashant Panse', designation: 'Associate Dean, Digitalization', image: committeePhotos.prashantPanse },
     { name: 'Dr. Anuradha Kar', designation: 'Associate Professor, Aivancity', image: committeePhotos.anuradhaKar },
   ],
   publicationChairs: [
@@ -137,14 +137,14 @@ export const committeeData = {
     { name: 'Prof. Jinendra Agrawal', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.jinendraAgrawal },
     { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.manmathBadapanda },
     { name: 'Prof. M P S Chawla', designation: 'Secretary, IEEE MP Section', image: committeePhotos.mpSChawla },
-    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair Computer Society ', image: committeePhotos.durgeshMishra },
+    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair, Computer Society, IEEE MP Section', image: committeePhotos.durgeshMishra },
   ],
   ieeeFranceSection: [
     { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
-    { name: 'Dr. Marina Deng', designation: 'Vice President Conferences', image: committeePhotos.marinaDeng },
-    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics', image: committeePhotos.gerardCapolino },
-    { name: 'Roua Touihri', designation: 'President Computer', image: committeePhotos.rouaTouihri },
-    { name: 'Pascal Lorenz', designation: 'President, Communications', image: committeePhotos.pascalLorenz },
+    { name: 'Dr. Marina Deng', designation: 'Vice President, Conferences, IEEE France Section', image: committeePhotos.marinaDeng },
+    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics, IEEE France Section', image: committeePhotos.gerardCapolino },
+    { name: 'Roua Touihri', designation: 'President, Computer, IEEE France Section', image: committeePhotos.rouaTouihri },
+    { name: 'Pascal Lorenz', designation: 'President, Communications, IEEE France Section', image: committeePhotos.pascalLorenz },
   ],
 };
 
