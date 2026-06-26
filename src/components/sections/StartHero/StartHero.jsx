@@ -34,7 +34,7 @@ const StartHero = () => {
                     <i className="fa-solid fa-bullhorn" /> &nbsp;UPDATES
                 </span>
                 <div className="hero-ticker-track-wrap">
-                    <ul className="marquee hero-ticker-list">
+                    <ul className="hero-ticker-list hero-ticker-track">
                         {importantDates.map((item) => (
                             <li key={item.id} className="hero-ticker-item">
                                 <i className={`fa-solid ${item.icon} hero-ticker-icon`} />
@@ -42,10 +42,9 @@ const StartHero = () => {
                                 <span className="hero-ticker-date">{item.date}</span>
                             </li>
                         ))}
-                    </ul>
-                    <ul className="marquee2 hero-ticker-list" aria-hidden="true">
+                        {/* Duplicate set — required for seamless infinite scroll */}
                         {importantDates.map((item) => (
-                            <li key={item.id} className="hero-ticker-item">
+                            <li key={`dup-${item.id}`} className="hero-ticker-item" aria-hidden="true">
                                 <i className={`fa-solid ${item.icon} hero-ticker-icon`} />
                                 {item.label}&nbsp;—&nbsp;
                                 <span className="hero-ticker-date">{item.date}</span>
