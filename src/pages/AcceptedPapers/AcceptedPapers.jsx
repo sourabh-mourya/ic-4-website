@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../../components/Footer/Footer';
-import Nav from '../../components/Navbar/Nav';
+import Footer from '../../components/layout/Footer/Footer';
+import Nav from '../../components/layout/Navbar/Navbar';
 import { assets } from '../../constants/assets';
 import './AcceptedPapers.css';
 

@@ -5,15 +5,15 @@ import { ROUTES } from './constants/routes';
 import RegistrationDisabledModal from './components/common/RegistrationDisabledModal';
 
 // Lazy-load all pages — each page loads only when navigated to
-const HomePage        = lazy(() => import('./pages/HomePage/HomePage'));
-const PaperSubmission = lazy(() => import('./pages/PaperSubmisssion/PaperSubmission'));
-const ProgrameComitte = lazy(() => import('./pages/ProgrameComitte/ProgrameComitte'));
+const HomePage        = lazy(() => import('./pages/Home/Home'));
+const PaperSubmission = lazy(() => import('./pages/PaperSubmission/PaperSubmission'));
+const ProgrameComitte = lazy(() => import('./pages/Committee/Committee'));
 const AcceptedPapers  = lazy(() => import('./pages/AcceptedPapers/AcceptedPapers'));
-const ContactUs       = lazy(() => import('./pages/ContactUs/ContactUs'));
+const ContactUs       = lazy(() => import('./pages/Contact/Contact'));
 const Venue           = lazy(() => import('./pages/Venue/Venue'));
 const Topics          = lazy(() => import('./pages/Topics/Topics'));
 const AboutMedicaps   = lazy(() => import('./pages/AboutMedicaps/AboutMedicaps'));
-const Register        = lazy(() => import('./pages/Register/Register'));
+const Register        = lazy(() => import('./pages/Registration/Registration'));
 
 const PageLoader = () => (
   <div style={{

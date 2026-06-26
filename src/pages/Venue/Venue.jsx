@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import './venue.css'
-import Nav from '../../components/Navbar/Nav'
+import Footer from '../../components/layout/Footer/Footer'
+import './Venue.css'
+import Nav from '../../components/layout/Navbar/Navbar'
 import { venueInfo } from '../../data/data'
 
 const Venue = () => {

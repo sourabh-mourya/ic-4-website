@@ -1,11 +1,11 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import aboutMedicapsGallery from '../../img/aboutMedicapsGallery.jpeg'
-import aboutMedi1 from '../../img/aboutMedi1-min.jpg'
-import aboutMedi2 from '../../img/aboutMedi2-min.jpg'
-import aboutMedi3 from '../../img/aboutMedi3-min.jpg'
-import aboutMedi4 from '../../img/aboutMedi4-min.jpg'
-import Nav from '../../components/Navbar/Nav'
+import Footer from '../../components/layout/Footer/Footer'
+import aboutMedicapsGallery from '../../assets/images/branding/aboutMedicapsGallery.jpeg'
+import aboutMedi1 from '../../assets/images/branding/aboutMedi1-min.jpg'
+import aboutMedi2 from '../../assets/images/branding/aboutMedi2-min.jpg'
+import aboutMedi3 from '../../assets/images/branding/aboutMedi3-min.jpg'
+import aboutMedi4 from '../../assets/images/branding/aboutMedi4-min.jpg'
+import Nav from '../../components/layout/Navbar/Navbar'
 
 function AboutMedicaps() {
     return (

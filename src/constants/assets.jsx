@@ -5,29 +5,29 @@
 // ============================================================
 
 // --- Navbar & Branding ---
-import medicapsLogo from '../img/MedicapsNewLogo.png';
-import medicaps25 from '../img/medi25year.jpg';
-import medicapsLogo1 from '../img/medicapslogo1.png';
-import springerLogo from '../img/springer.png';
-import ieeelogo2 from '../img/ieeelogo2.png';
-import tarumtLogo from '../img/tarumt-logo.png';
+import medicapsLogo from '../assets/images/branding/MedicapsNewLogo.png';
+import medicaps25 from '../assets/images/branding/medi25year.jpg';
+import medicapsLogo1 from '../assets/images/branding/medicapslogo1.png';
+import springerLogo from '../assets/images/branding/springer.png';
+import ieeelogo2 from '../assets/images/branding/ieeelogo2.png';
+import tarumtLogo from '../assets/images/branding/tarumt-logo.png';
 
 // --- Past Conference Images ---
-import pastConference1 from '../img/CONFERENCEICANI.jpeg';
-import pastConference2 from '../img/pastConference_2.JPG';
-import pastConference3 from '../img/pastConference_3.JPG';
-import pastConference4 from '../img/pastConference_4.JPG';
+import pastConference1 from '../assets/images/branding/CONFERENCEICANI.jpeg';
+import pastConference2 from '../assets/images/branding/pastConference_2.JPG';
+import pastConference3 from '../assets/images/branding/pastConference_3.JPG';
+import pastConference4 from '../assets/images/branding/pastConference_4.JPG';
 
 // --- Content Images ---
-import scopeImage from '../img/scope2.jpg';
+import scopeImage from '../assets/images/branding/scope2.jpg';
 
 // --- Payment ---
-import paymentQR from '../img/paymentqr.jpg';
+import paymentQR from '../assets/images/branding/paymentqr.jpg';
 
 // --- Documents ---
-import brochurePDF from "../img/IC-EETA’25 Brochure Updated.pdf";
-import paperTemplate from '../img/conference-template-a4.docx';
-import copyrightForm from '../img/IEEEcopyrightform.pdf';
+import brochurePDF from "../assets/documents/IC-EETA’25 Brochure Updated.pdf";
+import paperTemplate from '../assets/documents/conference-template-a4.docx';
+import copyrightForm from '../assets/documents/IEEEcopyrightform.pdf';
 
 // --- Committee Photos ---
 import rcMittal from '../assets/images/committee/rcMittal.png';

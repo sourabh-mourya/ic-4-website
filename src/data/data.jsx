@@ -19,7 +19,7 @@ export const conferenceInfo = {
   year: '2027',
   venue: 'Main Auditorium, Medicaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
-  phones: ['+91 731-3111500', '+91 731-3111501'],
+  phones: ['+91-731-3111500', '+91-731-3111501'],
   email: 'ic4@medicaps.ac.in',
 };
 
@@ -92,7 +92,7 @@ export const footerContent = {
 export const venueInfo = {
   name: 'Main Auditorium, Medicaps University',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
-  phones: ['+91 731-3111500', '+91 731-3111501'],
+  phones: ['+91-731-3111500', '+91-731-3111501'],
   email: 'ic4@medicaps.ac.in',
   mapSrc: 'https://maps.google.com/maps?width=2048&height=600&hl=en&q=medi-caps+university&t=&z=12&ie=UTF8&iwloc=B&output=embed',
 };

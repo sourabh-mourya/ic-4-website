@@ -1,7 +1,7 @@
 import React from 'react'
-import Nav from '../../components/Navbar/Nav'
+import Nav from '../../components/layout/Navbar/Navbar'
 import "./Topics.css"
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/layout/Footer/Footer'
 import { conferenceTracks } from '../../data/data'
 
 const Topics = () => {
