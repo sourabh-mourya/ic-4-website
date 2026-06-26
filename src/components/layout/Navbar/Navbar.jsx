@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useEffect, memo } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
@@ -75,32 +78,41 @@ const Nav = memo((props) => {
 
       {/* ── STICKY NAVBAR ── */}
       <div className="w-full sticky top-0 z-[100] bg-white border-b border-gray-200 shadow-sm">
-        <div className="w-full flex items-center justify-between px-4 md:px-10 lg:px-16 py-2.5 relative">
+        <div className="w-full flex items-center justify-between px-4 md:px-6 lg:px-10 xl:px-16 py-2.5 relative">
 
-          {/* Mobile: Short name */}
-          <div className="lg:hidden flex items-center">
+          {/* ── DESKTOP BRAND LOGO (Sticky only) ── */}
+          <div className="hidden lg:flex items-center flex-shrink-0 mr-4">
+            <Link to={ROUTES.HOME}>
+              <img
+                src={assets.medicapsLogo}
+                alt="Medicaps University"
+                className="h-8 w-auto md:h-9 object-contain transition-transform duration-250 hover:scale-103"
+              />
+            </Link>
+          </div>
+
+          {/* ── MOBILE: Short name + Register + Hamburger ── */}
+          <div className="flex lg:hidden items-center w-full justify-between">
             <span className="font-black text-[#016698] text-sm tracking-widest">
               {heroContent.shortName}
             </span>
-          </div>
-
-          {/* Mobile: Register + Hamburger */}
-          <div className="lg:hidden flex items-center gap-2 ml-auto">
-            <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-              <button className="px-3 py-1 bg-[#016698] text-white text-[0.68rem] font-bold uppercase rounded-md">
-                Register
+            <div className="flex items-center gap-2">
+              <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                <button className="px-3.5 py-1.5 bg-[#a21d2e] text-white text-[0.68rem] font-bold uppercase rounded-md shadow active:scale-97 transition-all duration-150">
+                  Register
+                </button>
+              </Link>
+              <button
+                onClick={() => setOpen(!open)}
+                className="focus:outline-none p-1.5 ml-1 bg-gray-50 hover:bg-gray-100 rounded-md transition-colors duration-150"
+                aria-label="Toggle menu"
+              >
+                {!open
+                  ? <img src={hamburger} alt="Menu" width={22} height={22} />
+                  : <img src={close} alt="Close" width={22} height={22} />
+                }
               </button>
-            </Link>
-            <button
-              onClick={() => setOpen(!open)}
-              className="focus:outline-none p-1"
-              aria-label="Toggle menu"
-            >
-              {!open
-                ? <img src={hamburger} alt="Menu" width={28} />
-                : <img src={close} alt="Close" width={28} />
-              }
-            </button>
+            </div>
           </div>
 
           {/* ── MOBILE FULLSCREEN MENU ── */}
@@ -112,19 +124,19 @@ const Nav = memo((props) => {
                 <Link to={ROUTES.HOME} onClick={() => setOpen(false)}>
                   <img src={assets.medicapsLogo} alt="Medicaps" className="w-[100px] brightness-0 invert" />
                 </Link>
-                <button onClick={() => setOpen(false)} className="focus:outline-none">
-                  <img src={close} alt="Close" width={30} />
+                <button onClick={() => setOpen(false)} className="focus:outline-none p-2 rounded-full hover:bg-white/10 transition-colors">
+                  <img src={close} alt="Close" width={24} height={24} className="brightness-0 invert" />
                 </button>
               </div>
 
               {/* Nav Links */}
-              <ul className="flex flex-col px-6 py-2 flex-1">
+              <ul className="flex flex-col px-6 py-4 flex-1 gap-2">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.link}
                       onClick={() => setOpen(false)}
-                      className={`flex items-center py-3.5 text-[0.9rem] font-bold uppercase tracking-wider border-b border-white/10 transition-colors duration-200
+                      className={`flex items-center py-3 text-[1rem] font-bold uppercase tracking-wider border-b border-white/10 transition-colors duration-200
                         ${location.pathname === link.link
                           ? 'text-yellow-300'
                           : 'text-white hover:text-yellow-200'
@@ -137,14 +149,14 @@ const Nav = memo((props) => {
               </ul>
 
               {/* Mobile Action Buttons */}
-              <div className="flex flex-col gap-3 px-6 py-6 flex-shrink-0">
+              <div className="flex flex-col gap-3.5 px-6 py-6 flex-shrink-0 bg-[#014f75]">
                 <Link to={ROUTES.PAPER_SUBMISSION} onClick={() => setOpen(false)}>
-                  <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 transition duration-150 tracking-wider">
+                  <button className="w-full py-3.5 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 active:scale-99 transition duration-150 tracking-wider shadow">
                     Paper Submission
                   </button>
                 </Link>
                 <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-                  <button className="w-full py-3 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 transition duration-150 tracking-wider">
+                  <button className="w-full py-3.5 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 active:scale-99 transition duration-150 tracking-wider shadow">
                     Register
                   </button>
                 </Link>
@@ -155,8 +167,8 @@ const Nav = memo((props) => {
                   rel="noopener noreferrer"
                   onClick={handleBrochureClick}
                 >
-                  <button className="w-full py-3 bg-[#cc0000] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#a21d2e] transition duration-150 flex items-center justify-center gap-2 tracking-wider">
-                    <i className="fa-solid fa-circle-down"></i> Download Brochure
+                  <button className="w-full py-3.5 bg-[#a21d2e] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#851623] active:scale-99 transition duration-150 flex items-center justify-center gap-2 tracking-wider shadow">
+                    <i className="fa-solid fa-circle-down text-base"></i> Download Brochure
                   </button>
                 </a>
               </div>
@@ -165,14 +177,14 @@ const Nav = memo((props) => {
           )}
 
           {/* ── DESKTOP NAV LINKS ── */}
-          <ul className="hidden lg:flex items-center justify-center flex-1 gap-20 xl:gap-10">
+          <ul className="hidden lg:flex items-center justify-center flex-1 gap-4 xl:gap-6 2xl:gap-8 mx-auto">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
                   to={link.link}
-                  className={`conf-nav-link font-bold text-[0.72rem] xl:text-[0.8rem] uppercase tracking-wider transition-colors duration-200 pb-1 whitespace-nowrap
+                  className={`conf-nav-link font-bold text-[0.7rem] lg:text-[0.74rem] xl:text-[0.8rem] 2xl:text-[0.85rem] uppercase tracking-wider transition-colors duration-200 pb-1 whitespace-nowrap
                     ${location.pathname === link.link
-                      ? 'text-[#a21d2e] border-b-2 border-[#a21d2e]'
+                      ? 'text-[#a21d2e] conf-nav-active'
                       : 'text-[#293985] hover:text-[#a21d2e]'
                     }`}
                 >
@@ -185,17 +197,17 @@ const Nav = memo((props) => {
           {/* ── DESKTOP ACTION BUTTONS ── */}
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
             <Link to={ROUTES.PAPER_SUBMISSION}>
-              <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
+              <button className="px-4 py-2.5 bg-[#016698] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md active:scale-97 transition duration-150 whitespace-nowrap">
                 Paper Submission
               </button>
             </Link>
             <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-              <button className="px-5 py-2.5 bg-[#016698] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md transition duration-150 whitespace-nowrap">
+              <button className="px-4 py-2.5 bg-[#a21d2e] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#851623] shadow hover:shadow-md active:scale-97 transition duration-150 whitespace-nowrap">
                 Register
               </button>
             </Link>
             <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" onClick={handleBrochureClick}>
-              <button className="px-5 py-2.5 bg-[#cc0000] text-white text-[0.72rem] font-bold uppercase rounded-lg hover:bg-[#a21d2e] shadow hover:shadow-md transition duration-150 flex items-center gap-2 whitespace-nowrap">
+              <button className="px-4 py-2.5 bg-[#293985] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#1f2b66] shadow hover:shadow-md active:scale-97 transition duration-150 flex items-center gap-1.5 whitespace-nowrap">
                 <i className="fa-solid fa-circle-down"></i> Brochure
               </button>
             </a>
