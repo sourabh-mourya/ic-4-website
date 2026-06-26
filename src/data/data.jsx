@@ -112,11 +112,11 @@ export const committeeData = {
     { name: 'Prof. Birajashis Pattnaik', designation: 'Pro Vice Chancellor', image: committeePhotos.birajashisPattnaik },
   ],
   generalChair: [
-    { name: 'Dr. Ratnesh Litoriya', designation: 'Dean of Engineering (Computing)', image: committeePhotos.ratneshLitoriya },
+    { name: 'Dr. Ratnesh Litoriya', designation: 'Associate Dean of Engineering (Computing)', image: committeePhotos.ratneshLitoriya },
   ],
   generalCoChairs: [
     { name: 'Dr. Kailash Chandra Bandhu', designation: 'Head of Department, CSE', image: committeePhotos.kailashBandhu },
-    { name: 'Dr. Prashant Panse', designation: 'Associate Dean Digitalization', image: committeePhotos.prashantPanse },
+    { name: 'Dr. Prashant Panse', designation: 'Associate Dean, Digitalization', image: committeePhotos.prashantPanse },
     { name: 'Dr. Anuradha Kar', designation: 'Associate Professor, Aivancity', image: committeePhotos.anuradhaKar },
   ],
   publicationChairs: [
@@ -137,14 +137,14 @@ export const committeeData = {
     { name: 'Prof. Jinendra Agrawal', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.jinendraAgrawal },
     { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.manmathBadapanda },
     { name: 'Prof. M P S Chawla', designation: 'Secretary, IEEE MP Section', image: committeePhotos.mpSChawla },
-    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair Computer Society ', image: committeePhotos.durgeshMishra },
+    { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair, Computer Society, IEEE MP Section', image: committeePhotos.durgeshMishra },
   ],
   ieeeFranceSection: [
     { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
-    { name: 'Dr. Marina Deng', designation: 'Vice President Conferences', image: committeePhotos.marinaDeng },
-    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics', image: committeePhotos.gerardCapolino },
-    { name: 'Roua Touihri', designation: 'President Computer', image: committeePhotos.rouaTouihri },
-    { name: 'Pascal Lorenz', designation: 'President, Communications', image: committeePhotos.pascalLorenz },
+    { name: 'Dr. Marina Deng', designation: 'Vice President, Conferences, IEEE France Section', image: committeePhotos.marinaDeng },
+    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics, IEEE France Section', image: committeePhotos.gerardCapolino },
+    { name: 'Roua Touihri', designation: 'President, Computer, IEEE France Section', image: committeePhotos.rouaTouihri },
+    { name: 'Pascal Lorenz', designation: 'President, Communications, IEEE France Section', image: committeePhotos.pascalLorenz },
   ],
 };
 
@@ -245,7 +245,7 @@ export const internationalAdvisoryCommittee2 = [
 // Previous Conferences  (exactly 4, no IEEE prefix)
 // ──────────────────────────────────────────────
 export const previousConferences = [
-  { id: 'iceeta25', title: "International Conference IC-EETA'25", year: '2025', link: null, image: 'pastConference3' },
+  { id: 'iceeta25', title: "International Conference IC-EETA'25", year: '2025', link: 'https://ieeexplore.ieee.org/xpl/conhome/11547912/proceeding', image: 'pastConference3' },
   { id: 'ic4_2024', title: '2nd Conference IC4', year: '2024', link: 'https://ieeexplore.ieee.org/xpl/conhome/10486055/proceeding', image: 'pastConference4' },
   { id: 'cdan2016', title: 'CDAN Symposium', year: '2016', link: 'https://ieeexplore.ieee.org/xpl/conhome/7562831/proceeding', image: 'pastConference2' },
   { id: 'ic4_2015', title: '1st Conference IC4', year: '2015', link: 'https://ieeexplore.ieee.org/xpl/conhome/7368254/proceeding', image: 'pastConference1' },
@@ -256,9 +256,11 @@ export const previousConferences = [
 // ──────────────────────────────────────────────
 export const registrationFees = [
   { category: 'Non-IEEE Professional', indian: 'INR 9000/-', international: 'USD 250' },
-  { category: 'IEEE Professional Members', indian: 'INR 8000/-', international: 'USD 250' },
-  { category: 'Non-IEEE Students', indian: 'INR 8000/-', international: 'USD 250' },
-  { category: 'IEEE Student Members', indian: 'INR 7000/-', international: 'USD 250' },
+  { category: 'IEEE Professional Members', indian: 'INR 7500/-', international: 'USD 250' },
+  { category: 'Non-IEEE PhD Students', indian: 'INR 7000/-', international: 'USD 250' },
+  { category: 'IEEE PhD Students', indian: 'INR 6000/-', international: 'USD 250' },
+  { category: 'Non-IEEE PG/UG Students', indian: 'INR 6000/-', international: 'USD 250' },
+  { category: 'IEEE PG/UG Students', indian: 'INR 5000/-', international: 'USD 250' },
   { category: 'Industry Participants', indian: 'INR 10000/-', international: 'USD 250' },
 ];
 
