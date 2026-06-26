@@ -277,40 +277,38 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.hero-btn--primary {
-    background: #a21d2e;
+.hero-btn--red {
+    background: #c0392b;
     color: #ffffff;
-    box-shadow: 0 4px 16px rgba(162,29,46,0.45);
+    box-shadow: 0 4px 16px rgba(192,57,43,0.45);
 }
-.hero-btn--primary:hover {
-    background: #861726;
+.hero-btn--red:hover {
+    background: #a93226;
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(162,29,46,0.55);
+    box-shadow: 0 8px 24px rgba(192,57,43,0.55);
 }
 
-.hero-btn--outline {
+.hero-btn--navy {
     background: transparent;
     color: #ffffff;
-    border: 2px solid rgba(255,255,255,0.65);
+    border: 2px solid rgba(255,255,255,0.55);
 }
-.hero-btn--outline:hover {
-    background: #ffffff;
-    color: #1e2a6e;
-    border-color: #ffffff;
+.hero-btn--navy:hover {
+    background: #1a1f5e;
+    border-color: #1a1f5e;
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .hero-btn--ghost {
-    background: rgba(1, 102, 152, 0.75);
-    color: #ffffff;
-    box-shadow: 0 4px 14px rgba(1,102,152,0.4);
-    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.65);
+    border: 1.5px solid rgba(255,255,255,0.2);
 }
 .hero-btn--ghost:hover {
-    background: #016698;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(1,102,152,0.5);
+    background: rgba(255,255,255,0.13);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* ── Scroll hint ── */

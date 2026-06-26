@@ -93,12 +93,12 @@ const Nav = memo((props) => {
 
           {/* ── MOBILE: Short name + Register + Hamburger ── */}
           <div className="flex lg:hidden items-center w-full justify-between">
-            <span className="font-black text-[#016698] text-sm tracking-widest">
+            <span className="font-black text-[#1a1f5e] text-sm tracking-widest">
               {heroContent.shortName}
             </span>
             <div className="flex items-center gap-2">
               <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-                <button className="px-3.5 py-1.5 bg-[#a21d2e] text-white text-[0.68rem] font-bold uppercase rounded-md shadow active:scale-97 transition-all duration-150">
+                <button className="px-3.5 py-1.5 bg-[#c0392b] text-white text-[0.68rem] font-bold uppercase rounded-md shadow active:scale-97 transition-all duration-150">
                   Register
                 </button>
               </Link>
@@ -117,7 +117,7 @@ const Nav = memo((props) => {
 
           {/* ── MOBILE FULLSCREEN MENU ── */}
           {open && (
-            <div className="lg:hidden fixed inset-0 w-full h-full bg-[#016698] z-[9999] flex flex-col overflow-y-auto">
+            <div className="lg:hidden fixed inset-0 w-full h-full bg-[#1a1f5e] z-[9999] flex flex-col overflow-y-auto">
 
               {/* Overlay Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/20 flex-shrink-0">
@@ -149,15 +149,15 @@ const Nav = memo((props) => {
               </ul>
 
               {/* Mobile Action Buttons */}
-              <div className="flex flex-col gap-3.5 px-6 py-6 flex-shrink-0 bg-[#014f75]">
-                <Link to={ROUTES.PAPER_SUBMISSION} onClick={() => setOpen(false)}>
-                  <button className="w-full py-3.5 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 active:scale-99 transition duration-150 tracking-wider shadow">
-                    Paper Submission
+              <div className="flex flex-col gap-3 px-6 py-6 flex-shrink-0 border-t border-white/10">
+                <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                  <button className="w-full py-3 bg-[#c0392b] text-white text-sm font-bold uppercase rounded-lg hover:bg-[#a93226] active:scale-99 transition duration-150 tracking-wider shadow">
+                    Register Now
                   </button>
                 </Link>
-                <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-                  <button className="w-full py-3.5 bg-white text-[#016698] text-sm font-bold uppercase rounded-xl hover:bg-gray-100 active:scale-99 transition duration-150 tracking-wider shadow">
-                    Register
+                <Link to={ROUTES.PAPER_SUBMISSION} onClick={() => setOpen(false)}>
+                  <button className="w-full py-3 bg-transparent text-white text-sm font-bold uppercase rounded-lg border border-white/40 hover:bg-white/10 active:scale-99 transition duration-150 tracking-wider">
+                    Paper Submission
                   </button>
                 </Link>
                 <a
@@ -167,8 +167,8 @@ const Nav = memo((props) => {
                   rel="noopener noreferrer"
                   onClick={handleBrochureClick}
                 >
-                  <button className="w-full py-3.5 bg-[#a21d2e] text-white text-sm font-bold uppercase rounded-xl hover:bg-[#851623] active:scale-99 transition duration-150 flex items-center justify-center gap-2 tracking-wider shadow">
-                    <i className="fa-solid fa-circle-down text-base"></i> Download Brochure
+                  <button className="w-full py-3 bg-transparent text-white/70 text-sm font-bold uppercase rounded-lg border border-white/20 hover:bg-white/10 active:scale-99 transition duration-150 flex items-center justify-center gap-2 tracking-wider">
+                    <i className="fa-solid fa-circle-down text-sm"></i> Brochure
                   </button>
                 </a>
               </div>
@@ -195,19 +195,19 @@ const Nav = memo((props) => {
           </ul>
 
           {/* ── DESKTOP ACTION BUTTONS ── */}
-          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
             <Link to={ROUTES.PAPER_SUBMISSION}>
-              <button className="px-4 py-2.5 bg-[#016698] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#014f75] shadow hover:shadow-md active:scale-97 transition duration-150 whitespace-nowrap">
+              <button className="nav-btn nav-btn--outline whitespace-nowrap">
                 Paper Submission
               </button>
             </Link>
             <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
-              <button className="px-4 py-2.5 bg-[#a21d2e] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#851623] shadow hover:shadow-md active:scale-97 transition duration-150 whitespace-nowrap">
+              <button className="nav-btn nav-btn--primary whitespace-nowrap">
                 Register
               </button>
             </Link>
             <a href={assets.brochurePDF} download="conferenceBrochure" target="_blank" rel="noopener noreferrer" onClick={handleBrochureClick}>
-              <button className="px-4 py-2.5 bg-[#293985] text-white text-[0.7rem] xl:text-[0.75rem] 2xl:text-[0.8rem] font-bold uppercase rounded-lg hover:bg-[#1f2b66] shadow hover:shadow-md active:scale-97 transition duration-150 flex items-center gap-1.5 whitespace-nowrap">
+              <button className="nav-btn nav-btn--ghost whitespace-nowrap">
                 <i className="fa-solid fa-circle-down"></i> Brochure
               </button>
             </a>

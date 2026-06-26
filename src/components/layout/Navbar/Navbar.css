@@ -36,42 +36,84 @@ body {
     left: 0;
 }
 
-/* ── NAVBAR ACTION BUTTONS ── */
 .conf-btn-primary {
-    background-color: #a21d2e;
+    background-color: #c0392b;
     color: white;
     border: none;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
-
-.conf-btn-primary:hover {
-    opacity: 0.85;
-}
+.conf-btn-primary:hover { opacity: 0.88; }
 
 .conf-btn-secondary {
     background-color: transparent;
-    color: #016698;
-    border: 2px solid #016698;
+    color: #1a1f5e;
+    border: 2px solid #1a1f5e;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
-
 .conf-btn-secondary:hover {
-    background-color: #016698;
+    background-color: #1a1f5e;
     color: white;
 }
 
 .conf-btn-accent {
-    background-color: #293985;
+    background-color: #1a1f5e;
     color: white;
     border: none;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
+}
+.conf-btn-accent:hover { opacity: 0.88; }
+
+/* ── New unified nav buttons ── */
+.nav-btn {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
 }
 
-.conf-btn-accent:hover {
-    opacity: 0.85;
+/* Primary = solid conference red */
+.nav-btn--primary {
+    background: #c0392b;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(192,57,43,0.35);
+}
+.nav-btn--primary:hover {
+    background: #a93226;
+    box-shadow: 0 4px 14px rgba(192,57,43,0.45);
+}
+
+/* Outline = navy border, transparent fill */
+.nav-btn--outline {
+    background: transparent;
+    color: #1a1f5e;
+    border: 1.5px solid #1a1f5e;
+}
+.nav-btn--outline:hover {
+    background: #1a1f5e;
+    color: #ffffff;
+}
+
+/* Ghost = subtle, low emphasis */
+.nav-btn--ghost {
+    background: transparent;
+    color: #6b7280;
+    border: 1.5px solid #d1d5db;
+}
+.nav-btn--ghost:hover {
+    background: #f3f4f6;
+    color: #374151;
+    border-color: #9ca3af;
 }
 
 .dispNone {
@@ -191,7 +233,7 @@ body {
 }
 
 .headingMain {
-    background: -webkit-linear-gradient(#293985, #a21d2e);
+    background: -webkit-linear-gradient(135deg, #1a1f5e, #c0392b);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

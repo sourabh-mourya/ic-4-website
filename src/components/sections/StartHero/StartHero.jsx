@@ -97,18 +97,17 @@ const StartHero = () => {
                             <i className="fa-regular fa-calendar hero-meta-icon" />
                             {conferenceInfo.dates}
                         </span>
-
                     </div>
 
                     {/* Action Buttons */}
                     <div className="hero-actions">
                         <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
-                            <button className="hero-btn hero-btn--primary">
+                            <button className="hero-btn hero-btn--red">
                                 <i className="fa-solid fa-pen-to-square" /> Register Now
                             </button>
                         </Link>
                         <Link to={ROUTES.PAPER_SUBMISSION} className="click-scale">
-                            <button className="hero-btn hero-btn--outline">
+                            <button className="hero-btn hero-btn--navy">
                                 <i className="fa-solid fa-paper-plane" /> Submit Paper
                             </button>
                         </Link>

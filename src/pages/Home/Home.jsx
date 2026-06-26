@@ -4,13 +4,26 @@ import Nav from '../../components/layout/Navbar/Navbar'
 import Footer from '../../components/layout/Footer/Footer'
 import { Link } from 'react-router-dom'
 import StartHero from '../../components/sections/StartHero/StartHero'
-import ImportantDates from '../../components/common/ImportantDates'
 import ConferenceCard from '../../components/common/ConferenceCard'
 import { useCount, useRegistration } from '../../context';
-import { previousConferences } from '../../data/data';
+import { previousConferences, importantDates } from '../../data/data';
 import { assets } from '../../constants/assets';
 import { ROUTES } from '../../constants/routes';
 import { CONFIG } from '../../constants/config';
+
+const STATS = [
+    { icon: 'fa-users',           value: '500+', label: 'Attendees' },
+    { icon: 'fa-file-lines',      value: '150+', label: 'Papers' },
+    { icon: 'fa-chalkboard-user', value: '6',    label: 'Tracks' },
+    { icon: 'fa-earth-americas',  value: '10+',  label: 'Countries' },
+];
+
+const QUICK_LINKS = [
+    { to: ROUTES.COMMITTEES,      icon: 'fa-users-gear',   title: 'Committees',       desc: 'View General Chairs, patrons and organizing members.' },
+    { to: ROUTES.ACCEPTED_PAPERS, icon: 'fa-file-lines',   title: 'Paper Guidelines', desc: 'IEEE templates, formatting rules and submission checklist.' },
+    { to: ROUTES.TOPICS,          icon: 'fa-lightbulb',    title: 'Topics',           desc: 'Explore the 6 research tracks and topics of interest.' },
+    { to: ROUTES.VENUE,           icon: 'fa-location-dot', title: 'Venue & Map',      desc: 'Campus location, directions and accommodation tips.' },
+];
 
 const HomePage = () => {
     const { setCount } = useCount();
@@ -24,145 +37,113 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        const func = () => {
-            console.log("page is fully loaded");
-            setCount(prev => prev + 1);
-        }
-        window.addEventListener("load", func);
-        return () => window.removeEventListener("load", func);
+        const func = () => setCount(prev => prev + 1);
+        window.addEventListener('load', func);
+        return () => window.removeEventListener('load', func);
     }, [setCount]);
 
     return (
         <>
-            {/* Nav & Hero Banner */}
             <Nav />
             <StartHero />
 
-            {/* Important Dates Section */}
-            <section className="home-imp-dates" id="impDates">
-                <ImportantDates />
+            {/* ════ 1. IMPORTANT DATES ════ */}
+            <section className="hp-dates" id="impDates">
+                <div className="hp-container">
+                    <div className="hp-section-label">
+                        <span className="hp-eyebrow">Key Deadlines</span>
+                        <h2 className="hp-heading bodyFont2">Important Dates</h2>
+                    </div>
+                    <div className="hp-dates-grid">
+                        {importantDates.map((item) => (
+                            <div className="hp-date-card" key={item.id}>
+                                <div className="hp-date-icon-wrap">
+                                    <i className={`fa-solid ${item.icon} hp-date-icon`} />
+                                </div>
+                                <span className="hp-date-label">{item.label}</span>
+                                <span className="hp-date-value">{item.date}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
 
-            {/* ── Conference Scope ── */}
-            <section className="home-scope-section">
-                <div className="home-scope-card">
-                    <div className="home-scope-text">
-                        <span className="home-section-eyebrow">Scope of Event</span>
-                        <h2 className="home-section-heading font-heading">Conference Scope</h2>
-                        <p className="home-scope-body">
-                            The objective of this international conference is to foster a dynamic exchange of knowledge and
-                            innovation across the domains of mechanical, civil, electrical, and computer engineering. By
-                            bringing together leading scholars, industry experts, and visionary practitioners, the conference
-                            aims to strengthen academic-industry collaboration and provide a forum for the dissemination of
-                            pioneering research, advanced technologies, and future-oriented solutions. Emphasizing
-                            interdisciplinary synergy, the event is aimed at addressing pressing global challenges while
-                            promoting sustainable, cutting-edge practices.
+            {/* ════ 2. CONFERENCE SCOPE ════ */}
+            <section className="hp-scope">
+                <div className="hp-container hp-scope-inner">
+                    <div className="hp-scope-text">
+                        <span className="hp-eyebrow">About the Conference</span>
+                        <h2 className="hp-heading bodyFont2">Conference Scope</h2>
+                        <div className="hp-heading-bar" />
+                        <p className="hp-scope-body">
+                            IC4'27 is an international forum bringing together leading scholars, industry
+                            experts, and visionary practitioners across Computer Science, Electronics,
+                            Electrical Engineering, Instrumentation, IT, and Robotics. The conference
+                            fosters cross-disciplinary collaboration to address global challenges and
+                            accelerate sustainable technological innovation.
                         </p>
-                        <Link to={ROUTES.REGISTER} className="click-scale" onClick={handleRegisterClick}>
-                            <button className="conf-btn-primary">Register Now &rarr;</button>
-                        </Link>
+                        <div className="hp-scope-actions">
+                            <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                                <button className="hp-btn hp-btn--red">Register Now &rarr;</button>
+                            </Link>
+                            <Link to={ROUTES.TOPICS}>
+                                <button className="hp-btn hp-btn--outline">View Topics</button>
+                            </Link>
+                        </div>
                     </div>
-
-                    <div className="home-scope-img-wrap">
-                        <div className="home-scope-img-inner">
-                            <img
-                                className="home-scope-img"
-                                alt="IC4 Conference Scope"
-                                src={assets.scopeImage}
-                            />
-                            <div className="home-scope-img-overlay" />
+                    <div className="hp-scope-img-wrap">
+                        <img className="hp-scope-img" src={assets.scopeImage} alt="IC4 Conference" />
+                        <div className="hp-scope-img-badge">
+                            <span className="hp-scope-badge-num bodyFont2">3rd</span>
+                            <span className="hp-scope-badge-txt">Edition</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ── Statistics ── */}
-            <section className="home-stats-section">
-                <div className="home-stats-inner">
-                    {[
-                        { icon: 'fa-users',            value: '500+', label: 'Attendees' },
-                        { icon: 'fa-file-invoice',     value: '150+', label: 'Papers Submitted' },
-                        { icon: 'fa-chalkboard-user',  value: '85+',  label: 'Sessions' },
-                        { icon: 'fa-earth-americas',   value: '10+',  label: 'Countries' },
-                    ].map(({ icon, value, label }) => (
-                        <div className="home-stat-card" key={label}>
-                            <div className="home-stat-icon-wrap">
-                                <i className={`fa-solid ${icon} home-stat-icon`} />
-                            </div>
-                            <p className="home-stat-value bodyFont2">{value}</p>
-                            <p className="home-stat-label">{label}</p>
+            {/* ════ 3. STATS ════ */}
+            <section className="hp-stats">
+                <div className="hp-container hp-stats-inner">
+                    {STATS.map(({ icon, value, label }) => (
+                        <div className="hp-stat" key={label}>
+                            <i className={`fa-solid ${icon} hp-stat-icon`} />
+                            <span className="hp-stat-value bodyFont2">{value}</span>
+                            <span className="hp-stat-label">{label}</span>
                         </div>
                     ))}
                 </div>
             </section>
 
-            {/* ── Quick Links ── */}
-            <section className="home-quicklinks-section">
-                <div className="home-quicklinks-inner">
-                    <div className="home-quicklinks-header">
-                        <span className="home-section-eyebrow home-section-eyebrow--light">Explore More</span>
-                        <h2 className="home-section-heading home-section-heading--light font-heading">Quick Links</h2>
-                    </div>
-
-                    <div className="home-quicklinks-grid">
-                        {[
-                            {
-                                to: ROUTES.COMMITTEES,
-                                icon: 'fa-user-large',
-                                title: 'Program Committee',
-                                desc: 'Meet the General Chairs, patrons, and organizing members.',
-                            },
-                            {
-                                to: ROUTES.ACCEPTED_PAPERS,
-                                icon: 'fa-newspaper',
-                                title: 'Paper Guidelines',
-                                desc: 'Download IEEE templates and review submission guidelines.',
-                            },
-                            {
-                                to: ROUTES.VENUE,
-                                icon: 'fa-location-pin',
-                                title: 'Venue & Map',
-                                desc: 'Find directions, local accommodation, and the campus map.',
-                            },
-                        ].map(({ to, icon, title, desc }) => (
-                            <Link to={to} className="click-scale home-ql-link" key={title}>
-                                <div className="home-ql-card">
-                                    <div className="home-ql-icon-wrap">
-                                        <i className={`fa-solid ${icon} home-ql-icon`} />
-                                    </div>
-                                    <h3 className="home-ql-title font-heading">{title}</h3>
-                                    <p className="home-ql-desc">{desc}</p>
-                                    <span className="home-ql-cta">Explore Details &rarr;</span>
+            {/* ════ 4. QUICK LINKS ════ */}
+            <section className="hp-links">
+                <div className="hp-container">
+                    <span className="hp-eyebrow">Navigate</span>
+                    <h2 className="hp-heading bodyFont2">Quick Access</h2>
+                    <div className="hp-heading-bar" />
+                    <div className="hp-links-grid">
+                        {QUICK_LINKS.map(({ to, icon, title, desc }) => (
+                            <Link to={to} className="hp-link-card" key={title}>
+                                <div className="hp-link-icon">
+                                    <i className={`fa-solid ${icon}`} />
                                 </div>
+                                <div className="hp-link-body">
+                                    <h3 className="hp-link-title">{title}</h3>
+                                    <p className="hp-link-desc">{desc}</p>
+                                </div>
+                                <i className="fa-solid fa-chevron-right hp-link-arrow" />
                             </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── Collaborations ── */}
-            <section className="home-collab-section">
-                <div className="home-collab-card">
-                    <span className="home-section-eyebrow">Updates &amp; Partners</span>
-                    <h2 className="home-section-heading font-heading">Media &amp; Collaborations</h2>
-                    <p className="home-collab-desc">
-                        We are currently aligning partners and media agencies. Declarations and details will be displayed here soon.
-                    </p>
-                    <div className="home-collab-badge">
-                        <i className="fa-solid fa-circle-info home-collab-badge-icon" />
-                        Under Preparation
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Previous Conferences ── */}
-            <section className="home-prev-section">
-                <div className="home-prev-inner">
-                    <span className="home-section-eyebrow">Past Events</span>
-                    <h2 className="home-section-heading font-heading">Previous Conferences</h2>
-                    <span className="home-section-divider" />
-
-                    <div className="home-prev-grid">
+            {/* ════ 5. PREVIOUS CONFERENCES ════ */}
+            <section className="hp-prev">
+                <div className="hp-container">
+                    <span className="hp-eyebrow">Legacy</span>
+                    <h2 className="hp-heading bodyFont2">Previous Conferences</h2>
+                    <div className="hp-heading-bar" />
+                    <div className="hp-prev-grid">
                         {previousConferences.map((conf) => (
                             <ConferenceCard
                                 key={conf.id}
@@ -176,28 +157,40 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* ── Paper Submission CTA ── */}
-            <section className="home-cta-section">
-                <div className="home-cta-inner gradientColor">
-                    <div className="home-cta-glow" />
-                    <div className="home-cta-content">
-                        <i className="fa-solid fa-paper-plane home-cta-icon" />
-                        <h2 className="home-cta-title font-heading">Submit Your Research Paper</h2>
-                        <p className="home-cta-body">
-                            Authors are invited to submit original, unpublished papers through our conference submission
-                            system. Papers should not be under consideration for publication elsewhere.
+            {/* ════ 6. PAPER SUBMISSION CTA ════ */}
+            <section className="hp-cta">
+                <div className="hp-container hp-cta-inner">
+                    <div className="hp-cta-text">
+                        <span className="hp-eyebrow">Call for Papers</span>
+                        <h2 className="hp-heading bodyFont2">Submit Your Research</h2>
+                        <p className="hp-cta-desc">
+                            Authors are invited to submit original, unpublished work. All accepted papers
+                            will be published in IEEE Xplore and indexed in major databases.
                         </p>
-                        <Link to={ROUTES.PAPER_SUBMISSION} className="click-scale">
-                            <button className="home-cta-btn">Submit Your Paper &rarr;</button>
-                        </Link>
+                        <div className="hp-cta-actions">
+                            <Link to={ROUTES.PAPER_SUBMISSION}>
+                                <button className="hp-btn hp-btn--red">Submit Paper &rarr;</button>
+                            </Link>
+                            <Link to={ROUTES.ACCEPTED_PAPERS}>
+                                <button className="hp-btn hp-btn--outline">Guidelines</button>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="hp-cta-visual">
+                        <div className="hp-cta-circle">
+                            <i className="fa-solid fa-paper-plane hp-cta-circle-icon" />
+                        </div>
+                        <div className="hp-cta-ieee">
+                            <i className="fa-solid fa-certificate" />
+                            <span>IEEE Indexed</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Footer */}
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
