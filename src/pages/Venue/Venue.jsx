@@ -82,13 +82,13 @@ const Venue = () => {
                             <div>
                                 <h3 className="venue-partner-name">Aivancity School of AI and Data for Business and Society</h3>
                                 <p className="venue-partner-desc">
-                                    <i className="fa-solid fa-location-dot venue-detail-icon venue-detail-icon--red" style={{marginRight: '8px'}} />
-                                    151, Boulevard Maxime Gorki, Villejuif, France<br/><br/>
-                                    <i className="fa-solid fa-phone venue-detail-icon venue-detail-icon--navy" style={{marginRight: '8px'}} />
+                                    <i className="fa-solid fa-location-dot venue-detail-icon venue-detail-icon--red" style={{ marginRight: '8px' }} />
+                                    151, Boulevard Maxime Gorki, Villejuif, France<br /><br />
+                                    <i className="fa-solid fa-phone venue-detail-icon venue-detail-icon--navy" style={{ marginRight: '8px' }} />
                                     Phone: +33 (0) 1 88 38 03 00
                                 </p>
                             </div>
-                            <a
+                            {/* <a
                                 href="https://aivancity.ai"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const Venue = () => {
                                 <button className="page-btn page-btn--primary venue-partner-btn">
                                     View Program Details
                                 </button>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 
