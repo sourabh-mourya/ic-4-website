@@ -312,6 +312,7 @@
     font-size: clamp(1.3rem, 4vw, 1.8rem);
     font-weight: 800;
     margin: 0;
+    color: #fff;
 }
 
 .cta-desc {
