@@ -18,11 +18,7 @@ const Nav = memo((props) => {
   const { setIsRegModalOpen, setIsBrochureModalOpen } = useRegistration();
 
   const handleRegisterClick = (e) => {
-    if (!CONFIG.REGISTRATION_ENABLED) {
-      e.preventDefault();
-      setIsRegModalOpen(true);
-      setOpen(false);
-    }
+    setOpen(false);
   };
 
   const handleBrochureClick = (e) => {

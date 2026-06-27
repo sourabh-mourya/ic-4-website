@@ -11,12 +11,6 @@ import { useRegistration } from '../../../context';
 const StartHero = () => {
     const { setIsRegModalOpen, setIsBrochureModalOpen } = useRegistration();
 
-    const handleRegisterClick = (e) => {
-        if (!CONFIG.REGISTRATION_ENABLED) {
-            e.preventDefault();
-            setIsRegModalOpen(true);
-        }
-    };
 
     const handleBrochureClick = (e) => {
         if (!CONFIG.BROCHURE_DOWNLOAD_ENABLED) {
@@ -96,7 +90,7 @@ const StartHero = () => {
 
                     {/* Action buttons */}
                     <div className="hero-actions">
-                        <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                        <Link to={ROUTES.REGISTER}>
                             <button className="hero-btn hero-btn--primary">
                                 <i className="fa-solid fa-pen-to-square" /> Register Now
                             </button>

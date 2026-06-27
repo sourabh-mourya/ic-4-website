@@ -29,12 +29,6 @@ const HomePage = () => {
     const { setCount } = useCount();
     const { setIsRegModalOpen } = useRegistration();
 
-    const handleRegisterClick = (e) => {
-        if (!CONFIG.REGISTRATION_ENABLED) {
-            e.preventDefault();
-            setIsRegModalOpen(true);
-        }
-    };
 
     useEffect(() => {
         const func = () => setCount(prev => prev + 1);
@@ -83,7 +77,7 @@ const HomePage = () => {
                             accelerate sustainable technological innovation.
                         </p>
                         <div className="hp-scope-actions">
-                            <Link to={ROUTES.REGISTER} onClick={handleRegisterClick}>
+                            <Link to={ROUTES.REGISTER}>
                                 <button className="hp-btn hp-btn--red">Register Now &rarr;</button>
                             </Link>
                             <Link to={ROUTES.TOPICS}>

@@ -8,8 +8,18 @@ import ImportantDates from '../../components/common/ImportantDates'
 import { assets } from '../../constants/assets'
 import { registrationFees } from '../../data/data'
 import { CONFIG } from '../../constants/config'
+import { useRegistration } from '../../context'
 
 function Register() {
+    const { setIsRegModalOpen } = useRegistration();
+
+    const handlePaymentClick = (e) => {
+        if (!CONFIG.REGISTRATION_ENABLED) {
+            e.preventDefault();
+            setIsRegModalOpen(true);
+        }
+    };
+
     return (
         <>
             <Nav />
@@ -36,22 +46,6 @@ function Register() {
                             <span className="page-section-bar" />
                         </div>
 
-                        {!CONFIG.REGISTRATION_ENABLED && (
-                            <div className="reg-alert-box">
-                                <div className="reg-alert-icon">
-                                    <i className="fa-solid fa-triangle-exclamation"></i>
-                                </div>
-                                <div className="reg-alert-content">
-                                    <h3 className="reg-alert-title font-heading">
-                                        Registrations are currently closed
-                                    </h3>
-                                    <p className="reg-alert-desc">
-                                        Thank you for your interest. Registration is temporarily unavailable and will reopen soon. Please check back later for updates.
-                                    </p>
-                                </div>
-                            </div>
-                        )}
-
                         <div className="reg-table-wrapper">
                             <table className="registerTable">
                                 <thead>
@@ -75,17 +69,16 @@ function Register() {
 
                         {/* CTA button */}
                         <div className="reg-cta-wrapper">
-                            {CONFIG.REGISTRATION_ENABLED ? (
-                                <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" target="_blank" rel="noopener noreferrer">
-                                    <button className="page-btn page-btn--primary reg-pay-btn">
-                                        Register & Pay Here
-                                    </button>
-                                </a>
-                            ) : (
-                                <button className="page-btn reg-pay-btn reg-pay-btn--disabled" disabled>
-                                    Registration Closed
+                            <a 
+                                href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
+                                rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
+                                onClick={handlePaymentClick}
+                            >
+                                <button className="page-btn page-btn--primary reg-pay-btn">
+                                    Register & Pay Here
                                 </button>
-                            )}
+                            </a>
                         </div>
                     </div>
 
@@ -111,15 +104,15 @@ function Register() {
                                     </div>
                                     <div className="gateway-target-details">
                                         <span className="gateway-label">Gateway Target</span>
-                                        {CONFIG.REGISTRATION_ENABLED ? (
-                                            <a href="https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" className="gateway-link" target="_blank" rel="noopener noreferrer">
-                                                Medicaps Miscellaneous Portal
-                                            </a>
-                                        ) : (
-                                            <span className="gateway-status gateway-status--closed">
-                                                Temporarily Closed
-                                            </span>
-                                        )}
+                                        <a 
+                                            href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                            className="gateway-link" 
+                                            target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
+                                            rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
+                                            onClick={handlePaymentClick}
+                                        >
+                                            Medicaps Miscellaneous Portal
+                                        </a>
                                     </div>
                                 </div>
                             </div>
