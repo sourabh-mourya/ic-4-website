@@ -75,18 +75,21 @@ const Venue = () => {
                     <div className="venue-partner-card">
                         <div className="venue-partner-label">
                             <span className="page-section-eyebrow">International Partner</span>
-                            <h2 className="page-section-heading bodyFont2">Partner Institution</h2>
+                            <h2 className="page-section-heading bodyFont2">Co-Venue</h2>
                             <span className="page-section-bar" />
                         </div>
                         <div className="venue-partner-body">
                             <div>
-                                <h3 className="venue-partner-name">Aivancity Paris-Cachan</h3>
+                                <h3 className="venue-partner-name">Aivancity School of AI and Data for Business and Society</h3>
                                 <p className="venue-partner-desc">
-                                    Aivancity School for Technology, Business &amp; Society Paris-Cachan is our esteemed international partner. Their Bachelor of Science in Applied Artificial Intelligence program is designed to prepare professionals for the future of AI.
+                                    <i className="fa-solid fa-location-dot venue-detail-icon venue-detail-icon--red" style={{marginRight: '8px'}} />
+                                    151, Boulevard Maxime Gorki, Villejuif, France<br/><br/>
+                                    <i className="fa-solid fa-phone venue-detail-icon venue-detail-icon--navy" style={{marginRight: '8px'}} />
+                                    Phone: +33 (0) 1 88 38 03 00
                                 </p>
                             </div>
                             <a
-                                href="https://aivancity.ai/en/program/bachelor-science-intelligence-artificielle-appliquee/presentation"
+                                href="https://aivancity.ai"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

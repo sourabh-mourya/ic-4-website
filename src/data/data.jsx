@@ -89,8 +89,8 @@ export const footerContent = {
 // Venue Info
 // ──────────────────────────────────────────────
 export const venueInfo = {
-  name: 'Main Auditorium, Medicaps University',
-  address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
+  name: 'Medicaps University',
+  address: 'A.B. Road, Pigdamber, Rau, Indore-453331, M.P., India',
   phones: ['+91-731-3111500', '+91-731-3111501'],
   email: 'ic4@medicaps.ac.in',
   mapSrc: 'https://maps.google.com/maps?width=2048&height=600&hl=en&q=medi-caps+university&t=&z=12&ie=UTF8&iwloc=B&output=embed',
@@ -141,9 +141,10 @@ export const committeeData = {
   ieeeFranceSection: [
     { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
     { name: 'Dr. Marina Deng', designation: 'Vice President, Conferences, IEEE France Section', image: committeePhotos.marinaDeng },
-    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics, IEEE France Section', image: committeePhotos.gerardCapolino },
-    { name: 'Roua Touihri', designation: 'President, Computer, IEEE France Section', image: committeePhotos.rouaTouihri },
-    { name: 'Pascal Lorenz', designation: 'President, Communications, IEEE France Section', image: committeePhotos.pascalLorenz },
+    { name: 'Adrien Revault d\'Allonnes', designation: 'President, Computational Intelligence Society, IEEE France Section', image: committeePhotos.adrienRevault },
+    { name: 'Roua Touihri', designation: 'President, Computer Society, IEEE France Section', image: committeePhotos.rouaTouihri },
+    { name: 'Pascal Lorenz', designation: 'President, Communications Society, IEEE France Section', image: committeePhotos.pascalLorenz },
+    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics Society, IEEE France Section', image: committeePhotos.gerardCapolino },
   ],
 };
 

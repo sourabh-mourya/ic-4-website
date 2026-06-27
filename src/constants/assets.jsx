@@ -55,6 +55,7 @@ import marinaDeng from '../assets/images/committee/marinaDeng.jpeg';
 import gerardCapolino from '../assets/images/committee/gerardCapolino.jpeg';
 import rouaTouihri from '../assets/images/committee/rouaTouihri.jpeg';
 import pascalLorenz from '../assets/images/committee/pascalLorenz.png';
+import adrienRevault from '../assets/images/committee/adrienRevault.jpeg';
 
 // --- Exported Asset Map ---
 export const assets = {
@@ -109,4 +110,5 @@ export const committeePhotos = {
   gerardCapolino,
   rouaTouihri,
   pascalLorenz,
+  adrienRevault,
 };
