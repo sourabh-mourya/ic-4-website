@@ -158,7 +158,7 @@ export const programChair = [
 ];
 
 export const workingCommittee = [
-  'Dr. Manoj Kumar Rawat', 'Dr. Safdar Sardar Khan', 'Dr. Ritu Maheshwari',
+  'Dr. Manoj Kumar Rawat', 'Dr. Safdar Sardar Khan',
   'Dr. Rohit Gupta', 'Dr. Sunil Kushwaha', 'Dr. Hareram Jha',
   'Prof. Ashish Kumar Kumawat', 'Prof. Dharmendra Mangal', 'Prof. Ajeet Singh Rajput',
   'Prof. Hemant K. Pathak', 'Prof. Kriti Joshi', 'Prof. Swati Vaidya',
