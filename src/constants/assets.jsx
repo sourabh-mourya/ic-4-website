@@ -39,7 +39,6 @@ import birajashisPattnaik from '../assets/images/committee/birajashisPattnaik.pn
 import ratneshLitoriya from '../assets/images/committee/ratneshLitoriya.png';
 import kailashBandhu from '../assets/images/committee/kailashBandhu.png';
 import prashantPanse from '../assets/images/committee/prashantPanse.png';
-import anuradhaKar from '../assets/images/committee/anuradhaKar.jpeg';
 import sonuKumar from '../assets/images/committee/sonuKumar.png';
 import rudreshShah from '../assets/images/committee/rudreshShah.png';
 import latikaJindal from '../assets/images/committee/latikaJindal.png';
@@ -50,12 +49,6 @@ import jinendraAgrawal from '../assets/images/committee/jinendraAgrawal.jpeg';
 import manmathBadapanda from '../assets/images/committee/manmathBadapanda.jpeg';
 import mpSChawla from '../assets/images/committee/mpSChawla.jpeg';
 import durgeshMishra from '../assets/images/committee/durgeshMishra.jpeg';
-import florenceSedes from '../assets/images/committee/florenceSedes.jpeg';
-import marinaDeng from '../assets/images/committee/marinaDeng.jpeg';
-import gerardCapolino from '../assets/images/committee/gerardCapolino.jpeg';
-import rouaTouihri from '../assets/images/committee/rouaTouihri.jpeg';
-import pascalLorenz from '../assets/images/committee/pascalLorenz.png';
-import adrienRevault from '../assets/images/committee/adrienRevault.jpeg';
 
 // --- Exported Asset Map ---
 export const assets = {
@@ -94,7 +87,6 @@ export const committeePhotos = {
   ratneshLitoriya,
   kailashBandhu,
   prashantPanse,
-  anuradhaKar,
   sonuKumar,
   rudreshShah,
   latikaJindal,
@@ -105,10 +97,4 @@ export const committeePhotos = {
   manmathBadapanda,
   mpSChawla,
   durgeshMishra,
-  florenceSedes,
-  marinaDeng,
-  gerardCapolino,
-  rouaTouihri,
-  pascalLorenz,
-  adrienRevault,
 };

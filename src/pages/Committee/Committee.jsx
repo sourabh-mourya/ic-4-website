@@ -65,9 +65,6 @@ const ProgrameComitte = memo(() => {
           {/* IEEE MP Section */}
           <CommitteeSection title="IEEE Madhya Pradesh Section" members={committeeData.ieeeMPSection} />
 
-          {/* IEEE France Section */}
-          <CommitteeSection title="IEEE France Section" members={committeeData.ieeeFranceSection} />
-
           <div className="committee-divider-wrap">
             <span className="committee-divider-line" />
           </div>

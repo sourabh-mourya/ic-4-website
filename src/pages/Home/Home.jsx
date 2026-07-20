@@ -12,17 +12,17 @@ import { ROUTES } from '../../constants/routes';
 import { CONFIG } from '../../constants/config';
 
 const STATS = [
-    { icon: 'fa-users',           value: '500+', label: 'Attendees' },
-    { icon: 'fa-file-lines',      value: '150+', label: 'Papers' },
-    { icon: 'fa-chalkboard-user', value: '6',    label: 'Tracks' },
-    { icon: 'fa-earth-americas',  value: '10+',  label: 'Countries' },
+    { icon: 'fa-users', value: '500+', label: 'Attendees' },
+    { icon: 'fa-file-lines', value: '150+', label: 'Papers' },
+    { icon: 'fa-chalkboard-user', value: '6', label: 'Tracks' },
+    { icon: 'fa-earth-americas', value: '10+', label: 'Countries' },
 ];
 
 const QUICK_LINKS = [
-    { to: ROUTES.COMMITTEES,      icon: 'fa-users-gear',   title: 'Committees',       desc: 'View General Chairs, patrons and organizing members.' },
-    { to: ROUTES.ACCEPTED_PAPERS, icon: 'fa-file-lines',   title: 'Paper Guidelines', desc: 'IEEE templates, formatting rules and submission checklist.' },
-    { to: ROUTES.TOPICS,          icon: 'fa-lightbulb',    title: 'Topics',           desc: 'Explore the 6 research tracks and topics of interest.' },
-    { to: ROUTES.VENUE,           icon: 'fa-location-dot', title: 'Venue & Map',      desc: 'Campus location, directions and accommodation tips.' },
+    { to: ROUTES.COMMITTEES, icon: 'fa-users-gear', title: 'Committees', desc: 'View General Chairs, patrons and organizing members.' },
+    { to: ROUTES.ACCEPTED_PAPERS, icon: 'fa-file-lines', title: 'Paper Guidelines', desc: 'IEEE templates, formatting rules and submission checklist.' },
+    { to: ROUTES.TOPICS, icon: 'fa-lightbulb', title: 'Topics', desc: 'Explore the 6 research tracks and topics of interest.' },
+    { to: ROUTES.VENUE, icon: 'fa-location-dot', title: 'Venue & Map', desc: 'Campus location, directions and accommodation tips.' },
 ];
 
 const HomePage = () => {

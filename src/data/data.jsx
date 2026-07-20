@@ -116,7 +116,6 @@ export const committeeData = {
   generalCoChairs: [
     { name: 'Dr. Kailash Chandra Bandhu', designation: 'Head of Department, CSE', image: committeePhotos.kailashBandhu },
     { name: 'Dr. Prashant Panse', designation: 'Associate Dean, Digitalization', image: committeePhotos.prashantPanse },
-    { name: 'Dr. Anuradha Kar', designation: 'Associate Professor, Aivancity', image: committeePhotos.anuradhaKar },
   ],
   publicationChairs: [
     { name: 'Dr. Sonu Kumar', designation: 'Publication Chair', image: committeePhotos.sonuKumar },
@@ -137,14 +136,6 @@ export const committeeData = {
     { name: 'Prof. Manmath Badapanda', designation: 'Vice Chairperson, IEEE MP Section', image: committeePhotos.manmathBadapanda },
     { name: 'Prof. M P S Chawla', designation: 'Secretary, IEEE MP Section', image: committeePhotos.mpSChawla },
     { name: 'Prof. Durgesh Kumar Mishra', designation: 'Chair, Computer Society, IEEE MP Section', image: committeePhotos.durgeshMishra },
-  ],
-  ieeeFranceSection: [
-    { name: 'Dr. Florence Sedes', designation: 'President, IEEE France Section', image: committeePhotos.florenceSedes },
-    { name: 'Dr. Marina Deng', designation: 'Vice President, Conferences, IEEE France Section', image: committeePhotos.marinaDeng },
-    { name: 'Adrien Revault d\'Allonnes', designation: 'President, Computational Intelligence Society, IEEE France Section', image: committeePhotos.adrienRevault },
-    { name: 'Roua Touihri', designation: 'President, Computer Society, IEEE France Section', image: committeePhotos.rouaTouihri },
-    { name: 'Pascal Lorenz', designation: 'President, Communications Society, IEEE France Section', image: committeePhotos.pascalLorenz },
-    { name: 'Gérard-André Capolino', designation: 'President, Power Electronics Society, IEEE France Section', image: committeePhotos.gerardCapolino },
   ],
 };
 
