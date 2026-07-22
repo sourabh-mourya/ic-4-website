@@ -112,12 +112,7 @@ const StartHero = () => {
                             </button>
                         </a>
                     </div>
-
-                    {/* IEEE note */}
-                    <p className="hero-ieee-note">
-                        <i className="fa-solid fa-certificate" />
-                        &nbsp; Papers published in IEEE Xplore &amp; indexed in Scopus
-                    </p>
+                    
                 </div>
 
                 {/* Right — Photo panel */}

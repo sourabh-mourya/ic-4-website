@@ -11,12 +11,6 @@ import { assets } from '../../constants/assets';
 import { ROUTES } from '../../constants/routes';
 import { CONFIG } from '../../constants/config';
 
-const STATS = [
-    { icon: 'fa-users', value: '500+', label: 'Attendees' },
-    { icon: 'fa-file-lines', value: '150+', label: 'Papers' },
-    { icon: 'fa-chalkboard-user', value: '6', label: 'Tracks' },
-    { icon: 'fa-earth-americas', value: '10+', label: 'Countries' },
-];
 
 const QUICK_LINKS = [
     { to: ROUTES.COMMITTEES, icon: 'fa-users-gear', title: 'Committees', desc: 'View General Chairs, patrons and organizing members.' },
@@ -95,18 +89,6 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* ════ 3. STATS ════ */}
-            <section className="hp-stats">
-                <div className="hp-container hp-stats-inner">
-                    {STATS.map(({ icon, value, label }) => (
-                        <div className="hp-stat" key={label}>
-                            <i className={`fa-solid ${icon} hp-stat-icon`} />
-                            <span className="hp-stat-value bodyFont2">{value}</span>
-                            <span className="hp-stat-label">{label}</span>
-                        </div>
-                    ))}
-                </div>
-            </section>
 
             {/* ════ 4. QUICK LINKS ════ */}
             <section className="hp-links">
@@ -158,8 +140,7 @@ const HomePage = () => {
                         <span className="hp-eyebrow">Call for Papers</span>
                         <h2 className="hp-heading bodyFont2">Submit Your Research</h2>
                         <p className="hp-cta-desc">
-                            Authors are invited to submit original, unpublished work. All accepted papers
-                            will be published in IEEE Xplore and indexed in major databases.
+                            Authors are invited to submit original, unpublished work. Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements.
                         </p>
                         <div className="hp-cta-actions">
                             <Link to={ROUTES.PAPER_SUBMISSION}>
@@ -173,10 +154,6 @@ const HomePage = () => {
                     <div className="hp-cta-visual">
                         <div className="hp-cta-circle">
                             <i className="fa-solid fa-paper-plane hp-cta-circle-icon" />
-                        </div>
-                        <div className="hp-cta-ieee">
-                            <i className="fa-solid fa-certificate" />
-                            <span>IEEE Indexed</span>
                         </div>
                     </div>
                 </div>
