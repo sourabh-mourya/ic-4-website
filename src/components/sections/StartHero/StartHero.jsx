@@ -63,6 +63,12 @@ const StartHero = () => {
                         <span className="hero-edition-tag">
                             {conferenceInfo.edition} Edition
                         </span>
+                        {conferenceInfo.ieeeRecordNumber && (
+                            <span className="hero-ieee-badge">
+                                <i className="fa-solid fa-certificate" />
+                                IEEE Record: #{conferenceInfo.ieeeRecordNumber}
+                            </span>
+                        )}
                     </div>
 
                     {/* Conference name */}

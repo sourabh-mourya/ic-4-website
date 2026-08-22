@@ -34,6 +34,8 @@ import rcMittal from '../assets/images/committee/rcMittal.png';
 import gopalAgrawal from '../assets/images/committee/gopalAgrawal.png';
 import palashGarg from '../assets/images/committee/palashGarg.png';
 import saloniGarg from '../assets/images/committee/saloniGarg.png';
+import akshitGarg from '../assets/images/committee/akshitGarg.jpeg';
+import ajayKulkarni from '../assets/images/committee/ajayKulkarni.jpeg';
 import dkPatnaik from '../assets/images/committee/dkPatnaik.png';
 import birajashisPattnaik from '../assets/images/committee/birajashisPattnaik.png';
 import ratneshLitoriya from '../assets/images/committee/ratneshLitoriya.png';
@@ -82,6 +84,8 @@ export const committeePhotos = {
   gopalAgrawal,
   palashGarg,
   saloniGarg,
+  akshitGarg,
+  ajayKulkarni,
   dkPatnaik,
   birajashisPattnaik,
   ratneshLitoriya,

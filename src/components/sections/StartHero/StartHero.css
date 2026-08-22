@@ -158,6 +158,21 @@
     padding: 5px 12px;
 }
 
+.hero-ieee-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #006699;
+    background: #e6f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 99px;
+    padding: 5px 12px;
+}
+
 /* Main heading */
 .hero-title {
     font-size: clamp(1.3rem, 2.8vw, 2rem);
