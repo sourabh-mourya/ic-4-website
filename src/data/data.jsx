@@ -22,6 +22,7 @@ export const conferenceInfo = {
   email: 'ic4@medicaps.ac.in',
   ieeeRecordNumber: '73190',
   ieeeConferenceRecord: 'IEEE Conference Record: 73190',
+  ieeeRecordUrl: 'https://conferences.ieee.org/conferences_events/conferences/search?q=2027%203rd%20International%20Conference%20on%20Computer,%20Communication%20and%20Control%20(IC4)&virtualflag=B&virtualConfReadOnly=N',
 };
 
 // ──────────────────────────────────────────────
@@ -373,7 +374,7 @@ export const galleryImages = [];
 // Paper Submission Content
 // ──────────────────────────────────────────────
 export const paperSubmissionInfo = {
-  portalUrl: 'https://cmt3.research.microsoft.com/',
+  portalUrl: 'https://cmt3.research.microsoft.com/ICCCC2027',
   isOpen: true,
   contactEmail: 'ic4@medicaps.ac.in',
   deadlines: [

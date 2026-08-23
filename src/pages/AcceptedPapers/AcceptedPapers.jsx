@@ -4,6 +4,7 @@ import Nav from '../../components/layout/Navbar/Navbar';
 import PageHeader from '../../components/common/PageHeader';
 import '../../components/common/PageHeader.css';
 import { assets } from '../../constants/assets';
+import { paperSubmissionInfo } from '../../data/data';
 import './AcceptedPapers.css';
 
 const AcceptedPapers = () => {
@@ -94,7 +95,15 @@ const AcceptedPapers = () => {
                     <i className="fa-solid fa-check"></i>
                   </div>
                   <span>
-                    <strong>CMT Submission:</strong> Paper submission must be done online via the CMT link provided on our submission page. Email submissions are not accepted.
+                    <strong>CMT Submission:</strong> Paper submission must be done online via the{' '}
+                    <a 
+                      href={paperSubmissionInfo.portalUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-link"
+                    >
+                      Microsoft CMT Portal
+                    </a>. Email submissions are not accepted.
                   </span>
                 </li>
               </ul>

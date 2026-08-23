@@ -64,10 +64,16 @@ const StartHero = () => {
                             {conferenceInfo.edition} Edition
                         </span>
                         {conferenceInfo.ieeeRecordNumber && (
-                            <span className="hero-ieee-badge">
+                            <a
+                                href={conferenceInfo.ieeeRecordUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hero-ieee-badge"
+                                title="View IEEE Conference Record"
+                            >
                                 <i className="fa-solid fa-certificate" />
                                 IEEE Record: #{conferenceInfo.ieeeRecordNumber}
-                            </span>
+                            </a>
                         )}
                     </div>
 

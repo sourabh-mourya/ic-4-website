@@ -171,6 +171,17 @@
     border: 1px solid #b3d9ff;
     border-radius: 99px;
     padding: 5px 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.hero-ieee-badge:hover {
+    background: #006699;
+    color: #ffffff;
+    border-color: #006699;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 102, 153, 0.25);
 }
 
 /* Main heading */
