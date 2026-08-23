@@ -8,7 +8,7 @@ export const CONFIG = {
   siteUrl: 'https://ic4.medicaps.ac.in',
   REGISTRATION_ENABLED: false,
   CMT_PORTAL_ENABLED: true,
-  BROCHURE_DOWNLOAD_ENABLED: false,
+  BROCHURE_DOWNLOAD_ENABLED: true,
   year: '2026',
   edition: '3rd',
   shortName: "IC4'27",
