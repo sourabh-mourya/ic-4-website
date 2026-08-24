@@ -15,7 +15,7 @@ export const conferenceInfo = {
   edition: '3rd',
   fullName: '3rd International Conference on Computer, Communication and Control',
   abbreviation: "IC4'27",
-  dates: 'March  18-20,2027',
+  dates: 'March 18-20, 2027',
   year: '2027',
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
   phones: ['+91-731-3111500', '+91-731-3111501'],
@@ -31,7 +31,7 @@ export const conferenceInfo = {
 export const heroContent = {
   heading: '3rd International Conference on Computer, Communication and Control',
   shortName: "IC4'27",
-  dates: 'March  18-20,2027',
+  dates: 'March 18-20, 2027',
 };
 
 // ──────────────────────────────────────────────
@@ -51,11 +51,11 @@ export const navLinks = [
 // Important Dates
 // ──────────────────────────────────────────────
 export const importantDates = [
-  { id: 'submission', label: 'Full Paper Submission', date: 'Sept 15, 2026', icon: 'fa-hourglass-end' },
-  { id: 'notification', label: 'Acceptance Notification', date: 'Oct 15, 2026', icon: 'fa-bell' },
-  { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Nov 15, 2026', icon: 'fa-cloud-arrow-up' },
-  { id: 'registration', label: 'Registration Deadline', date: 'Nov 15, 2026', icon: 'fa-id-card' },
-  { id: 'conference', label: 'Conference Date', date: 'March  18-20,2027', icon: 'fa-chalkboard-user' },
+  { id: 'submission', label: 'Full Paper Submission', date: 'Sept 30, 2026', icon: 'fa-hourglass-end' },
+  { id: 'notification', label: 'Acceptance Notification', date: 'Oct 31, 2026', icon: 'fa-bell' },
+  { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Nov 30, 2026', icon: 'fa-cloud-arrow-up' },
+  { id: 'registration', label: 'Registration Deadline', date: 'Nov 30, 2026', icon: 'fa-id-card' },
+  { id: 'conference', label: 'Conference Date', date: 'March 18-20, 2027', icon: 'fa-chalkboard-user' },
 ];
 
 // ──────────────────────────────────────────────
@@ -378,10 +378,10 @@ export const paperSubmissionInfo = {
   isOpen: true,
   contactEmail: 'ic4@medicaps.ac.in',
   deadlines: [
-    { label: 'Full Paper Submission', date: 'Sept 15, 2026', icon: 'fa-hourglass-end' },
-    { label: 'Acceptance Notification', date: 'Oct 15, 2026', icon: 'fa-bell' },
-    { label: 'Camera Ready Paper', date: 'Nov 15, 2026', icon: 'fa-cloud-arrow-up' },
-    { label: 'Registration Deadline', date: 'Nov 15, 2026', icon: 'fa-id-card' }
+    { label: 'Full Paper Submission', date: 'Sept 30, 2026', icon: 'fa-hourglass-end' },
+    { label: 'Acceptance Notification', date: 'Oct 31, 2026', icon: 'fa-bell' },
+    { label: 'Camera Ready Paper', date: 'Nov 30, 2026', icon: 'fa-cloud-arrow-up' },
+    { label: 'Registration Deadline', date: 'Nov 30, 2026', icon: 'fa-id-card' }
   ]
 };
 
@@ -437,7 +437,7 @@ export const submissionSteps = [
   {
     step: '04',
     title: 'Review & Decision',
-    description: 'Your paper will undergo peer review, and acceptance decision will be emailed by Oct 15, 2026.'
+    description: 'Your paper will undergo peer review, and acceptance decision will be emailed by Oct 31, 2026.'
   }
 ];
 

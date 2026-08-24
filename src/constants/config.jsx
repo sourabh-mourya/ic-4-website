@@ -8,11 +8,11 @@ export const CONFIG = {
   siteUrl: 'https://ic4.medicaps.ac.in',
   REGISTRATION_ENABLED: false,
   CMT_PORTAL_ENABLED: true,
-  BROCHURE_DOWNLOAD_ENABLED: false,
+  BROCHURE_DOWNLOAD_ENABLED: true,
   year: '2026',
   edition: '3rd',
   shortName: "IC4'27",
-  conferenceDates: 'December 10–12, 2026',
+  conferenceDates: 'March 18–20, 2027',
   university: 'Medicaps University',
   location: 'Indore, India',
   email: 'ic4@medicaps.ac.in',
@@ -21,7 +21,7 @@ export const CONFIG = {
   seo: {
     title: "IC4'27 | 3rd International Conference on Computer, Communication and Control",
     description:
-      "IC4'27 is the 3rd International Conference on Computer, Communication and Control, held at Medicaps University, Indore on December 10–12, 2026.",
+      "IC4'27 is the 3rd International Conference on Computer, Communication and Control, held at Medicaps University, Indore on March 18–20, 2027.",
     keywords:
       'IC4 2026, International Conference, Computer Communication Control, Medicaps University, Indore',
   },

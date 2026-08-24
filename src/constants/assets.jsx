@@ -25,7 +25,7 @@ import scopeImage from '../assets/images/branding/scope2.jpg';
 import paymentQR from '../assets/images/branding/paymentqr.jpg';
 
 // --- Documents ---
-import brochurePDF from "../assets/documents/IC-EETA’25 Brochure Updated.pdf";
+import brochurePDF from "../assets/documents/IC4-2027 Brochure.pdf";
 import paperTemplate from '../assets/documents/conference-template-a4.docx';
 import copyrightForm from '../assets/documents/IEEEcopyrightform.pdf';
 
