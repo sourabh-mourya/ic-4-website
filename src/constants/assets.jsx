@@ -25,9 +25,11 @@ import scopeImage from '../assets/images/branding/scope2.jpg';
 import paymentQR from '../assets/images/branding/paymentqr.jpg';
 
 // --- Documents ---
-import brochurePDF from "../assets/documents/IC4-2027 Brochure.pdf";
-import paperTemplate from '../assets/documents/conference-template-a4.docx';
-import copyrightForm from '../assets/documents/IEEEcopyrightform.pdf';
+// PDFs are served from public/ to avoid webpack corrupting binary files.
+// The .docx template was removed; we now link to the official IEEE template URL.
+const brochurePDF = `${process.env.PUBLIC_URL}/documents/IC4-2027-Brochure.pdf`;
+const paperTemplate = 'https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx';
+const copyrightForm = `${process.env.PUBLIC_URL}/documents/IEEEcopyrightform.pdf`;
 
 // --- Committee Photos ---
 import rcMittal from '../assets/images/committee/rcMittal.png';
