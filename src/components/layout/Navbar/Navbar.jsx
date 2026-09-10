@@ -60,11 +60,11 @@ const Nav = memo((props) => {
             </p>
           </div>
 
-          {/* Right: 25 Years Badge */}
+          {/* Right: IEEE MP Section Logo */}
           <div className="flex-shrink-0">
             <img
-              src={assets.medicaps25}
-              alt="Medicaps 25 Years"
+              src={assets.ieeeMPSection}
+              alt="IEEE Madhya Pradesh Section"
               className="w-[45px] sm:w-[65px] md:w-[90px] lg:w-[115px]"
             />
           </div>

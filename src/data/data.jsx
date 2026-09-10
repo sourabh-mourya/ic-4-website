@@ -66,7 +66,7 @@ export const contactInfo = {
   contacts: [
     { purpose: 'For Paper Submission', name: 'Dr. Kailash Chandra Bandhu', phone: '+91 9479628030' },
     { purpose: 'For Travel and Stay', name: 'Dr. Sonu Kumar', phone: '+91 9827282120' },
-    { purpose: 'For Conference Event Related', name: 'Prof. Sanket Gupta', phone: '+91 7000110427' },
+    { purpose: 'For Conference Event Related', name: 'Dr. Sanket Gupta', phone: '+91 7000110427' },
   ],
 };
 
@@ -132,7 +132,10 @@ export const committeeData = {
     { name: 'Dr. Latika Jindal', designation: 'Publicity Chair', image: committeePhotos.latikaJindal },
   ],
   technicalProgramChair: [
-    { name: 'Prof. Sanket Gupta', designation: 'Technical Program Committee Chair', image: committeePhotos.sanketGupta },
+    { name: 'Dr. Sanket Gupta', designation: 'Technical Program Committee Chair', image: committeePhotos.sanketGupta },
+  ],
+  executiveChair: [
+    { name: 'Prof. Ashish Sharma', designation: 'Executive Committee Chair', image: committeePhotos.ashishSharma },
   ],
   ieeeMPSection: [
     { name: 'Prof. G S Tomar', designation: 'Chairperson, IEEE MP Section', image: committeePhotos.gsTomar_mp },

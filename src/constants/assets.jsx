@@ -11,6 +11,7 @@ import medicapsLogo1 from '../assets/images/branding/medicapslogo1.png';
 import springerLogo from '../assets/images/branding/springer.png';
 import ieeelogo2 from '../assets/images/branding/ieeelogo2.png';
 import tarumtLogo from '../assets/images/branding/tarumt-logo.png';
+import ieeeMPSection from '../assets/images/branding/ieeeMPSection.png';
 
 // --- Past Conference Images ---
 import pastConference1 from '../assets/images/branding/CONFERENCEICANI.jpeg';
@@ -23,13 +24,6 @@ import scopeImage from '../assets/images/branding/scope2.jpg';
 
 // --- Payment ---
 import paymentQR from '../assets/images/branding/paymentqr.jpg';
-
-// --- Documents ---
-// PDFs are served from public/ to avoid webpack corrupting binary files.
-// The .docx template was removed; we now link to the official IEEE template URL.
-const brochurePDF = `${process.env.PUBLIC_URL}/documents/IC4-2027-Brochure.pdf`;
-const paperTemplate = 'https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx';
-const copyrightForm = `${process.env.PUBLIC_URL}/documents/IEEEcopyrightform.pdf`;
 
 // --- Committee Photos ---
 import rcMittal from '../assets/images/committee/rcMittal.png';
@@ -53,6 +47,14 @@ import jinendraAgrawal from '../assets/images/committee/jinendraAgrawal.jpeg';
 import manmathBadapanda from '../assets/images/committee/manmathBadapanda.jpeg';
 import mpSChawla from '../assets/images/committee/mpSChawla.jpeg';
 import durgeshMishra from '../assets/images/committee/durgeshMishra.jpeg';
+import ashishSharma from '../assets/images/committee/ashishSharma.jpeg';
+
+// --- Documents ---
+// PDFs are served from public/ to avoid webpack corrupting binary files.
+// The .docx template was removed; we now link to the official IEEE template URL.
+const brochurePDF = `${process.env.PUBLIC_URL}/documents/IC4-2027-Brochure.pdf`;
+const paperTemplate = 'https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx';
+const copyrightForm = `${process.env.PUBLIC_URL}/documents/IEEEcopyrightform.pdf`;
 
 // --- Exported Asset Map ---
 export const assets = {
@@ -63,6 +65,7 @@ export const assets = {
   springerLogo,
   ieeelogo2,
   tarumtLogo,
+  ieeeMPSection,
 
   // Conference images
   pastConference1,
@@ -103,4 +106,5 @@ export const committeePhotos = {
   manmathBadapanda,
   mpSChawla,
   durgeshMishra,
+  ashishSharma,
 };

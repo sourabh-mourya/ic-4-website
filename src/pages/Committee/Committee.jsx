@@ -60,6 +60,9 @@ const ProgrameComitte = memo(() => {
             <div className="committee-chairs-item">
               <CommitteeSection title="Technical Program Committee Chair" members={committeeData.technicalProgramChair} />
             </div>
+            <div className="committee-chairs-item">
+              <CommitteeSection title="Executive Committee Chair" members={committeeData.executiveChair} />
+            </div>
           </div>
 
           {/* IEEE MP Section */}
