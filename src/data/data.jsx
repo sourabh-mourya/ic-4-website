@@ -63,9 +63,9 @@ export const importantDates = [
 export const contactInfo = {
   email: 'ic4@medicaps.ac.in',
   contacts: [
-    { purpose: 'For Paper Submission', name: 'Dr. Kailash Chandra Bandhu', phone: '+91 9479628030' },
-    { purpose: 'For Travel and Stay', name: 'Dr. Sonu Kumar', phone: '+91 9827282120' },
-    { purpose: 'For Conference Event Related', name: 'Dr. Sanket Gupta', phone: '+91 7000110427' },
+    { purpose: 'For Paper Submission', name: 'Dr. Kailash Chandra Bandhu', phone: '+91 9669385567' },
+    { purpose: 'For Travel and Stay', name: 'Dr. Sonu Kumar', phone: '+91 8586809522' },
+    { purpose: 'For Conference Event Related', name: 'Dr. Sanket Gupta', phone: '+91 9713029078' },
   ],
 };
 
