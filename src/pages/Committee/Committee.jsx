@@ -46,8 +46,8 @@ const ProgrameComitte = memo(() => {
           {/* General Co-Chairs */}
           <CommitteeSection title="General Co-Chairs" members={committeeData.generalCoChairs} />
 
-          {/* Publication / Finance / Publicity / Technical */}
-          <div className="committee-chairs-grid">
+          {/* Publication / Finance / Publicity */}
+          <div className="committee-chairs-grid committee-chairs-grid--3col">
             <div className="committee-chairs-item">
               <CommitteeSection title="Publication Chair" members={committeeData.publicationChairs} />
             </div>
@@ -57,6 +57,10 @@ const ProgrameComitte = memo(() => {
             <div className="committee-chairs-item">
               <CommitteeSection title="Publicity Chair" members={committeeData.publicityChair} />
             </div>
+          </div>
+
+          {/* Technical Program Committee Chair + Executive Committee Chair */}
+          <div className="committee-chairs-grid committee-chairs-grid--2col">
             <div className="committee-chairs-item">
               <CommitteeSection title="Technical Program Committee Chair" members={committeeData.technicalProgramChair} />
             </div>
