@@ -380,12 +380,7 @@ export const paperSubmissionInfo = {
   portalUrl: 'https://cmt3.research.microsoft.com/ICCCC2027',
   isOpen: true,
   contactEmail: 'ic4@medicaps.ac.in',
-  deadlines: [
-    { label: 'Full Paper Submission', date: 'Sept 30, 2026', icon: 'fa-hourglass-end' },
-    { label: 'Acceptance Notification', date: 'Oct 31, 2026', icon: 'fa-bell' },
-    { label: 'Camera Ready Paper', date: 'Nov 30, 2026', icon: 'fa-cloud-arrow-up' },
-    { label: 'Registration Deadline', date: 'Nov 30, 2026', icon: 'fa-id-card' }
-  ]
+  deadlines: importantDates.filter(d => d.id !== 'conference')
 };
 
 export const submissionGuidelines = [
