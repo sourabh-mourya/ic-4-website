@@ -51,9 +51,8 @@ import ashishSharma from '../assets/images/committee/ashishSharma.jpeg';
 
 // --- Documents ---
 // PDFs are served from public/ to avoid webpack corrupting binary files.
-// The .docx template was removed; we now link to the official IEEE template URL.
 const brochurePDF = `${process.env.PUBLIC_URL}/documents/IC4-2027-Brochure.pdf`;
-const paperTemplate = 'https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx';
+const paperTemplate = `${process.env.PUBLIC_URL}/documents/Template.docx`;
 const copyrightForm = `${process.env.PUBLIC_URL}/documents/IEEEcopyrightform.pdf`;
 
 // --- Exported Asset Map ---
