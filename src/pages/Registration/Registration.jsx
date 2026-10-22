@@ -6,7 +6,7 @@ import '../../components/common/PageHeader.css'
 import './Registration.css'
 import ImportantDates from '../../components/common/ImportantDates'
 import { assets } from '../../constants/assets'
-import { registrationFees } from '../../data/data'
+import { registrationFees, attendeeRegistrationFees } from '../../data/data'
 import { CONFIG } from '../../constants/config'
 import { useRegistration } from '../../context'
 
@@ -57,6 +57,50 @@ function Register() {
                                 </thead>
                                 <tbody>
                                     {registrationFees.map((fee, index) => (
+                                        <tr key={index}>
+                                            <td className="fee-category font-heading">{fee.category}</td>
+                                            <td className="fee-charge fee-charge--indian text-center">{fee.indian}</td>
+                                            <td className="fee-charge fee-charge--international text-center">{fee.international}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {/* CTA button */}
+                        <div className="reg-cta-wrapper">
+                            <a 
+                                href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
+                                rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
+                                onClick={handlePaymentClick}
+                            >
+                                <button className="page-btn page-btn--primary reg-pay-btn">
+                                    Register & Pay Here
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Registration for Attendees */}
+                    <div className="reg-section-card">
+                        <div className="reg-section-header">
+                            <span className="page-section-eyebrow">Pricing Table</span>
+                            <h2 className="page-section-heading bodyFont2">Registration for Attendees</h2>
+                            <span className="page-section-bar" />
+                        </div>
+
+                        <div className="reg-table-wrapper">
+                            <table className="registerTable">
+                                <thead>
+                                    <tr>
+                                        <th className="table-col-particulars font-heading">Particulars</th>
+                                        <th className="table-col-ind text-center font-heading">Charges for Indians</th>
+                                        <th className="table-col-int text-center font-heading">Charges for International</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {attendeeRegistrationFees.map((fee, index) => (
                                         <tr key={index}>
                                             <td className="fee-category font-heading">{fee.category}</td>
                                             <td className="fee-charge fee-charge--indian text-center">{fee.indian}</td>

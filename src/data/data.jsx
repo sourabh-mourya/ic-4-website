@@ -364,6 +364,13 @@ export const registrationFees = [
 ];
 
 // ──────────────────────────────────────────────
+// Attendee Registration Fees
+// ──────────────────────────────────────────────
+export const attendeeRegistrationFees = [
+  { category: 'Registration for Attendees', indian: 'INR 1500/-', international: 'USD 100' },
+];
+
+// ──────────────────────────────────────────────
 // Speakers  (to be populated when confirmed)
 // ──────────────────────────────────────────────
 export const speakers = [];
@@ -520,6 +527,7 @@ export const conferenceData = {
   internationalAdvisoryCommittee2,
   previousConferences,
   registrationFees,
+  attendeeRegistrationFees,
   speakers,
   galleryImages,
   paperSubmissionInfo,
