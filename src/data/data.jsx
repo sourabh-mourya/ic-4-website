@@ -20,6 +20,7 @@ export const conferenceInfo = {
   address: 'A.B. Road, Pigdamber, Rau Indore - (453331)',
   phones: ['+91-731-3111500', '+91-731-3111501'],
   email: 'ic4@medicaps.ac.in',
+  registrationPaymentUrl: 'https://medicaps.pod.ai/d/kiNdHC/miscellaneous-payments/?display=outsider',
   ieeeRecordNumber: '73190',
   ieeeConferenceRecord: 'IEEE Conference Record: 73190',
   ieeeRecordUrl: 'https://conferences.ieee.org/conferences_events/conferences/search?q=2027%203rd%20International%20Conference%20on%20Computer,%20Communication%20and%20Control%20(IC4)&virtualflag=B&virtualConfReadOnly=N',

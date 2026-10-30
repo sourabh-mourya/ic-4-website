@@ -70,7 +70,7 @@ function Register() {
                         {/* CTA button */}
                         <div className="reg-cta-wrapper">
                             <a 
-                                href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                href={CONFIG.REGISTRATION_ENABLED ? CONFIG.REGISTRATION_PAYMENT_URL : "#"} 
                                 target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
                                 rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
                                 onClick={handlePaymentClick}
@@ -114,7 +114,7 @@ function Register() {
                         {/* CTA button */}
                         <div className="reg-cta-wrapper">
                             <a 
-                                href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                href={CONFIG.REGISTRATION_ENABLED ? CONFIG.REGISTRATION_PAYMENT_URL : "#"} 
                                 target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
                                 rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
                                 onClick={handlePaymentClick}
@@ -149,7 +149,7 @@ function Register() {
                                     <div className="gateway-target-details">
                                         <span className="gateway-label">Gateway Target</span>
                                         <a 
-                                            href={CONFIG.REGISTRATION_ENABLED ? "https://portal.medicaps.ac.in/accsoft2/MiscellaneousPayment.aspx" : "#"} 
+                                            href={CONFIG.REGISTRATION_ENABLED ? CONFIG.REGISTRATION_PAYMENT_URL : "#"} 
                                             className="gateway-link" 
                                             target={CONFIG.REGISTRATION_ENABLED ? "_blank" : undefined} 
                                             rel={CONFIG.REGISTRATION_ENABLED ? "noopener noreferrer" : undefined}
