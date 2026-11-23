@@ -53,9 +53,9 @@ export const navLinks = [
 // ──────────────────────────────────────────────
 export const importantDates = [
   { id: 'submission', label: 'Full Paper Submission', date: 'Nov 15, 2026', icon: 'fa-hourglass-end' },
-  { id: 'notification', label: 'Acceptance Notification', date: 'Nov 30, 2026', icon: 'fa-bell' },
-  { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Dec 15, 2026', icon: 'fa-cloud-arrow-up' },
-  { id: 'registration', label: 'Registration Deadline', date: 'Dec 20, 2026', icon: 'fa-id-card' },
+  { id: 'notification', label: 'Acceptance Notification', date: 'Dec 10, 2026', icon: 'fa-bell' },
+  { id: 'camera', label: 'Camera Ready Paper Submission', date: 'Dec 20, 2026', icon: 'fa-cloud-arrow-up' },
+  { id: 'registration', label: 'Registration Deadline', date: 'Dec 25, 2026', icon: 'fa-id-card' },
   { id: 'conference', label: 'Conference Date', date: 'March 18-20, 2027', icon: 'fa-chalkboard-user' },
 ];
 
